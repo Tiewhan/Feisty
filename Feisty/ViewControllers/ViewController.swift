@@ -38,14 +38,20 @@ class ViewController: UIViewController {
         }
 
         let alertController = UIAlertController(title: "Login Message", message: message, preferredStyle: .alert)
-        alertController.addAction(UIAlertAction(title: "Dismiss", style: .default))
-
-        //self.present(alertController, animated: true, completion: nil)
-
+        
         if loggedIn{
-            performSegue(withIdentifier: "segToMain", sender: nil)
+            alertController.addAction(UIAlertAction(title: "Dismiss", style: .default, handler: { action in self.moveToMainMenu()}))
         }
+        else{
+            alertController.addAction(UIAlertAction(title: "Dismiss", style: .default))
+        }
+        
+        self.present(alertController, animated: true, completion: nil)
 
+    }
+    
+    func moveToMainMenu(){
+        performSegue(withIdentifier: "segToMain", sender: nil)
     }
     
 }

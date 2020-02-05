@@ -49,7 +49,6 @@
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="loginPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PSF-Mo-fTZ"/>
-                                    <segue destination="wqE-Ev-LHd" kind="show" identifier="segToMain" id="Byb-Vu-IFA"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aan-iG-gdG">
@@ -90,15 +89,17 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" id="seA-Ba-3dH"/>
                     <connections>
                         <outlet property="btnLogin" destination="YKP-Xa-PfI" id="Low-d3-YTY"/>
                         <outlet property="txtPassword" destination="aan-iG-gdG" id="5AM-0D-ZoR"/>
                         <outlet property="txtUsername" destination="Fa9-ia-2r4" id="60k-wk-TPY"/>
+                        <segue destination="wqE-Ev-LHd" kind="show" identifier="segToMain" id="MuO-bC-Rse"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="136.80000000000001" y="137.4384236453202"/>
+            <point key="canvasLocation" x="113" y="136"/>
         </scene>
         <!--Friend Scene-->
         <scene sceneID="RC4-zV-22S">
