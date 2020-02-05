@@ -13,9 +13,15 @@ class ViewController: UIViewController {
     @IBOutlet weak var btnLogin: UIButton!
     @IBOutlet weak var txtUsername: UITextField!
     @IBOutlet weak var txtPassword: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+    }
+    
+    //Changes the status bar style to lightstyle. Contrasts the dark theme of the app
+    override var preferredStatusBarStyle: UIStatusBarStyle{
+        return .lightContent
     }
 
     @IBAction func loginPressed(_ sender: UIButton) {

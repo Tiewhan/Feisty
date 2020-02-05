@@ -15,8 +15,9 @@
 		5A25203D23E9792700A4FB72 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A25203B23E9792700A4FB72 /* LaunchScreen.storyboard */; };
 		5A25204823E9792700A4FB72 /* FeistyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A25204723E9792700A4FB72 /* FeistyTests.swift */; };
 		5A25205323E9792700A4FB72 /* FeistyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A25205223E9792700A4FB72 /* FeistyUITests.swift */; };
-		5A5C184823EA9BB700C49076 /* GamesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A5C184723EA9BB700C49076 /* GamesViewController.swift */; };
 		5A5C184A23EAA1BD00C49076 /* MainMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A5C184923EAA1BD00C49076 /* MainMenuController.swift */; };
+		5AA73FA623EAE9CF00E38782 /* GamesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA73FA523EAE9CF00E38782 /* GamesViewController.swift */; };
+		5AA73FAA23EAEB5200E38782 /* FriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA73FA923EAEB5200E38782 /* FriendsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,8 +52,9 @@
 		5A25204E23E9792700A4FB72 /* FeistyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FeistyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A25205223E9792700A4FB72 /* FeistyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeistyUITests.swift; sourceTree = "<group>"; };
 		5A25205423E9792700A4FB72 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5A5C184723EA9BB700C49076 /* GamesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamesViewController.swift; sourceTree = "<group>"; };
 		5A5C184923EAA1BD00C49076 /* MainMenuController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuController.swift; sourceTree = "<group>"; };
+		5AA73FA523EAE9CF00E38782 /* GamesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamesViewController.swift; sourceTree = "<group>"; };
+		5AA73FA923EAEB5200E38782 /* FriendsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,15 +105,13 @@
 		5A25202F23E9792700A4FB72 /* Feisty */ = {
 			isa = PBXGroup;
 			children = (
+				5AA73FA823EAEB0600E38782 /* ViewControllers */,
 				5A25203023E9792700A4FB72 /* AppDelegate.swift */,
 				5A25203223E9792700A4FB72 /* SceneDelegate.swift */,
-				5A25203423E9792700A4FB72 /* ViewController.swift */,
 				5A25203623E9792700A4FB72 /* Main.storyboard */,
 				5A25203923E9792700A4FB72 /* Assets.xcassets */,
 				5A25203B23E9792700A4FB72 /* LaunchScreen.storyboard */,
 				5A25203E23E9792700A4FB72 /* Info.plist */,
-				5A5C184723EA9BB700C49076 /* GamesViewController.swift */,
-				5A5C184923EAA1BD00C49076 /* MainMenuController.swift */,
 			);
 			path = Feisty;
 			sourceTree = "<group>";
@@ -132,6 +132,17 @@
 				5A25205423E9792700A4FB72 /* Info.plist */,
 			);
 			path = FeistyUITests;
+			sourceTree = "<group>";
+		};
+		5AA73FA823EAEB0600E38782 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				5AA73FA523EAE9CF00E38782 /* GamesViewController.swift */,
+				5A5C184923EAA1BD00C49076 /* MainMenuController.swift */,
+				5A25203423E9792700A4FB72 /* ViewController.swift */,
+				5AA73FA923EAEB5200E38782 /* FriendsViewController.swift */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -265,11 +276,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5A5C184823EA9BB700C49076 /* GamesViewController.swift in Sources */,
 				5A25203523E9792700A4FB72 /* ViewController.swift in Sources */,
 				5A25203123E9792700A4FB72 /* AppDelegate.swift in Sources */,
 				5A25203323E9792700A4FB72 /* SceneDelegate.swift in Sources */,
 				5A5C184A23EAA1BD00C49076 /* MainMenuController.swift in Sources */,
+				5AA73FAA23EAEB5200E38782 /* FriendsViewController.swift in Sources */,
+				5AA73FA623EAE9CF00E38782 /* GamesViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
