@@ -1,0 +1,597 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5A25203123E9792700A4FB72 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A25203023E9792700A4FB72 /* AppDelegate.swift */; };
+		5A25203323E9792700A4FB72 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A25203223E9792700A4FB72 /* SceneDelegate.swift */; };
+		5A25203523E9792700A4FB72 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A25203423E9792700A4FB72 /* ViewController.swift */; };
+		5A25203823E9792700A4FB72 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A25203623E9792700A4FB72 /* Main.storyboard */; };
+		5A25203A23E9792700A4FB72 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A25203923E9792700A4FB72 /* Assets.xcassets */; };
+		5A25203D23E9792700A4FB72 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A25203B23E9792700A4FB72 /* LaunchScreen.storyboard */; };
+		5A25204823E9792700A4FB72 /* FeistyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A25204723E9792700A4FB72 /* FeistyTests.swift */; };
+		5A25205323E9792700A4FB72 /* FeistyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A25205223E9792700A4FB72 /* FeistyUITests.swift */; };
+		5A5C184823EA9BB700C49076 /* GamesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A5C184723EA9BB700C49076 /* GamesViewController.swift */; };
+		5A5C184A23EAA1BD00C49076 /* MainMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A5C184923EAA1BD00C49076 /* MainMenuController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5A25204423E9792700A4FB72 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5A25202523E9792700A4FB72 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5A25202C23E9792700A4FB72;
+			remoteInfo = Feisty;
+		};
+		5A25204F23E9792700A4FB72 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5A25202523E9792700A4FB72 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5A25202C23E9792700A4FB72;
+			remoteInfo = Feisty;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		5A25202D23E9792700A4FB72 /* Feisty.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Feisty.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5A25203023E9792700A4FB72 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		5A25203223E9792700A4FB72 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		5A25203423E9792700A4FB72 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		5A25203723E9792700A4FB72 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		5A25203923E9792700A4FB72 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5A25203C23E9792700A4FB72 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		5A25203E23E9792700A4FB72 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5A25204323E9792700A4FB72 /* FeistyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FeistyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5A25204723E9792700A4FB72 /* FeistyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeistyTests.swift; sourceTree = "<group>"; };
+		5A25204923E9792700A4FB72 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5A25204E23E9792700A4FB72 /* FeistyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FeistyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5A25205223E9792700A4FB72 /* FeistyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeistyUITests.swift; sourceTree = "<group>"; };
+		5A25205423E9792700A4FB72 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5A5C184723EA9BB700C49076 /* GamesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamesViewController.swift; sourceTree = "<group>"; };
+		5A5C184923EAA1BD00C49076 /* MainMenuController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5A25202A23E9792700A4FB72 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5A25204023E9792700A4FB72 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5A25204B23E9792700A4FB72 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5A25202423E9792700A4FB72 = {
+			isa = PBXGroup;
+			children = (
+				5A25202F23E9792700A4FB72 /* Feisty */,
+				5A25204623E9792700A4FB72 /* FeistyTests */,
+				5A25205123E9792700A4FB72 /* FeistyUITests */,
+				5A25202E23E9792700A4FB72 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		5A25202E23E9792700A4FB72 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5A25202D23E9792700A4FB72 /* Feisty.app */,
+				5A25204323E9792700A4FB72 /* FeistyTests.xctest */,
+				5A25204E23E9792700A4FB72 /* FeistyUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5A25202F23E9792700A4FB72 /* Feisty */ = {
+			isa = PBXGroup;
+			children = (
+				5A25203023E9792700A4FB72 /* AppDelegate.swift */,
+				5A25203223E9792700A4FB72 /* SceneDelegate.swift */,
+				5A25203423E9792700A4FB72 /* ViewController.swift */,
+				5A25203623E9792700A4FB72 /* Main.storyboard */,
+				5A25203923E9792700A4FB72 /* Assets.xcassets */,
+				5A25203B23E9792700A4FB72 /* LaunchScreen.storyboard */,
+				5A25203E23E9792700A4FB72 /* Info.plist */,
+				5A5C184723EA9BB700C49076 /* GamesViewController.swift */,
+				5A5C184923EAA1BD00C49076 /* MainMenuController.swift */,
+			);
+			path = Feisty;
+			sourceTree = "<group>";
+		};
+		5A25204623E9792700A4FB72 /* FeistyTests */ = {
+			isa = PBXGroup;
+			children = (
+				5A25204723E9792700A4FB72 /* FeistyTests.swift */,
+				5A25204923E9792700A4FB72 /* Info.plist */,
+			);
+			path = FeistyTests;
+			sourceTree = "<group>";
+		};
+		5A25205123E9792700A4FB72 /* FeistyUITests */ = {
+			isa = PBXGroup;
+			children = (
+				5A25205223E9792700A4FB72 /* FeistyUITests.swift */,
+				5A25205423E9792700A4FB72 /* Info.plist */,
+			);
+			path = FeistyUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5A25202C23E9792700A4FB72 /* Feisty */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5A25205723E9792700A4FB72 /* Build configuration list for PBXNativeTarget "Feisty" */;
+			buildPhases = (
+				5A25202923E9792700A4FB72 /* Sources */,
+				5A25202A23E9792700A4FB72 /* Frameworks */,
+				5A25202B23E9792700A4FB72 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Feisty;
+			productName = Feisty;
+			productReference = 5A25202D23E9792700A4FB72 /* Feisty.app */;
+			productType = "com.apple.product-type.application";
+		};
+		5A25204223E9792700A4FB72 /* FeistyTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5A25205A23E9792700A4FB72 /* Build configuration list for PBXNativeTarget "FeistyTests" */;
+			buildPhases = (
+				5A25203F23E9792700A4FB72 /* Sources */,
+				5A25204023E9792700A4FB72 /* Frameworks */,
+				5A25204123E9792700A4FB72 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5A25204523E9792700A4FB72 /* PBXTargetDependency */,
+			);
+			name = FeistyTests;
+			productName = FeistyTests;
+			productReference = 5A25204323E9792700A4FB72 /* FeistyTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		5A25204D23E9792700A4FB72 /* FeistyUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5A25205D23E9792700A4FB72 /* Build configuration list for PBXNativeTarget "FeistyUITests" */;
+			buildPhases = (
+				5A25204A23E9792700A4FB72 /* Sources */,
+				5A25204B23E9792700A4FB72 /* Frameworks */,
+				5A25204C23E9792700A4FB72 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5A25205023E9792700A4FB72 /* PBXTargetDependency */,
+			);
+			name = FeistyUITests;
+			productName = FeistyUITests;
+			productReference = 5A25204E23E9792700A4FB72 /* FeistyUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5A25202523E9792700A4FB72 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1130;
+				LastUpgradeCheck = 1130;
+				ORGANIZATIONNAME = DVT;
+				TargetAttributes = {
+					5A25202C23E9792700A4FB72 = {
+						CreatedOnToolsVersion = 11.3.1;
+					};
+					5A25204223E9792700A4FB72 = {
+						CreatedOnToolsVersion = 11.3.1;
+						TestTargetID = 5A25202C23E9792700A4FB72;
+					};
+					5A25204D23E9792700A4FB72 = {
+						CreatedOnToolsVersion = 11.3.1;
+						TestTargetID = 5A25202C23E9792700A4FB72;
+					};
+				};
+			};
+			buildConfigurationList = 5A25202823E9792700A4FB72 /* Build configuration list for PBXProject "Feisty" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 5A25202423E9792700A4FB72;
+			productRefGroup = 5A25202E23E9792700A4FB72 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5A25202C23E9792700A4FB72 /* Feisty */,
+				5A25204223E9792700A4FB72 /* FeistyTests */,
+				5A25204D23E9792700A4FB72 /* FeistyUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5A25202B23E9792700A4FB72 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5A25203D23E9792700A4FB72 /* LaunchScreen.storyboard in Resources */,
+				5A25203A23E9792700A4FB72 /* Assets.xcassets in Resources */,
+				5A25203823E9792700A4FB72 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5A25204123E9792700A4FB72 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5A25204C23E9792700A4FB72 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5A25202923E9792700A4FB72 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5A5C184823EA9BB700C49076 /* GamesViewController.swift in Sources */,
+				5A25203523E9792700A4FB72 /* ViewController.swift in Sources */,
+				5A25203123E9792700A4FB72 /* AppDelegate.swift in Sources */,
+				5A25203323E9792700A4FB72 /* SceneDelegate.swift in Sources */,
+				5A5C184A23EAA1BD00C49076 /* MainMenuController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5A25203F23E9792700A4FB72 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5A25204823E9792700A4FB72 /* FeistyTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5A25204A23E9792700A4FB72 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5A25205323E9792700A4FB72 /* FeistyUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5A25204523E9792700A4FB72 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5A25202C23E9792700A4FB72 /* Feisty */;
+			targetProxy = 5A25204423E9792700A4FB72 /* PBXContainerItemProxy */;
+		};
+		5A25205023E9792700A4FB72 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5A25202C23E9792700A4FB72 /* Feisty */;
+			targetProxy = 5A25204F23E9792700A4FB72 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		5A25203623E9792700A4FB72 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5A25203723E9792700A4FB72 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		5A25203B23E9792700A4FB72 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5A25203C23E9792700A4FB72 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		5A25205523E9792700A4FB72 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		5A25205623E9792700A4FB72 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5A25205823E9792700A4FB72 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = Feisty/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = za.co.dvt.Feisty;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		5A25205923E9792700A4FB72 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = Feisty/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = za.co.dvt.Feisty;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		5A25205B23E9792700A4FB72 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = FeistyTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = za.co.dvt.FeistyTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Feisty.app/Feisty";
+			};
+			name = Debug;
+		};
+		5A25205C23E9792700A4FB72 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = FeistyTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = za.co.dvt.FeistyTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Feisty.app/Feisty";
+			};
+			name = Release;
+		};
+		5A25205E23E9792700A4FB72 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = FeistyUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = za.co.dvt.FeistyUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Feisty;
+			};
+			name = Debug;
+		};
+		5A25205F23E9792700A4FB72 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = FeistyUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = za.co.dvt.FeistyUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Feisty;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5A25202823E9792700A4FB72 /* Build configuration list for PBXProject "Feisty" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5A25205523E9792700A4FB72 /* Debug */,
+				5A25205623E9792700A4FB72 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5A25205723E9792700A4FB72 /* Build configuration list for PBXNativeTarget "Feisty" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5A25205823E9792700A4FB72 /* Debug */,
+				5A25205923E9792700A4FB72 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5A25205A23E9792700A4FB72 /* Build configuration list for PBXNativeTarget "FeistyTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5A25205B23E9792700A4FB72 /* Debug */,
+				5A25205C23E9792700A4FB72 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5A25205D23E9792700A4FB72 /* Build configuration list for PBXNativeTarget "FeistyUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5A25205E23E9792700A4FB72 /* Debug */,
+				5A25205F23E9792700A4FB72 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5A25202523E9792700A4FB72 /* Project object */;
+}
