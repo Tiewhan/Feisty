@@ -16,8 +16,12 @@
 		5A25204823E9792700A4FB72 /* FeistyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A25204723E9792700A4FB72 /* FeistyTests.swift */; };
 		5A25205323E9792700A4FB72 /* FeistyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A25205223E9792700A4FB72 /* FeistyUITests.swift */; };
 		5A5C184A23EAA1BD00C49076 /* MainMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A5C184923EAA1BD00C49076 /* MainMenuController.swift */; };
-		5AA73FA623EAE9CF00E38782 /* GamesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA73FA523EAE9CF00E38782 /* GamesViewController.swift */; };
 		5AA73FAA23EAEB5200E38782 /* FriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA73FA923EAEB5200E38782 /* FriendsViewController.swift */; };
+		5AA73FAE23EC16E000E38782 /* GamesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA73FAD23EC16E000E38782 /* GamesViewController.swift */; };
+		5AA73FB323EC218100E38782 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA73FB223EC218100E38782 /* Game.swift */; };
+		5AA73FB823EC21CD00E38782 /* GameManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA73FB723EC21CD00E38782 /* GameManager.swift */; };
+		5AA73FBB23EC345800E38782 /* Name.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA73FBA23EC345800E38782 /* Name.swift */; };
+		5AA73FBD23EC36B100E38782 /* Money.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA73FBC23EC36B100E38782 /* Money.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,8 +57,12 @@
 		5A25205223E9792700A4FB72 /* FeistyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeistyUITests.swift; sourceTree = "<group>"; };
 		5A25205423E9792700A4FB72 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5A5C184923EAA1BD00C49076 /* MainMenuController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuController.swift; sourceTree = "<group>"; };
-		5AA73FA523EAE9CF00E38782 /* GamesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamesViewController.swift; sourceTree = "<group>"; };
 		5AA73FA923EAEB5200E38782 /* FriendsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsViewController.swift; sourceTree = "<group>"; };
+		5AA73FAD23EC16E000E38782 /* GamesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamesViewController.swift; sourceTree = "<group>"; };
+		5AA73FB223EC218100E38782 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
+		5AA73FB723EC21CD00E38782 /* GameManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameManager.swift; sourceTree = "<group>"; };
+		5AA73FBA23EC345800E38782 /* Name.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Name.swift; sourceTree = "<group>"; };
+		5AA73FBC23EC36B100E38782 /* Money.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Money.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +113,9 @@
 		5A25202F23E9792700A4FB72 /* Feisty */ = {
 			isa = PBXGroup;
 			children = (
+				5AA73FB923EC343A00E38782 /* Wrappers */,
+				5AA73FB623EC21BC00E38782 /* Managers */,
+				5AA73FAF23EC1F8700E38782 /* CommonClasses */,
 				5AA73FA823EAEB0600E38782 /* ViewControllers */,
 				5A25203023E9792700A4FB72 /* AppDelegate.swift */,
 				5A25203223E9792700A4FB72 /* SceneDelegate.swift */,
@@ -137,12 +148,37 @@
 		5AA73FA823EAEB0600E38782 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				5AA73FA523EAE9CF00E38782 /* GamesViewController.swift */,
+				5AA73FAD23EC16E000E38782 /* GamesViewController.swift */,
 				5A5C184923EAA1BD00C49076 /* MainMenuController.swift */,
 				5A25203423E9792700A4FB72 /* ViewController.swift */,
 				5AA73FA923EAEB5200E38782 /* FriendsViewController.swift */,
 			);
 			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		5AA73FAF23EC1F8700E38782 /* CommonClasses */ = {
+			isa = PBXGroup;
+			children = (
+				5AA73FB223EC218100E38782 /* Game.swift */,
+			);
+			path = CommonClasses;
+			sourceTree = "<group>";
+		};
+		5AA73FB623EC21BC00E38782 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				5AA73FB723EC21CD00E38782 /* GameManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		5AA73FB923EC343A00E38782 /* Wrappers */ = {
+			isa = PBXGroup;
+			children = (
+				5AA73FBA23EC345800E38782 /* Name.swift */,
+				5AA73FBC23EC36B100E38782 /* Money.swift */,
+			);
+			path = Wrappers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -277,11 +313,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				5A25203523E9792700A4FB72 /* ViewController.swift in Sources */,
+				5AA73FB823EC21CD00E38782 /* GameManager.swift in Sources */,
 				5A25203123E9792700A4FB72 /* AppDelegate.swift in Sources */,
 				5A25203323E9792700A4FB72 /* SceneDelegate.swift in Sources */,
 				5A5C184A23EAA1BD00C49076 /* MainMenuController.swift in Sources */,
+				5AA73FAE23EC16E000E38782 /* GamesViewController.swift in Sources */,
+				5AA73FBD23EC36B100E38782 /* Money.swift in Sources */,
+				5AA73FBB23EC345800E38782 /* Name.swift in Sources */,
 				5AA73FAA23EAEB5200E38782 /* FriendsViewController.swift in Sources */,
-				5AA73FA623EAE9CF00E38782 /* GamesViewController.swift in Sources */,
+				5AA73FB323EC218100E38782 /* Game.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

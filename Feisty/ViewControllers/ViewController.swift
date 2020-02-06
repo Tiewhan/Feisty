@@ -24,6 +24,7 @@ class ViewController: UIViewController {
         return .lightContent
     }
 
+    //When login is pressed authenticate and if valid move on
     @IBAction func loginPressed(_ sender: UIButton) {
 
         var message: String = "";
