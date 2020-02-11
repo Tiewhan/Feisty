@@ -12,7 +12,7 @@ class GamesViewController: UITableViewController, GameManagerObserver {
     
     var observerID: String = "GameListSubscriber"
     
-    private var gameManager: GameManager? = nil
+    private var gameManager: GameManager?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,7 +35,7 @@ class GamesViewController: UITableViewController, GameManagerObserver {
     // MARK: - Table view data source
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if let gameManager = gameManager{
+        if let gameManager = gameManager {
             return gameManager.gameList.count
         }
         
@@ -46,10 +46,9 @@ class GamesViewController: UITableViewController, GameManagerObserver {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "labelCell", for: indexPath)
 
-        if let gameManager = gameManager{
+        if let gameManager = gameManager {
             
             let game: Game = gameManager.gameList[indexPath.row]
-            
             cell.textLabel?.text = game.name
             cell.detailTextLabel?.text = "R\(game.price)"
 

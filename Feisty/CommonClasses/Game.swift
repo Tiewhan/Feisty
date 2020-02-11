@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Game: Codable {
+class Game: Codable {
     
     var appID: String
     var name: String
@@ -29,7 +29,7 @@ struct Game: Codable {
         
     }
     
-    func toString() -> String{
+    func toString() -> String {
         return name
     }
     

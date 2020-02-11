@@ -20,30 +20,30 @@ class ViewController: UIViewController {
     }
     
     //Changes the status bar style to lightstyle. Contrasts the dark theme of the app
-    override var preferredStatusBarStyle: UIStatusBarStyle{
+    override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
     }
 
     //When login is pressed authenticate and if valid move on
     @IBAction func loginPressed(_ sender: UIButton) {
 
-        var message: String = "";
-        var loggedIn = false;
+        var message: String = ""
+        var loggedIn = false
 
         if txtUsername.text == "tiewhan" && txtPassword.text == "cat3" {
             message = "Welcome"
-            loggedIn = true;
-        }
-        else{
+            loggedIn = true
+        } else {
             message = "Login Failed"
         }
 
         let alertController = UIAlertController(title: "Login Message", message: message, preferredStyle: .alert)
         
-        if loggedIn{
-            alertController.addAction(UIAlertAction(title: "Dismiss", style: .default, handler: { action in self.moveToMainMenu()}))
-        }
-        else{
+        if loggedIn {
+            alertController.addAction(UIAlertAction(title: "Dismiss", style: .default, handler: { _ in
+                    self.moveToMainMenu()
+                }))
+        } else {
             alertController.addAction(UIAlertAction(title: "Dismiss", style: .default))
         }
         
@@ -51,9 +51,8 @@ class ViewController: UIViewController {
 
     }
     
-    func moveToMainMenu(){
+    func moveToMainMenu() {
         performSegue(withIdentifier: "segToMain", sender: nil)
     }
     
 }
-

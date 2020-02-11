@@ -9,6 +9,6 @@
 import Foundation
 
 enum ConnectionError: Error{
-    case ConnectionError
-    case GeneralError
+    case cbonnectionError
+    case generalError
 }
