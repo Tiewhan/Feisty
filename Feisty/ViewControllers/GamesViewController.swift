@@ -8,9 +8,11 @@
 
 import UIKit
 
-class GamesViewController: UITableViewController {
-
-    private var gameManager: GameManager = GameManager();
+class GamesViewController: UITableViewController, GameManagerObserver {
+    
+    var observerID: String = "GameListSubscriber"
+    
+    private var gameManager: GameManager? = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,6 +22,10 @@ class GamesViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        
+        gameManager = GameManager()
+        gameManager?.subscribeToGameManagerObserver(subscriber: self, subscriberID: observerID)
+        
     }
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
@@ -29,24 +35,36 @@ class GamesViewController: UITableViewController {
     // MARK: - Table view data source
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return gameManager.GameList.count
+        if let gameManager = gameManager{
+            return gameManager.gameList.count
+        }
+        
+        return 0
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "labelCell", for: indexPath)
 
-        let game: Game = gameManager.GameList[indexPath.row]
-        
-        cell.textLabel?.text = game.GameName.Text
-        cell.detailTextLabel?.text = "R\(game.Price.Amount)"
+        if let gameManager = gameManager{
+            
+            let game: Game = gameManager.gameList[indexPath.row]
+            
+            cell.textLabel?.text = game.name
+            cell.detailTextLabel?.text = "R\(game.price)"
 
+        }
+        
         return cell
         
     }
     
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         return "Games In Store"
+    }
+    
+    func gamesFinishedLoading() {
+        DispatchQueue.main.sync { self.tableView.reloadData() }
     }
     
 }
