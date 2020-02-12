@@ -8,7 +8,7 @@
 
 import Foundation
 
-enum ConnectionError: Error{
+enum ConnectionError: Error {
     case cbonnectionError
     case generalError
 }

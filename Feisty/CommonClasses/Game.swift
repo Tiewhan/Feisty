@@ -8,29 +8,30 @@
 
 import Foundation
 
-class Game: Codable {
-    
+///Represents a digital game.
+class Game {
+
     var appID: String
     var name: String
     var price: Double = 0.00
-    
+
     init(gameName name: String, gamePrice price: Double) {
-        
+
         self.name = name
         self.price = price
         appID = ""
-        
+
     }
-    
+
     init(_ jsonDecodedGame: JsonGame) {
-        
+
         appID = "\(jsonDecodedGame.appid)"
         name = jsonDecodedGame.name
-        
+
     }
-    
+
     func toString() -> String {
         return name
     }
-    
+
 }

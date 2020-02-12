@@ -13,12 +13,12 @@ class ViewController: UIViewController {
     @IBOutlet weak var btnLogin: UIButton!
     @IBOutlet weak var txtUsername: UITextField!
     @IBOutlet weak var txtPassword: UITextField!
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
-    
+
     //Changes the status bar style to lightstyle. Contrasts the dark theme of the app
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
@@ -38,7 +38,7 @@ class ViewController: UIViewController {
         }
 
         let alertController = UIAlertController(title: "Login Message", message: message, preferredStyle: .alert)
-        
+
         if loggedIn {
             alertController.addAction(UIAlertAction(title: "Dismiss", style: .default, handler: { _ in
                     self.moveToMainMenu()
@@ -46,13 +46,13 @@ class ViewController: UIViewController {
         } else {
             alertController.addAction(UIAlertAction(title: "Dismiss", style: .default))
         }
-        
+
         self.present(alertController, animated: true, completion: nil)
 
     }
-    
+
     func moveToMainMenu() {
         performSegue(withIdentifier: "segToMain", sender: nil)
     }
-    
+
 }
