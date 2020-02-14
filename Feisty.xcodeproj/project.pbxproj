@@ -20,8 +20,8 @@
 		5AA73FAE23EC16E000E38782 /* GamesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA73FAD23EC16E000E38782 /* GamesViewController.swift */; };
 		5AA73FB323EC218100E38782 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA73FB223EC218100E38782 /* Game.swift */; };
 		5AA73FB823EC21CD00E38782 /* GameManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA73FB723EC21CD00E38782 /* GameManager.swift */; };
-		5AA73FBB23EC345800E38782 /* Name.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA73FBA23EC345800E38782 /* Name.swift */; };
-		5AA73FBD23EC36B100E38782 /* Money.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA73FBC23EC36B100E38782 /* Money.swift */; };
+		5AF0E09623F1378F00F136AE /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF0E09523F1378F00F136AE /* APIManager.swift */; };
+		5AF0E09823F14DF100F136AE /* GameManagerObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF0E09723F14DF100F136AE /* GameManagerObserver.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,8 +61,8 @@
 		5AA73FAD23EC16E000E38782 /* GamesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamesViewController.swift; sourceTree = "<group>"; };
 		5AA73FB223EC218100E38782 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		5AA73FB723EC21CD00E38782 /* GameManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameManager.swift; sourceTree = "<group>"; };
-		5AA73FBA23EC345800E38782 /* Name.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Name.swift; sourceTree = "<group>"; };
-		5AA73FBC23EC36B100E38782 /* Money.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Money.swift; sourceTree = "<group>"; };
+		5AF0E09523F1378F00F136AE /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		5AF0E09723F14DF100F136AE /* GameManagerObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameManagerObserver.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,7 +113,6 @@
 		5A25202F23E9792700A4FB72 /* Feisty */ = {
 			isa = PBXGroup;
 			children = (
-				5AA73FB923EC343A00E38782 /* Wrappers */,
 				5AA73FB623EC21BC00E38782 /* Managers */,
 				5AA73FAF23EC1F8700E38782 /* CommonClasses */,
 				5AA73FA823EAEB0600E38782 /* ViewControllers */,
@@ -123,6 +122,7 @@
 				5A25203923E9792700A4FB72 /* Assets.xcassets */,
 				5A25203B23E9792700A4FB72 /* LaunchScreen.storyboard */,
 				5A25203E23E9792700A4FB72 /* Info.plist */,
+				5AF0E09723F14DF100F136AE /* GameManagerObserver.swift */,
 			);
 			path = Feisty;
 			sourceTree = "<group>";
@@ -168,17 +168,9 @@
 			isa = PBXGroup;
 			children = (
 				5AA73FB723EC21CD00E38782 /* GameManager.swift */,
+				5AF0E09523F1378F00F136AE /* APIManager.swift */,
 			);
 			path = Managers;
-			sourceTree = "<group>";
-		};
-		5AA73FB923EC343A00E38782 /* Wrappers */ = {
-			isa = PBXGroup;
-			children = (
-				5AA73FBA23EC345800E38782 /* Name.swift */,
-				5AA73FBC23EC36B100E38782 /* Money.swift */,
-			);
-			path = Wrappers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -315,11 +307,11 @@
 				5A25203523E9792700A4FB72 /* ViewController.swift in Sources */,
 				5AA73FB823EC21CD00E38782 /* GameManager.swift in Sources */,
 				5A25203123E9792700A4FB72 /* AppDelegate.swift in Sources */,
+				5AF0E09823F14DF100F136AE /* GameManagerObserver.swift in Sources */,
+				5AF0E09623F1378F00F136AE /* APIManager.swift in Sources */,
 				5A25203323E9792700A4FB72 /* SceneDelegate.swift in Sources */,
 				5A5C184A23EAA1BD00C49076 /* MainMenuController.swift in Sources */,
 				5AA73FAE23EC16E000E38782 /* GamesViewController.swift in Sources */,
-				5AA73FBD23EC36B100E38782 /* Money.swift in Sources */,
-				5AA73FBB23EC345800E38782 /* Name.swift in Sources */,
 				5AA73FAA23EAEB5200E38782 /* FriendsViewController.swift in Sources */,
 				5AA73FB323EC218100E38782 /* Game.swift in Sources */,
 			);

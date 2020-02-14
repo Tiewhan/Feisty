@@ -8,30 +8,29 @@
 
 import Foundation
 
-class Game {
+struct Game: Codable {
     
-    private var name: Name
-    private var price: Money
+    var appID: String
+    var name: String
+    var price: Double = 0.00
     
-    var GameName: Name{
-        get { return name }
-        set { name = newValue }
-    }
-    
-    var Price: Money{
-        get { return price }
-        set { price = newValue }
-    }
-    
-    init(gameName name: Name, gamePrice price:Money) {
+    init(gameName name: String, gamePrice price: Double) {
         
         self.name = name
         self.price = price
+        appID = ""
+        
+    }
+    
+    init(_ jsonDecodedGame: JsonGame) {
+        
+        appID = "\(jsonDecodedGame.appid)"
+        name = jsonDecodedGame.name
         
     }
     
     func toString() -> String{
-        return name.Text
+        return name
     }
     
 }

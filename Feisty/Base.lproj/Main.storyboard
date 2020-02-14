@@ -119,7 +119,6 @@
         <!--Games-->
         <scene sceneID="wWd-h2-Cxu">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dG0-Ff-iBb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController title="Games" id="KWS-rH-oZk" customClass="GamesViewController" customModule="Feisty" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="uq1-GS-lHj">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="675"/>
@@ -159,6 +158,13 @@
                     </tableView>
                     <tabBarItem key="tabBarItem" title="Games" id="1Dt-5L-KTN"/>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dG0-Ff-iBb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <view contentMode="scaleToFill" id="RHl-Wm-RH9">
+                    <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <viewLayoutGuide key="safeArea" id="pfu-Ft-Oo8"/>
+                </view>
             </objects>
             <point key="canvasLocation" x="2072.8000000000002" y="-488.00599700149928"/>
         </scene>
