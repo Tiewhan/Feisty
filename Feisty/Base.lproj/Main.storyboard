@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina5_9" orientation="portrait" appearance="light"/>
+    <device id="ipad12_9rounded" orientation="portrait" layout="fullscreen" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -12,19 +12,47 @@
             <objects>
                 <viewController title="Login Screen" id="BYZ-38-t0r" customClass="ViewController" customModule="Feisty" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="center" id="8bC-Xf-vdC" userLabel="Login">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="square.and.arrow.down" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="7QS-9L-d92">
-                                <rect key="frame" x="115.66666666666669" y="103.99999999999999" width="144" height="143.66666666666669"/>
+                                <rect key="frame" x="440" y="60" width="144" height="144"/>
                                 <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="7QS-9L-d92" secondAttribute="height" multiplier="1:1" id="0b6-jw-wYf"/>
-                                    <constraint firstAttribute="height" constant="144" id="8us-OV-TwF"/>
+                                    <constraint firstAttribute="height" priority="999" constant="144" id="8us-OV-TwF"/>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="100" id="GXh-EU-GPd"/>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="144" id="OZf-oo-Yk8"/>
                                 </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="GXh-EU-GPd"/>
+                                        <exclude reference="OZf-oo-Yk8"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=compact-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="GXh-EU-GPd"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=compact-widthClass=regular">
+                                    <mask key="constraints">
+                                        <include reference="GXh-EU-GPd"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="OZf-oo-Yk8"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <mask key="constraints">
+                                        <include reference="OZf-oo-Yk8"/>
+                                    </mask>
+                                </variation>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="ng2-Cb-083">
-                                <rect key="frame" x="62.666666666666657" y="328" width="249.99999999999997" height="80"/>
+                                <rect key="frame" x="387" y="284" width="250" height="80"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Fa9-ia-2r4">
                                         <rect key="frame" x="0.0" y="0.0" width="250" height="34"/>
@@ -52,11 +80,11 @@
                                 </constraints>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YKP-Xa-PfI">
-                                <rect key="frame" x="109.33333333333333" y="518" width="156.33333333333337" height="46"/>
+                                <rect key="frame" x="434" y="474" width="156" height="46"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="YKP-Xa-PfI" secondAttribute="height" multiplier="67:55" constant="100" id="aKU-vX-r1v"/>
-                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="120" id="fUA-pk-C9h"/>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="180" id="fUA-pk-C9h"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="28"/>
                                 <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -80,18 +108,52 @@
                             <constraint firstItem="7QS-9L-d92" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="60" id="Nyd-lt-Vlv"/>
                             <constraint firstItem="7QS-9L-d92" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Qxm-AC-v3y"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ng2-Cb-083" secondAttribute="trailing" priority="999" constant="25" id="TBn-MG-WbU"/>
+                            <constraint firstItem="YKP-Xa-PfI" firstAttribute="top" secondItem="ng2-Cb-083" secondAttribute="bottom" constant="40" id="YFm-tM-bir"/>
                             <constraint firstItem="ng2-Cb-083" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" priority="999" constant="25" id="bVT-ZA-Iey"/>
                             <constraint firstItem="ng2-Cb-083" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="h10-A2-6su"/>
-                            <constraint firstItem="ng2-Cb-083" firstAttribute="top" secondItem="7QS-9L-d92" secondAttribute="bottom" constant="80" id="iLF-Yd-Kn4"/>
+                            <constraint firstItem="ng2-Cb-083" firstAttribute="top" secondItem="7QS-9L-d92" secondAttribute="bottom" constant="50" id="iLF-Yd-Kn4"/>
                             <constraint firstItem="YKP-Xa-PfI" firstAttribute="top" secondItem="ng2-Cb-083" secondAttribute="bottom" constant="110" id="pMu-Fy-hOc"/>
+                            <constraint firstItem="ng2-Cb-083" firstAttribute="top" secondItem="7QS-9L-d92" secondAttribute="bottom" constant="80" id="zC8-J2-pxO"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="iLF-Yd-Kn4"/>
+                                <exclude reference="zC8-J2-pxO"/>
+                                <exclude reference="YFm-tM-bir"/>
+                                <exclude reference="pMu-Fy-hOc"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=compact-widthClass=compact">
+                            <mask key="constraints">
+                                <include reference="iLF-Yd-Kn4"/>
+                                <include reference="YFm-tM-bir"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=compact-widthClass=regular">
+                            <mask key="constraints">
+                                <include reference="iLF-Yd-Kn4"/>
+                                <include reference="YFm-tM-bir"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="constraints">
+                                <include reference="zC8-J2-pxO"/>
+                                <include reference="pMu-Fy-hOc"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=regular">
+                            <mask key="constraints">
+                                <include reference="zC8-J2-pxO"/>
+                                <include reference="pMu-Fy-hOc"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" id="seA-Ba-3dH"/>
                     <connections>
-                        <outlet property="btnLogin" destination="YKP-Xa-PfI" id="Low-d3-YTY"/>
-                        <outlet property="txtPassword" destination="aan-iG-gdG" id="5AM-0D-ZoR"/>
-                        <outlet property="txtUsername" destination="Fa9-ia-2r4" id="60k-wk-TPY"/>
+                        <outlet property="btnLogin" destination="YKP-Xa-PfI" id="Kza-yD-GYD"/>
+                        <outlet property="txtPassword" destination="aan-iG-gdG" id="kA4-Qk-waz"/>
+                        <outlet property="txtUsername" destination="Fa9-ia-2r4" id="Efr-3E-XZC"/>
                         <segue destination="wqE-Ev-LHd" kind="show" identifier="segToMain" id="MuO-bC-Rse"/>
                     </connections>
                 </viewController>
@@ -104,7 +166,7 @@
             <objects>
                 <viewController title="Friend Scene" id="UN3-mA-ItT" customClass="FriendsViewController" customModule="Feisty" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0Js-66-2i4">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="675"/>
+                        <rect key="frame" x="0.0" y="0.0" width="712" height="956.92005640964362"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -121,7 +183,7 @@
             <objects>
                 <viewController title="Games" id="KWS-rH-oZk" customClass="GamesViewController" customModule="Feisty" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="uq1-GS-lHj">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="675"/>
+                        <rect key="frame" x="0.0" y="0.0" width="712" height="956.92005640964362"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -130,21 +192,21 @@
                         <color key="sectionIndexBackgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="labelCell" textLabel="k9A-Dq-Rpx" detailTextLabel="7Ax-7I-u0v" style="IBUITableViewCellStyleSubtitle" id="SMN-8E-Z0c">
-                                <rect key="frame" x="0.0" y="28" width="375" height="55.666667938232422"/>
+                                <rect key="frame" x="0.0" y="28" width="712" height="55.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="SMN-8E-Z0c" id="L9D-vL-bjA">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="55.666667938232422"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="712" height="55.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Simple Game Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="k9A-Dq-Rpx">
-                                            <rect key="frame" x="16" y="8.9999999999999982" width="139" height="20.333333333333332"/>
+                                            <rect key="frame" x="20" y="10" width="139" height="20.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="7Ax-7I-u0v">
-                                            <rect key="frame" x="15.999999999999996" y="31.333333333333332" width="43.666666666666664" height="14.333333333333334"/>
+                                            <rect key="frame" x="20" y="31.5" width="44" height="14.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                             <nil key="textColor"/>
@@ -159,12 +221,6 @@
                     <tabBarItem key="tabBarItem" title="Games" id="1Dt-5L-KTN"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dG0-Ff-iBb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <view contentMode="scaleToFill" id="RHl-Wm-RH9">
-                    <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                    <viewLayoutGuide key="safeArea" id="pfu-Ft-Oo8"/>
-                </view>
             </objects>
             <point key="canvasLocation" x="2072.8000000000002" y="-488.00599700149928"/>
         </scene>

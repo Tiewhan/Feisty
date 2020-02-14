@@ -8,7 +8,7 @@
 
 import Foundation
 
-class GameManager{
+class GameManager {
 
     var gameList: [Game] = []
     var observers: [String: GameManagerObserver] = [:]
@@ -39,15 +39,31 @@ class GameManager{
 
     }
 
-    func subscribeToGameManagerObserver(subscriber observer: GameManagerObserver, subscriberID observerID: String) {
+  /**
+   Allows class and structs that confrom to the GameManagerObserver protocol to react to
+   certain events triggered by the manager
+   
+   - Parameter observer: The class/struct that conforms to the GameManagerObserver protocol
+   - Parameter observerID: The unique ID that is needed to identify the observer
+   */
+    func subscribeToGameManager(subscriber observer: GameManagerObserver,
+                                        subscriberID observerID: String) -> Void {
       observers[observerID] = observer
     }
 
-    func unsubscribeFromGameManagerObserver(subscriber observer: GameManagerObserver, subscriberID observerID: String) {
+  /**
+   Removes a class/struct from the list of subsrcibers that get notified about GameManager events
+   
+   - Parameter observerID: The ID of the observer to remove from the list
+   */
+    func unsubscribeFromGameManager(subscriberID observerID: String) -> Void {
       observers.removeValue(forKey: observerID)
     }
 
-    func notifyAllObservers() {
+  /**
+   Iterates through of the GameManagerOservers and notifies all of them about an event.
+   */
+    private func notifyAllObservers() -> Void{
       observers.forEach({ (observer) in
         observer.value.gamesFinishedLoading()
       })

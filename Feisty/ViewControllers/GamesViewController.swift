@@ -8,7 +8,7 @@
 
 import UIKit
 
-class GamesViewController: UITableViewController, GameManagerObserver {
+class GamesViewController: UITableViewController {
 
     var observerID: String = "GameListSubscriber"
 
@@ -18,7 +18,7 @@ class GamesViewController: UITableViewController, GameManagerObserver {
         super.viewDidLoad()
 
         gameManager = GameManager()
-        gameManager?.subscribeToGameManagerObserver(subscriber: self, subscriberID: observerID)
+        gameManager?.subscribeToGameManager(subscriber: self, subscriberID: observerID)
 
     }
 
@@ -56,8 +56,12 @@ class GamesViewController: UITableViewController, GameManagerObserver {
         return "Games In Store"
     }
 
-    func gamesFinishedLoading() {
-        DispatchQueue.main.sync { self.tableView.reloadData() }
-    }
+}
+
+extension GamesViewController: GameManagerObserver {
+
+  func gamesFinishedLoading() {
+      DispatchQueue.main.sync { self.tableView.reloadData() }
+  }
 
 }
