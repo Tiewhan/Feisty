@@ -8,54 +8,65 @@
 
 import Foundation
 
-class GameManager{
-    
+class GameManager {
+
     var gameList: [Game] = []
-    var observers: Dictionary<String, GameManagerObserver> = [:]
-    
-    init(){
-        
-//        gameList.append(Game(gameName: "Monster Hunter: World", gamePrice: 1000.00))
-//        gameList.append(Game(gameName: "The Sims 4", gamePrice: 600.00))
-//        gameList.append(Game(gameName: "The Sims 3", gamePrice: 600.00))
-//        gameList.append(Game(gameName: "DoTA", gamePrice: 0))
-        
-        let apiManager: ApiManager = ApiManager()
-        
-        apiManager.getGames(){ (games) in
-            
-            var smallGameList: [Game] = []
-            
-            //This limit exists until sectioning with the table works.
-            let size: Int = games.count >= 25 ? 25 : games.count
-            
-            if games.count >= 1 {
-                
-                for index in 0...(size - 1) {
-                    smallGameList.append(games[index])
-                }
-                
-                self.gameList = smallGameList
-                self.notifyAllObservers()
-                
-            }
-            
+    var observers: [String: GameManagerObserver] = [:]
+
+    init() {
+
+      let apiManager: APIManager = APIManager()
+
+      apiManager.getGames { (games) in
+
+        var smallGameList: [Game] = []
+
+        //This limit exists until sectioning with the table works.
+        let size: Int = games.count >= 25 ? 25 : games.count
+
+        if games.count >= 1 {
+
+          for index in 0...(size - 1) {
+              smallGameList.append(games[index])
+          }
+
+          self.gameList = smallGameList
+          self.notifyAllObservers()
+
         }
-        
+
+      }
+
     }
-    
-    func subscribeToGameManagerObserver(subscriber observer: GameManagerObserver, subscriberID observerID: String){
-        observers[observerID] = observer
+
+  /**
+   Allows class and structs that confrom to the GameManagerObserver protocol to react to
+   certain events triggered by the manager
+   
+   - Parameter observer: The class/struct that conforms to the GameManagerObserver protocol
+   - Parameter observerID: The unique ID that is needed to identify the observer
+   */
+    func subscribeToGameManager(subscriber observer: GameManagerObserver,
+                                        subscriberID observerID: String) -> Void {
+      observers[observerID] = observer
     }
-    
-    func unsubscribeFromGameManagerObserver(subscriber observer: GameManagerObserver, subscriberID observerID: String){
-        observers.removeValue(forKey: observerID)
+
+  /**
+   Removes a class/struct from the list of subsrcibers that get notified about GameManager events
+   
+   - Parameter observerID: The ID of the observer to remove from the list
+   */
+    func unsubscribeFromGameManager(subscriberID observerID: String) -> Void {
+      observers.removeValue(forKey: observerID)
     }
-    
-    func notifyAllObservers() {
-        observers.forEach({ (observer) in
-            observer.value.gamesFinishedLoading()
-        })
+
+  /**
+   Iterates through of the GameManagerOservers and notifies all of them about an event.
+   */
+    private func notifyAllObservers() -> Void{
+      observers.forEach({ (observer) in
+        observer.value.gamesFinishedLoading()
+      })
     }
 
 }

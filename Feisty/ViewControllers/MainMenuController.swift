@@ -8,11 +8,11 @@
 
 import UIKit
 
-class MainMenuController: UITabBarController{
-    
+class MainMenuController: UITabBarController {
+
     //Changes the status bar style to lightstyle. Contrasts the dark theme of the app
-    override var preferredStatusBarStyle: UIStatusBarStyle{
+    override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
     }
-    
+
 }

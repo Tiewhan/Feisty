@@ -9,8 +9,6 @@
 import Foundation
 
 protocol GameManagerObserver {
-    
     var observerID: String { get set }
     func gamesFinishedLoading()
-    
 }
