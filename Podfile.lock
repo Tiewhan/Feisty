@@ -1,0 +1,16 @@
+PODS:
+  - CommonFiles (0.1.0)
+
+DEPENDENCIES:
+  - CommonFiles (from `/Users/tsmith/Documents/Feisty/CommonFiles`)
+
+EXTERNAL SOURCES:
+  CommonFiles:
+    :path: "/Users/tsmith/Documents/Feisty/CommonFiles"
+
+SPEC CHECKSUMS:
+  CommonFiles: f3d436f6e0669019c9545c739fc2e9c7614dd87a
+
+PODFILE CHECKSUM: 47a8010d19302b8a7b7ecb844edcd05774ef2745
+
+COCOAPODS: 1.8.4
