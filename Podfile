@@ -11,11 +11,13 @@ pod 'CommonFiles', :git => 'https://github.com/Tiewhan/FeistyCommonFiles.git'
   target 'FeistyTests' do
     inherit! :search_paths
     # Pods for testing
+    pod 'CommonFiles', :git => 'https://github.com/Tiewhan/FeistyCommonFiles.git'
   end
 
   target 'FeistyUITests' do
 inherit! :search_paths
     # Pods for testing
+    pod 'CommonFiles', :git => 'https://github.com/Tiewhan/FeistyCommonFiles.git'
   end
 
 end
