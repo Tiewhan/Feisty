@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import CommonFiles
 
 class GameManager {
 

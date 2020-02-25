@@ -6,6 +6,7 @@
 //  Copyright © 2020 DVT. All rights reserved.
 //
 import UIKit
+import CommonFiles
 
 /// Represents an individual cell for the Game Table View
 class GameTableViewCell: UITableViewCell {

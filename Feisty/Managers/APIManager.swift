@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import CommonFiles
 
 ///Structure is only used to model JSON respones. Contains the a structure of Apps
 private struct AppList: Codable {
