@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import CommonFiles
 
 ///Structure is only used to model JSON respones. Contains the a structure of Apps
 private struct AppList: Codable {
@@ -65,7 +66,7 @@ struct APIManager {
           var games: [Game] = []
 
           decodedGames.applist.apps.forEach { (jsonGame) in
-              games.append(Game(jsonGame))
+            games.append(Game(appid: "\(jsonGame.appid)", name: jsonGame.name))
           }
 
           completionHandler(games)
