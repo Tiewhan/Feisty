@@ -1,0 +1,8 @@
+# Mac OS
+*.DS_Store
+
+# Pods
+/Pods
+
+# userdata
+xcuserdata/
