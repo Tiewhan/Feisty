@@ -16,6 +16,7 @@
 		5A25204823E9792700A4FB72 /* FeistyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A25204723E9792700A4FB72 /* FeistyTests.swift */; };
 		5A25205323E9792700A4FB72 /* FeistyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A25205223E9792700A4FB72 /* FeistyUITests.swift */; };
 		5A5C184A23EAA1BD00C49076 /* MainMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A5C184923EAA1BD00C49076 /* MainMenuController.swift */; };
+		5A8D210524050C70001578AE /* GameDetailsControllersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A8D210424050C70001578AE /* GameDetailsControllersViewController.swift */; };
 		5AA73FAA23EAEB5200E38782 /* FriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA73FA923EAEB5200E38782 /* FriendsViewController.swift */; };
 		5AA73FAE23EC16E000E38782 /* GamesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA73FAD23EC16E000E38782 /* GamesViewController.swift */; };
 		5AA73FB323EC218100E38782 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA73FB223EC218100E38782 /* Game.swift */; };
@@ -57,6 +58,7 @@
 		5A25205223E9792700A4FB72 /* FeistyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeistyUITests.swift; sourceTree = "<group>"; };
 		5A25205423E9792700A4FB72 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5A5C184923EAA1BD00C49076 /* MainMenuController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuController.swift; sourceTree = "<group>"; };
+		5A8D210424050C70001578AE /* GameDetailsControllersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameDetailsControllersViewController.swift; sourceTree = "<group>"; };
 		5AA73FA923EAEB5200E38782 /* FriendsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsViewController.swift; sourceTree = "<group>"; };
 		5AA73FAD23EC16E000E38782 /* GamesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamesViewController.swift; sourceTree = "<group>"; };
 		5AA73FB223EC218100E38782 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
@@ -152,6 +154,7 @@
 				5A5C184923EAA1BD00C49076 /* MainMenuController.swift */,
 				5A25203423E9792700A4FB72 /* ViewController.swift */,
 				5AA73FA923EAEB5200E38782 /* FriendsViewController.swift */,
+				5A8D210424050C70001578AE /* GameDetailsControllersViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -332,6 +335,7 @@
 				5AF0E09623F1378F00F136AE /* APIManager.swift in Sources */,
 				5A25203323E9792700A4FB72 /* SceneDelegate.swift in Sources */,
 				5A5C184A23EAA1BD00C49076 /* MainMenuController.swift in Sources */,
+				5A8D210524050C70001578AE /* GameDetailsControllersViewController.swift in Sources */,
 				5AA73FAE23EC16E000E38782 /* GamesViewController.swift in Sources */,
 				5AA73FAA23EAEB5200E38782 /* FriendsViewController.swift in Sources */,
 				5AA73FB323EC218100E38782 /* Game.swift in Sources */,

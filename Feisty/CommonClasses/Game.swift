@@ -9,29 +9,33 @@
 import Foundation
 
 ///Represents a digital game.
-class Game {
+public class Game {
 
-    var appID: String
-    var name: String
-    var price: Double = 0.00
+  public var appID: String
+  public var name: String
+  public var price: Double = 0.00
 
-    init(gameName name: String, gamePrice price: Double) {
+  public init(gameName name: String, gamePrice price: Double) {
 
-        self.name = name
-        self.price = price
-        appID = ""
+    self.name = name
+    self.price = price
+    appID = ""
 
-    }
+  }
 
-    init(_ jsonDecodedGame: JsonGame) {
+  public init(appid: String, name: String) {
 
-        appID = "\(jsonDecodedGame.appid)"
-        name = jsonDecodedGame.name
+    appID = "\(appid)"
+    self.name = name
 
-    }
+  }
 
-    func toString() -> String {
-        return name
-    }
+  public func toString() -> String {
+    return name
+  }
+
+  public func reduceMemoryLoad() {
+
+  }
 
 }
