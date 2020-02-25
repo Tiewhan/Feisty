@@ -6,10 +6,12 @@ target 'Feisty' do
 
   target 'FeistyTests' do
     inherit! :search_paths
+    pod 'CommonFiles', :git => 'https://github.com/Tiewhan/FeistyCommonFiles.git'
   end
 
   target 'FeistyUITests' do
     inherit! :search_paths
+    pod 'CommonFiles', :git => 'https://github.com/Tiewhan/FeistyCommonFiles.git'
   end
 
 end
