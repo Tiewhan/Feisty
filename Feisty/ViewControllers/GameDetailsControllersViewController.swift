@@ -6,6 +6,7 @@
 //  Copyright © 2020 DVT. All rights reserved.
 //
 import UIKit
+import CommonFiles
 
 class GameDetailsController: UIViewController {
 
