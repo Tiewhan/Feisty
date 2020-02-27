@@ -19,6 +19,9 @@
 		5A25205323E9792700A4FB72 /* FeistyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A25205223E9792700A4FB72 /* FeistyUITests.swift */; };
 		5A5C184A23EAA1BD00C49076 /* MainMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A5C184923EAA1BD00C49076 /* MainMenuController.swift */; };
 		5A8D210524050C70001578AE /* GameDetailsControllersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A8D210424050C70001578AE /* GameDetailsControllersViewController.swift */; };
+		5A8D211D2407B5B4001578AE /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A8D211C2407B5B4001578AE /* LoginViewModel.swift */; };
+		5A8D211F2407B709001578AE /* LoginType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A8D211E2407B709001578AE /* LoginType.swift */; };
+		5A8D21212407CEE6001578AE /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A8D21202407CEE6001578AE /* LoginModel.swift */; };
 		5AA73FAA23EAEB5200E38782 /* FriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA73FA923EAEB5200E38782 /* FriendsViewController.swift */; };
 		5AA73FAE23EC16E000E38782 /* GamesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA73FAD23EC16E000E38782 /* GamesViewController.swift */; };
 		5AA73FB823EC21CD00E38782 /* GameManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA73FB723EC21CD00E38782 /* GameManager.swift */; };
@@ -64,6 +67,9 @@
 		5A25205423E9792700A4FB72 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5A5C184923EAA1BD00C49076 /* MainMenuController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuController.swift; sourceTree = "<group>"; };
 		5A8D210424050C70001578AE /* GameDetailsControllersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameDetailsControllersViewController.swift; sourceTree = "<group>"; };
+		5A8D211C2407B5B4001578AE /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		5A8D211E2407B709001578AE /* LoginType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginType.swift; sourceTree = "<group>"; };
+		5A8D21202407CEE6001578AE /* LoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
 		5AA73FA923EAEB5200E38782 /* FriendsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsViewController.swift; sourceTree = "<group>"; };
 		5AA73FAD23EC16E000E38782 /* GamesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamesViewController.swift; sourceTree = "<group>"; };
 		5AA73FB723EC21CD00E38782 /* GameManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameManager.swift; sourceTree = "<group>"; };
@@ -130,6 +136,7 @@
 		5A25202F23E9792700A4FB72 /* Feisty */ = {
 			isa = PBXGroup;
 			children = (
+				5A8D21192407B466001578AE /* Login */,
 				5AA73FB623EC21BC00E38782 /* Managers */,
 				5AA73FA823EAEB0600E38782 /* ViewControllers */,
 				5A25203023E9792700A4FB72 /* AppDelegate.swift */,
@@ -161,12 +168,22 @@
 			path = FeistyUITests;
 			sourceTree = "<group>";
 		};
+		5A8D21192407B466001578AE /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				5A25203423E9792700A4FB72 /* ViewController.swift */,
+				5A8D211C2407B5B4001578AE /* LoginViewModel.swift */,
+				5A8D211E2407B709001578AE /* LoginType.swift */,
+				5A8D21202407CEE6001578AE /* LoginModel.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
 		5AA73FA823EAEB0600E38782 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
 				5AA73FAD23EC16E000E38782 /* GamesViewController.swift */,
 				5A5C184923EAA1BD00C49076 /* MainMenuController.swift */,
-				5A25203423E9792700A4FB72 /* ViewController.swift */,
 				5AA73FA923EAEB5200E38782 /* FriendsViewController.swift */,
 				5A8D210424050C70001578AE /* GameDetailsControllersViewController.swift */,
 			);
@@ -483,10 +500,13 @@
 				5A25203523E9792700A4FB72 /* ViewController.swift in Sources */,
 				5AA73FB823EC21CD00E38782 /* GameManager.swift in Sources */,
 				5A25203123E9792700A4FB72 /* AppDelegate.swift in Sources */,
+				5A8D211F2407B709001578AE /* LoginType.swift in Sources */,
 				5AF0E09823F14DF100F136AE /* GameManagerObserver.swift in Sources */,
 				5AF0E09623F1378F00F136AE /* APIManager.swift in Sources */,
 				5A25203323E9792700A4FB72 /* SceneDelegate.swift in Sources */,
 				5A5C184A23EAA1BD00C49076 /* MainMenuController.swift in Sources */,
+				5A8D21212407CEE6001578AE /* LoginModel.swift in Sources */,
+				5A8D211D2407B5B4001578AE /* LoginViewModel.swift in Sources */,
 				5A8D210524050C70001578AE /* GameDetailsControllersViewController.swift in Sources */,
 				5AA73FAE23EC16E000E38782 /* GamesViewController.swift in Sources */,
 				5AA73FAA23EAEB5200E38782 /* FriendsViewController.swift in Sources */,
