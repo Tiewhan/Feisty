@@ -52,7 +52,7 @@ extension ViewController: LoginType {
   
   func authenticationSuccess() {
     
-    createandShowAlert(message: "Successfully Logged In") { [weak self] _ in
+    createAndShowAlert(message: "Successfully Logged In") { [weak self] _ in
       self?.moveToMainMenu()
     }
     
@@ -60,11 +60,11 @@ extension ViewController: LoginType {
   
   func authenticationFailure() {
     
-    createandShowAlert(message: "Failed To Log In") { _ in }
+    createAndShowAlert(message: "Failed To Log In") { _ in }
     
   }
   
-  func createandShowAlert(message: String, handler: @escaping((UIAlertAction) -> Void)) {
+  func createAndShowAlert(message: String, handler: @escaping((UIAlertAction) -> Void)) {
     
     let alertController = UIAlertController(title: "Login Message", message: "", preferredStyle: .alert)
     alertController.message = message

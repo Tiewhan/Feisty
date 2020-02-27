@@ -16,6 +16,15 @@ class LoginViewModel {
     self.view = view
   }
   
+  /**
+   Call on the LoginModel to attempt a login with the given details.
+   Calls authenticationSuccess() on the ViewModel view if successful
+   Calls authenticationFailure() on the ViewModel view if failed
+   
+   - Parameters:
+    - userName: The username of the user
+    - password: The password of the user
+   */
   func attemptLogin(with userName: String, and password: String) {
     
     let model = LoginModel()

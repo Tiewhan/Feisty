@@ -8,6 +8,7 @@
 
 import Foundation
 
+///Represents a view that has to do with responding to authentication or not
 protocol LoginType: AnyObject {
   
   func authenticationSuccess()
