@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="ipad12_9rounded" orientation="portrait" layout="fullscreen" appearance="light"/>
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -12,11 +12,11 @@
             <objects>
                 <viewController title="Login Screen" id="BYZ-38-t0r" customClass="ViewController" customModule="Feisty" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="center" id="8bC-Xf-vdC" userLabel="Login">
-                        <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="square.and.arrow.down" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="7QS-9L-d92">
-                                <rect key="frame" x="440" y="60" width="144" height="144"/>
+                                <rect key="frame" x="135" y="59.999999999999986" width="144" height="143.66666666666669"/>
                                 <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="7QS-9L-d92" secondAttribute="height" multiplier="1:1" id="0b6-jw-wYf"/>
@@ -52,7 +52,7 @@
                                 </variation>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="ng2-Cb-083">
-                                <rect key="frame" x="387" y="284" width="250" height="80"/>
+                                <rect key="frame" x="82" y="284" width="250" height="80"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Fa9-ia-2r4">
                                         <rect key="frame" x="0.0" y="0.0" width="250" height="34"/>
@@ -80,7 +80,7 @@
                                 </constraints>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YKP-Xa-PfI">
-                                <rect key="frame" x="434" y="474" width="156" height="46"/>
+                                <rect key="frame" x="129" y="474" width="156" height="46"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="YKP-Xa-PfI" secondAttribute="height" multiplier="67:55" constant="100" id="aKU-vX-r1v"/>
@@ -166,7 +166,7 @@
             <objects>
                 <viewController title="Friend Scene" id="UN3-mA-ItT" customClass="FriendsViewController" customModule="Feisty" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0Js-66-2i4">
-                        <rect key="frame" x="0.0" y="0.0" width="712" height="956.92005640964362"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -178,51 +178,163 @@
             </objects>
             <point key="canvasLocation" x="2134" y="416"/>
         </scene>
+        <!--Item-->
+        <scene sceneID="Shv-BQ-ZwN">
+            <objects>
+                <navigationController id="ene-Cn-Xsc" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="FzE-lg-e4D"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="jht-Kj-66G">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="KWS-rH-oZk" kind="relationship" relationship="rootViewController" id="0Ib-7l-MiX"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="T6L-O4-YbQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1871" y="-488"/>
+        </scene>
         <!--Games-->
         <scene sceneID="wWd-h2-Cxu">
             <objects>
                 <viewController title="Games" id="KWS-rH-oZk" customClass="GamesViewController" customModule="Feisty" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="uq1-GS-lHj">
-                        <rect key="frame" x="0.0" y="0.0" width="712" height="956.92005640964362"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="separatorColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
                         <color key="sectionIndexColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="sectionIndexBackgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                        <activityIndicatorView key="tableFooterView" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="large" id="2ZQ-SA-f8T">
+                            <rect key="frame" x="0.0" y="112.66666793823241" width="414" height="44.000000000000014"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="color" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </activityIndicatorView>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="labelCell" textLabel="k9A-Dq-Rpx" detailTextLabel="7Ax-7I-u0v" style="IBUITableViewCellStyleSubtitle" id="SMN-8E-Z0c">
-                                <rect key="frame" x="0.0" y="28" width="712" height="55.5"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="GameCell" id="SMN-8E-Z0c" customClass="GameTableViewCell" customModule="Feisty" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="414" height="56.666667938232422"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="SMN-8E-Z0c" id="L9D-vL-bjA">
-                                    <rect key="frame" x="0.0" y="0.0" width="712" height="55.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="56.666667938232422"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Simple Game Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="k9A-Dq-Rpx">
-                                            <rect key="frame" x="20" y="10" width="139" height="20.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="7Ax-7I-u0v">
-                                            <rect key="frame" x="20" y="31.5" width="44" height="14.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="E49-Di-AM4">
+                                            <rect key="frame" x="10" y="2" width="394" height="52.666666666666664"/>
+                                            <subviews>
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" text="Game Name" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tf6-wW-YPy">
+                                                    <rect key="frame" x="0.0" y="0.0" width="394" height="35.666666666666664"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                </textView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AcT-pe-Jbq">
+                                                    <rect key="frame" x="0.0" y="35.666666666666664" width="394" height="17"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </stackView>
                                     </subviews>
+                                    <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="E49-Di-AM4" secondAttribute="bottom" constant="2" id="6iD-7D-kMr"/>
+                                        <constraint firstAttribute="trailing" secondItem="E49-Di-AM4" secondAttribute="trailing" constant="10" id="7nN-Xw-4JH"/>
+                                        <constraint firstItem="E49-Di-AM4" firstAttribute="top" secondItem="L9D-vL-bjA" secondAttribute="top" constant="2" id="A0d-ld-IFC"/>
+                                        <constraint firstItem="E49-Di-AM4" firstAttribute="leading" secondItem="L9D-vL-bjA" secondAttribute="leading" constant="10" id="mMB-ck-dlL"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                <connections>
+                                    <outlet property="detailsStackView" destination="E49-Di-AM4" id="EnI-WV-LbM"/>
+                                    <outlet property="txtGamePrice" destination="AcT-pe-Jbq" id="OND-f3-YUv"/>
+                                    <outlet property="txtViewGameName" destination="Tf6-wW-YPy" id="lmt-fx-edJ"/>
+                                    <segue destination="5A0-Lk-Doh" kind="show" identifier="showGameDetails" id="y88-HK-PCh"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <sections/>
                     </tableView>
                     <tabBarItem key="tabBarItem" title="Games" id="1Dt-5L-KTN"/>
+                    <navigationItem key="navigationItem" title="Games" id="tDU-p9-MuY"/>
+                    <connections>
+                        <outlet property="activityIndicator" destination="2ZQ-SA-f8T" id="dIm-w1-F3M"/>
+                        <outlet property="mainView" destination="uq1-GS-lHj" id="TBA-tt-Asp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dG0-Ff-iBb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2072.8000000000002" y="-488.00599700149928"/>
+            <point key="canvasLocation" x="2997" y="-488"/>
+        </scene>
+        <!--Game Details Controller-->
+        <scene sceneID="CIU-jU-KhV">
+            <objects>
+                <viewController id="5A0-Lk-Doh" customClass="GameDetailsController" customModule="Feisty" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8wm-Dq-EDX">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="l3g-JF-XDo">
+                                <rect key="frame" x="20" y="66" width="374" height="601"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="cM3-zL-HgI">
+                                        <rect key="frame" x="5" y="0.0" width="364" height="75.333333333333329"/>
+                                        <subviews>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" text="Game Name" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QDv-q9-sDs">
+                                                <rect key="frame" x="0.0" y="0.0" width="364" height="42.333333333333336"/>
+                                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="22"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" text="AppID" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fpo-b0-lzY">
+                                                <rect key="frame" x="0.0" y="42.333333333333329" width="364" height="33"/>
+                                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="cM3-zL-HgI" firstAttribute="top" secondItem="l3g-JF-XDo" secondAttribute="top" id="4gW-yi-wI5"/>
+                                    <constraint firstItem="cM3-zL-HgI" firstAttribute="leading" secondItem="l3g-JF-XDo" secondAttribute="leading" constant="5" id="kAN-gn-XrO"/>
+                                    <constraint firstAttribute="trailing" secondItem="cM3-zL-HgI" secondAttribute="trailing" constant="5" id="yeF-Sp-2Ms"/>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="600" id="zcK-uo-bS0"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="bcV-lk-UEE" firstAttribute="trailing" secondItem="l3g-JF-XDo" secondAttribute="trailing" priority="750" constant="20" id="IMj-az-hUS"/>
+                            <constraint firstItem="l3g-JF-XDo" firstAttribute="leading" secondItem="bcV-lk-UEE" secondAttribute="leading" priority="750" constant="20" id="K7a-6D-Iyb"/>
+                            <constraint firstItem="l3g-JF-XDo" firstAttribute="centerX" secondItem="bcV-lk-UEE" secondAttribute="centerX" id="VjP-th-g3r"/>
+                            <constraint firstItem="l3g-JF-XDo" firstAttribute="top" secondItem="bcV-lk-UEE" secondAttribute="top" constant="10" id="b3d-dE-jfQ"/>
+                            <constraint firstItem="bcV-lk-UEE" firstAttribute="bottom" secondItem="l3g-JF-XDo" secondAttribute="bottom" id="dfS-aq-OaQ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="bcV-lk-UEE"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="i5f-mN-x10"/>
+                    <connections>
+                        <outlet property="gameNameLabel" destination="QDv-q9-sDs" id="gtC-DN-QYD"/>
+                        <outlet property="lblAppID" destination="Fpo-b0-lzY" id="Z9I-K8-qSV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="djY-yJ-YRJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3818.8405797101454" y="-488.16964285714283"/>
         </scene>
         <!--Main Menu-->
         <scene sceneID="Rmp-r6-mxT">
@@ -238,7 +350,7 @@
                         <color key="selectedImageTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="KWS-rH-oZk" kind="relationship" relationship="viewControllers" id="fse-yY-mNi"/>
+                        <segue destination="ene-Cn-Xsc" kind="relationship" relationship="viewControllers" id="Et7-2W-cgh"/>
                         <segue destination="UN3-mA-ItT" kind="relationship" relationship="viewControllers" id="10B-4f-mYy"/>
                     </connections>
                 </tabBarController>
