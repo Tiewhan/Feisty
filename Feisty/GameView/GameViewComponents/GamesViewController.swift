@@ -121,6 +121,9 @@ class GamesViewController: UITableViewController {
 
   }
   
+  /**
+   Stops to the activity indicator on the main thread by async
+   */
   private func stopActivityIndicator() {
     
     DispatchQueue.main.async { [weak self] in
@@ -129,6 +132,9 @@ class GamesViewController: UITableViewController {
     
   }
   
+  /**
+   Reload the table data on the main thread by synced
+   */
   private func reloadTableData() {
     DispatchQueue.main.sync { [weak self] in
       self?.tableView.reloadData()
@@ -137,8 +143,16 @@ class GamesViewController: UITableViewController {
 
 }
 
+/**
+ Extend the ViewController with the GameDataLoadedType from the MVVC architecture
+ */
 extension GamesViewController: GameDataLoadedType {
   
+  /**
+   When the View Model finished loading the data this function will be invoked
+   
+   - Parameter data: The data that was retrieved from the View Model
+   */
   func gameDataSuccessfullyLoaded(with data: [Game]) {
     
     tableDataSource = data

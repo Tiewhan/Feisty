@@ -9,6 +9,9 @@
 import Foundation
 import CommonFiles
 
+/**
+ The protocol that any view contoller should implement if it needs to react to data being successfully retrieved
+ */
 protocol GameDataLoadedType: AnyObject {
   
   func gameDataSuccessfullyLoaded(with data: [Game])

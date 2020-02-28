@@ -8,6 +8,7 @@
 
 import Foundation
 
+///The GameModel class retrieves data when asked by the View Model
 class GameModel {
   
   func getGameManager() -> GameManager {
