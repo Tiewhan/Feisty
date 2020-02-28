@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CommonFiles
 
 class GamesViewController: UITableViewController {
 
