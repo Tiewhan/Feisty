@@ -138,6 +138,7 @@
 		5A25202F23E9792700A4FB72 /* Feisty */ = {
 			isa = PBXGroup;
 			children = (
+				5A8D21712409121C001578AE /* GameDetails */,
 				5A8D21622408E9C2001578AE /* GameView */,
 				5AA73FB623EC21BC00E38782 /* Managers */,
 				5AA73FA823EAEB0600E38782 /* ViewControllers */,
@@ -204,6 +205,13 @@
 				5A8D216D2408F019001578AE /* GameTableViewCell.swift */,
 			);
 			path = GameViewComponents;
+			sourceTree = "<group>";
+		};
+		5A8D21712409121C001578AE /* GameDetails */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = GameDetails;
 			sourceTree = "<group>";
 		};
 		5AA73FA823EAEB0600E38782 /* ViewControllers */ = {
