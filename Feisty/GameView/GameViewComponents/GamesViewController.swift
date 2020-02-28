@@ -16,10 +16,6 @@ class GamesViewController: UITableViewController {
     return GameDataViewModel(self)
   }()
   
-  private lazy var tableDataSource: [Game] = {
-    return []
-  }()
-  
   @IBOutlet var mainView: UITableView!
   @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
 
@@ -39,7 +35,7 @@ class GamesViewController: UITableViewController {
   // MARK: - Table view data source
   override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     
-    return tableDataSource.count
+    return dataViewModel.getPageCount()
   }
 
   override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -49,9 +45,9 @@ class GamesViewController: UITableViewController {
       return UITableViewCell()
     }
 
-    let game: Game = tableDataSource[indexPath.row]
-    cell.txtViewGameName?.text = game.name
-    cell.txtGamePrice?.text = "R\(game.price)"
+    let gameDetails = dataViewModel.getGameDetails(at: indexPath.row)
+    cell.txtViewGameName?.text = gameDetails.name
+    cell.txtGamePrice?.text = gameDetails.gamePrice
 
     return cell
 
@@ -154,8 +150,6 @@ extension GamesViewController: GameDataLoadedType {
    - Parameter data: The data that was retrieved from the View Model
    */
   func gameDataSuccessfullyLoaded(with data: [Game]) {
-    
-    tableDataSource = data
     
     stopActivityIndicator()
     reloadTableData()

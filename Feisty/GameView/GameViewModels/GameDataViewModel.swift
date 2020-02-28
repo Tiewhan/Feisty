@@ -33,11 +33,44 @@ class GameDataViewModel {
   }
   
   /**
+   Gets the game details that corresponds to the given index for use by the View.
+   
+   - Parameter index: The index of the game.
+                      This index matches the index of the row position on the view on not the data source
+   
+   - Returns: A tuple of the necessary details for the view to display.
+   */
+  func getGameDetails(at index: Int) -> (name: String, gamePrice: String) {
+    
+    if let game = gameManager?.gameList[index] {
+      return (game.name, "R\(game.price)")
+    }
+    
+    return ("No Name", "No price")
+  }
+  
+  /**
+   Get the ammount of data that should be displayed on the current page
+   
+   - Returns: The amount of items to be on the current page
+   */
+  func getPageCount() -> Int {
+    
+    if let count = gameManager?.gameList.count {
+      return count
+    }
+    
+    return 0
+    
+  }
+  
+  /**
    Gets the game that corresponds to the given index for use by the View.
    
-   - Parameter index: The index of the game. This index matches the index of the row position on the view on not the data source
+   - Parameter index: The index of the game.
+                      This index matches the index of the row position on the view on not the data source
    
-   - Returns: The game if found. Otherwise an empty game
+   - Returns: A game if found. Otherwise a blank game
    */
   func getGameAt(at index: Int) -> Game {
     
@@ -45,7 +78,7 @@ class GameDataViewModel {
       return game
     }
     
-    return Game(appid: "0", name: "Empty Game")
+    return Game(appid: "NO ID", name: "No Name")
   }
   
 }
