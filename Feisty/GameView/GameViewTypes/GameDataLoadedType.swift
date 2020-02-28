@@ -7,3 +7,10 @@
 //
 
 import Foundation
+import CommonFiles
+
+protocol GameDataLoadedType: AnyObject {
+  
+  func gameDataSuccessfullyLoaded(with data: [Game])
+  
+}

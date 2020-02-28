@@ -7,3 +7,11 @@
 //
 
 import Foundation
+
+class GameModel {
+  
+  func getGameManager() -> GameManager {
+    return GameManager()
+  }
+  
+}
