@@ -8,73 +8,21 @@
 import UIKit
 import CommonFiles
 
-/// Represents an individual cell for the Game Table View
-class GameTableViewCell: UITableViewCell {
-
-  @IBOutlet weak var detailsStackView: UIStackView!
-  @IBOutlet weak var txtViewGameName: UITextView!
-  @IBOutlet weak var txtGamePrice: UILabel!
-
-  private lazy var backGroundView: UIView = {
-    let view = UIView()
-    view.backgroundColor = .darkGray
-    return view
-  }()
-
-  /**
-   Pings the given view as a background to the given stackview
-   
-   - parameter view: The view that will be the background
-   - parameter stackView: The stack that needs to have the background added to
-   */
-  private func pinBackGround(_ view: UIView, to stackView: UIStackView) {
-    view.translatesAutoresizingMaskIntoConstraints = false
-    stackView.insertSubview(view, at: 0)
-    view.layer.cornerRadius = 10.0
-    view.pin(to: stackView)
-  }
-
-  ///The cell equivalent of viewDidLoad
-  override func layoutSubviews() {
-    super.layoutSubviews()
-    pinBackGround(backGroundView, to: detailsStackView)
-
-  }
-
-}
-
-public extension UIView {
-
-  /**
-   All constraints of the given view are set equal to the corresponding anchors of this view
-   */
-  func pin(to view: UIView) {
-
-    NSLayoutConstraint.activate([
-      leadingAnchor.constraint(equalTo: view.leadingAnchor),
-      trailingAnchor.constraint(equalTo: view.trailingAnchor),
-      topAnchor.constraint(equalTo: view.topAnchor),
-      bottomAnchor.constraint(equalTo: view.bottomAnchor)
-    ])
-
-  }
-
-}
-
 // MARK: Controllers
 class GamesViewController: UITableViewController {
 
   // MARK: Properties and Outlets
-  var observerID: String = "GameListSubscriber"
-  private var gameManager: GameManager?
+  private lazy var dataViewModel: GameDataViewModel = {
+    return GameDataViewModel(self)
+  }()
+  
   @IBOutlet var mainView: UITableView!
   @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
 
   override func viewDidLoad() {
     super.viewDidLoad()
 
-    gameManager = GameManager()
-    gameManager?.subscribeToGameManager(subscriber: self, subscriberID: observerID)
+    dataViewModel.viewFinishedLoading()
 
     setUpActivityInidcator()
 
@@ -86,11 +34,8 @@ class GamesViewController: UITableViewController {
 
   // MARK: - Table view data source
   override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    if let gameManager = gameManager {
-      return gameManager.gameList.count
-    }
-
-    return 0
+    
+    return dataViewModel.getPageCount()
   }
 
   override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -100,13 +45,9 @@ class GamesViewController: UITableViewController {
       return UITableViewCell()
     }
 
-    if let gameManager = gameManager {
-
-      let game: Game = gameManager.gameList[indexPath.row]
-      cell.txtViewGameName?.text = game.name
-      cell.txtGamePrice?.text = "R\(game.price)"
-
-    }
+    let gameDetails = dataViewModel.getGameDetails(at: indexPath.row)
+    cell.txtViewGameName?.text = gameDetails.name
+    cell.txtGamePrice?.text = gameDetails.gamePrice
 
     return cell
 
@@ -134,7 +75,7 @@ class GamesViewController: UITableViewController {
         fatalError("Cell is not being displayed")
       }
 
-      let selectedGame = gameManager?.gameList[indexPath.row]
+      let selectedGame = dataViewModel.getGameAt(at: indexPath.row)
       gameDetailController.selectedGame = selectedGame
 
     default:
@@ -175,22 +116,44 @@ class GamesViewController: UITableViewController {
     activityIndicator.startAnimating()
 
   }
+  
+  /**
+   Stops to the activity indicator on the main thread by async
+   */
+  private func stopActivityIndicator() {
+    
+    DispatchQueue.main.async { [weak self] in
+      self?.activityIndicator.stopAnimating()
+    }
+    
+  }
+  
+  /**
+   Reload the table data on the main thread by synced
+   */
+  private func reloadTableData() {
+    DispatchQueue.main.sync { [weak self] in
+      self?.tableView.reloadData()
+    }
+  }
 
 }
 
-// MARK: Game Observer Etensions
-extension GamesViewController: GameManagerObserver {
-
-  ///Called when the game manager has finished loading all of the data needed
-  func gamesFinishedLoading() {
-
-    DispatchQueue.main.async {
-
-      [weak self] in
-      self?.activityIndicator.stopAnimating()
-
-    }
-    DispatchQueue.main.sync { self.tableView.reloadData() }
+/**
+ Extend the ViewController with the GameDataLoadedType from the MVVC architecture
+ */
+extension GamesViewController: GameDataLoadedType {
+  
+  /**
+   When the View Model finished loading the data this function will be invoked
+   
+   - Parameter data: The data that was retrieved from the View Model
+   */
+  func gameDataSuccessfullyLoaded(with data: [Game]) {
+    
+    stopActivityIndicator()
+    reloadTableData()
+  
   }
-
+  
 }
