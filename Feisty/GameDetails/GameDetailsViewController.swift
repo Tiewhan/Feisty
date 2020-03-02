@@ -12,23 +12,37 @@ class GameDetailsController: UIViewController {
 
   @IBOutlet weak var gameNameLabel: UITextView!
   @IBOutlet weak var lblAppID: UITextView!
-
+  
   internal var selectedGame: Game?
+  
+  private lazy var viewModel: GameDetailsViewModel = {
+    return GameDetailsViewModel(self, game: selectedGame)
+  }()
 
   override func viewDidLoad() {
     super.viewDidLoad()
-
-    setGameDetails()
+    
+    viewModel.getGameData()
 
   }
 
-  private func setGameDetails() {
+  private func setGameDetails(name: String, appID: String) {
 
     if let selectedGame = selectedGame {
       gameNameLabel.text = selectedGame.name
       lblAppID.text = selectedGame.appID
     }
 
+  }
+
+}
+
+extension GameDetailsController: GameDetailsLoadedType {
+  
+  func gameDetailsFound(gameDetails: (gameName: String, appID: String)) {
+    
+    setGameDetails(name: gameDetails.gameName, appID: gameDetails.appID)
+    
   }
 
 }
