@@ -9,6 +9,7 @@
 import Foundation
 import CommonFiles
 
+///A view model that represents the view and provides a way for the view to get data
 class GameDetailsViewModel {
   
   private weak var view: GameDetailsLoadedType?
@@ -26,6 +27,9 @@ class GameDetailsViewModel {
     
   }
   
+  /**
+   Creates a tuple of game details and then triggers the gameDetailsFound view
+   */
   func getGameData() {
     
     let detailsTuple = (gameName: game.name, appID: game.appID)
