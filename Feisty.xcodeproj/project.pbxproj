@@ -136,6 +136,7 @@
 		5A25202F23E9792700A4FB72 /* Feisty */ = {
 			isa = PBXGroup;
 			children = (
+				5A8D2178240CDF4E001578AE /* GameView */,
 				5A8D21192407B466001578AE /* Login */,
 				5AA73FB623EC21BC00E38782 /* Managers */,
 				5AA73FA823EAEB0600E38782 /* ViewControllers */,
@@ -177,6 +178,37 @@
 				5A8D21202407CEE6001578AE /* LoginModel.swift */,
 			);
 			path = Login;
+			sourceTree = "<group>";
+		};
+		5A8D2178240CDF4E001578AE /* GameView */ = {
+			isa = PBXGroup;
+			children = (
+				5A8D217B240CDF6F001578AE /* GameViewTypes */,
+				5A8D217A240CDF66001578AE /* GameViewModels */,
+				5A8D2179240CDF5B001578AE /* GameViewComponents */,
+			);
+			path = GameView;
+			sourceTree = "<group>";
+		};
+		5A8D2179240CDF5B001578AE /* GameViewComponents */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = GameViewComponents;
+			sourceTree = "<group>";
+		};
+		5A8D217A240CDF66001578AE /* GameViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = GameViewModels;
+			sourceTree = "<group>";
+		};
+		5A8D217B240CDF6F001578AE /* GameViewTypes */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = GameViewTypes;
 			sourceTree = "<group>";
 		};
 		5AA73FA823EAEB0600E38782 /* ViewControllers */ = {
