@@ -2,15 +2,21 @@ PODS:
   - CommonFiles (1.0.0)
 
 DEPENDENCIES:
-  - CommonFiles (from `/Users/tsmith/Documents/SwiftProjects/FeistyCommonFiles`)
+  - CommonFiles (from `https://github.com/Tiewhan/FeistyCommonFiles.git`, branch `develop`)
 
 EXTERNAL SOURCES:
   CommonFiles:
-    :path: "/Users/tsmith/Documents/SwiftProjects/FeistyCommonFiles"
+    :branch: develop
+    :git: https://github.com/Tiewhan/FeistyCommonFiles.git
+
+CHECKOUT OPTIONS:
+  CommonFiles:
+    :commit: 744effc271eaeff8a5f7c9faa090a6b26fb17038
+    :git: https://github.com/Tiewhan/FeistyCommonFiles.git
 
 SPEC CHECKSUMS:
   CommonFiles: 494ccd0a3c0bd2cd3195150de00cbe00855f7af4
 
-PODFILE CHECKSUM: 0ab564a2c4e1ee31fc55112808ddaacde9c18cf5
+PODFILE CHECKSUM: 90415d9c12ebe8cb82d798dce77f16e0e3f6bf66
 
 COCOAPODS: 1.8.4
