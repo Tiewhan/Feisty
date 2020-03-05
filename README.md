@@ -4,7 +4,7 @@
 
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/6512822329d44287ac989f0a6e7a7650?branch=development)](https://www.codacy.com?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=Tiewhan/Feisty&amp;utm_campaign=Badge_Grade)
 
-<object data="https://codecov.io/gh/docker/notary/branch/master/graphs/sunburst.svg" type="image/svg+xml" token="VV01FD29GI"></object>
+<object data="https://codecov.io/gh/docker/notary/branch/default/graphs/sunburst.svg" type="image/svg+xml"></object>
 
 The application is a game store that draws heavy inspiration from the mobile Steam application and makes use of the steampowered API to provide data and authentication.
 
