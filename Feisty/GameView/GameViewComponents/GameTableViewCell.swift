@@ -9,11 +9,11 @@
 import UIKit
 
 /// Represents an individual cell for the Game Table View
-class GameTableViewCell: UITableViewCell {
+public class GameTableViewCell: UITableViewCell {
 
   @IBOutlet weak var detailsStackView: UIStackView!
-  @IBOutlet weak var txtViewGameName: UITextView!
-  @IBOutlet weak var txtGamePrice: UILabel!
+  @IBOutlet public weak var txtViewGameName: UITextView!
+  @IBOutlet public weak var txtGamePrice: UILabel!
 
   private lazy var backGroundView: UIView = {
     let view = UIView()
@@ -35,7 +35,7 @@ class GameTableViewCell: UITableViewCell {
   }
 
   ///The cell equivalent of viewDidLoad
-  override func layoutSubviews() {
+  public override func layoutSubviews() {
     super.layoutSubviews()
     pinBackGround(backGroundView, to: detailsStackView)
 
