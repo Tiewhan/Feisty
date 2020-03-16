@@ -28,8 +28,9 @@ class LoginTestCase: XCTestCase {
     application.menuItems["Paste"].tap()
     
     application.textFields["Password"].doubleTap()
-    
-    application.tapKeys(text: password)
+    UIPasteboard.general.string = password
+    application.textFields["Password"].tap()
+    application.menuItems["Paste"].tap()
     
     application.buttons["Login"].tap()
     

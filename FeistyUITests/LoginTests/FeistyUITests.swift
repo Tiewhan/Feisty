@@ -38,6 +38,8 @@ class FeistyUITests: LoginTestCase {
     
     loginUser(with: testUsername, and: testPassword)
     
+    sleep(1)
+    
     XCTAssert(application.alerts["Login Message"].staticTexts["Failed To Log In"].exists)
     
   }
