@@ -8,20 +8,6 @@
       <BuildActionEntries>
          <BuildActionEntry
             buildForTesting = "YES"
-            buildForRunning = "NO"
-            buildForProfiling = "NO"
-            buildForArchiving = "NO"
-            buildForAnalyzing = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "5A25202C23E9792700A4FB72"
-               BuildableName = "Feisty.app"
-               BlueprintName = "Feisty"
-               ReferencedContainer = "container:Feisty.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
             buildForRunning = "YES"
             buildForProfiling = "YES"
             buildForArchiving = "YES"
@@ -47,9 +33,9 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "5A25204223E9792700A4FB72"
-               BuildableName = "FeistyTests.xctest"
-               BlueprintName = "FeistyTests"
+               BlueprintIdentifier = "5A25204D23E9792700A4FB72"
+               BuildableName = "FeistyUITests.xctest"
+               BlueprintName = "FeistyUITests"
                ReferencedContainer = "container:Feisty.xcodeproj">
             </BuildableReference>
          </TestableReference>

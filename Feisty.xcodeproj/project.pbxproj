@@ -18,13 +18,16 @@
 		5A25205323E9792700A4FB72 /* FeistyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A25205223E9792700A4FB72 /* FeistyUITests.swift */; };
 		5A5C184A23EAA1BD00C49076 /* MainMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A5C184923EAA1BD00C49076 /* MainMenuController.swift */; };
 		5A63349024121C8C008995E6 /* LoginModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A63348F24121C8C008995E6 /* LoginModelTest.swift */; };
-		5A63349324121E91008995E6 /* GameManagerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A63349224121E91008995E6 /* GameManagerTest.swift */; };
+		5A63349824126F54008995E6 /* GameDataViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A63349724126F54008995E6 /* GameDataViewModelTest.swift */; };
+		5A63349A24127000008995E6 /* MockGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A63349924127000008995E6 /* MockGameView.swift */; };
+		5A6334AB241640D2008995E6 /* MockGameModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A6334AA241640D2008995E6 /* MockGameModel.swift */; };
 		5A8D210524050C70001578AE /* GameDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A8D210424050C70001578AE /* GameDetailsViewController.swift */; };
 		5A8D2181240CE01B001578AE /* GamesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A8D2180240CE01B001578AE /* GamesViewController.swift */; };
 		5A8D21D8240D3284001578AE /* GameTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A8D21D7240D3284001578AE /* GameTableViewCell.swift */; };
 		5A8D222C2410EEBD001578AE /* LoginTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A8D222B2410EEBD001578AE /* LoginTest.swift */; };
 		5A8D222E2410F05B001578AE /* MockLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A8D222D2410F05B001578AE /* MockLoginView.swift */; };
 		5AA73FAA23EAEB5200E38782 /* FriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA73FA923EAEB5200E38782 /* FriendsViewController.swift */; };
+		5AA970B1241B7CCB001F6B5C /* LoginTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA970B0241B7CCB001F6B5C /* LoginTestCase.swift */; };
 		B9DDE4D614EB3A4718404DCC /* Pods_FeistyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A67E4BFBB5461E9CC01C2048 /* Pods_FeistyUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -64,13 +67,16 @@
 		5A25205423E9792700A4FB72 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5A5C184923EAA1BD00C49076 /* MainMenuController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuController.swift; sourceTree = "<group>"; };
 		5A63348F24121C8C008995E6 /* LoginModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModelTest.swift; sourceTree = "<group>"; };
-		5A63349224121E91008995E6 /* GameManagerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameManagerTest.swift; sourceTree = "<group>"; };
+		5A63349724126F54008995E6 /* GameDataViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameDataViewModelTest.swift; sourceTree = "<group>"; };
+		5A63349924127000008995E6 /* MockGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockGameView.swift; sourceTree = "<group>"; };
+		5A6334AA241640D2008995E6 /* MockGameModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockGameModel.swift; sourceTree = "<group>"; };
 		5A8D210424050C70001578AE /* GameDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameDetailsViewController.swift; sourceTree = "<group>"; };
 		5A8D2180240CE01B001578AE /* GamesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamesViewController.swift; sourceTree = "<group>"; };
 		5A8D21D7240D3284001578AE /* GameTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameTableViewCell.swift; sourceTree = "<group>"; };
 		5A8D222B2410EEBD001578AE /* LoginTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginTest.swift; sourceTree = "<group>"; };
 		5A8D222D2410F05B001578AE /* MockLoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockLoginView.swift; sourceTree = "<group>"; };
 		5AA73FA923EAEB5200E38782 /* FriendsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsViewController.swift; sourceTree = "<group>"; };
+		5AA970B0241B7CCB001F6B5C /* LoginTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginTestCase.swift; sourceTree = "<group>"; };
 		5EB806D65E95D49432435A5E /* Pods_FeistyTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FeistyTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6C520CE4080DFD99AB044FD6 /* Pods-FeistyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FeistyTests.release.xcconfig"; path = "Target Support Files/Pods-FeistyTests/Pods-FeistyTests.release.xcconfig"; sourceTree = "<group>"; };
 		7AAB1CAE99A226578CDD426C /* Pods-FeistyUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FeistyUITests.debug.xcconfig"; path = "Target Support Files/Pods-FeistyUITests/Pods-FeistyUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -149,7 +155,7 @@
 		5A25204623E9792700A4FB72 /* FeistyTests */ = {
 			isa = PBXGroup;
 			children = (
-				5A63349124121E1D008995E6 /* GameManagerTests */,
+				5A63349524126F18008995E6 /* GameTests */,
 				5A8D222A2410EE88001578AE /* LoginTests */,
 				5A25204923E9792700A4FB72 /* Info.plist */,
 			);
@@ -159,7 +165,7 @@
 		5A25205123E9792700A4FB72 /* FeistyUITests */ = {
 			isa = PBXGroup;
 			children = (
-				5A25205223E9792700A4FB72 /* FeistyUITests.swift */,
+				5AA970AF241B7A3C001F6B5C /* LoginTests */,
 				5A25205423E9792700A4FB72 /* Info.plist */,
 			);
 			path = FeistyUITests;
@@ -182,12 +188,22 @@
 			path = LoginModelTest;
 			sourceTree = "<group>";
 		};
-		5A63349124121E1D008995E6 /* GameManagerTests */ = {
+		5A63349524126F18008995E6 /* GameTests */ = {
 			isa = PBXGroup;
 			children = (
-				5A63349224121E91008995E6 /* GameManagerTest.swift */,
+				5A63349624126F23008995E6 /* GameListTests */,
 			);
-			path = GameManagerTests;
+			path = GameTests;
+			sourceTree = "<group>";
+		};
+		5A63349624126F23008995E6 /* GameListTests */ = {
+			isa = PBXGroup;
+			children = (
+				5A63349724126F54008995E6 /* GameDataViewModelTest.swift */,
+				5A63349924127000008995E6 /* MockGameView.swift */,
+				5A6334AA241640D2008995E6 /* MockGameModel.swift */,
+			);
+			path = GameListTests;
 			sourceTree = "<group>";
 		};
 		5A8D21192407B466001578AE /* Login */ = {
@@ -239,6 +255,15 @@
 				5AA73FA923EAEB5200E38782 /* FriendsViewController.swift */,
 			);
 			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		5AA970AF241B7A3C001F6B5C /* LoginTests */ = {
+			isa = PBXGroup;
+			children = (
+				5A25205223E9792700A4FB72 /* FeistyUITests.swift */,
+				5AA970B0241B7CCB001F6B5C /* LoginTestCase.swift */,
+			);
+			path = LoginTests;
 			sourceTree = "<group>";
 		};
 		8B5CC40DEEC6F8836724C8C6 /* Frameworks */ = {
@@ -555,8 +580,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				5A63349024121C8C008995E6 /* LoginModelTest.swift in Sources */,
-				5A63349324121E91008995E6 /* GameManagerTest.swift in Sources */,
+				5A63349A24127000008995E6 /* MockGameView.swift in Sources */,
 				5A8D222E2410F05B001578AE /* MockLoginView.swift in Sources */,
+				5A6334AB241640D2008995E6 /* MockGameModel.swift in Sources */,
+				5A63349824126F54008995E6 /* GameDataViewModelTest.swift in Sources */,
 				5A8D222C2410EEBD001578AE /* LoginTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -566,6 +593,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5A25205323E9792700A4FB72 /* FeistyUITests.swift in Sources */,
+				5AA970B1241B7CCB001F6B5C /* LoginTestCase.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

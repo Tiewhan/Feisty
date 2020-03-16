@@ -13,7 +13,7 @@ class GamesViewController: UITableViewController {
 
   // MARK: Properties and Outlets
   private lazy var dataViewModel: GameDataViewModel = {
-    return GameDataViewModel(self)
+    return GameDataViewModel(self, with: GameModel(GameAPIRepo()))
   }()
   
   @IBOutlet var mainView: UITableView!
@@ -21,9 +21,7 @@ class GamesViewController: UITableViewController {
 
   override func viewDidLoad() {
     super.viewDidLoad()
-
-    dataViewModel.viewFinishedLoading()
-
+    
     setUpActivityInidcator()
 
   }
@@ -46,7 +44,7 @@ class GamesViewController: UITableViewController {
     }
 
     let gameDetails = dataViewModel.getGameDetails(at: indexPath.row)
-    cell.txtViewGameName?.text = gameDetails.name
+    cell.txtViewGameName?.text = gameDetails.gameName
     cell.txtGamePrice?.text = gameDetails.gamePrice
 
     return cell
@@ -132,7 +130,7 @@ class GamesViewController: UITableViewController {
    Reload the table data on the main thread by synced
    */
   private func reloadTableData() {
-    DispatchQueue.main.sync { [weak self] in
+    DispatchQueue.main.async { [weak self] in
       self?.tableView.reloadData()
     }
   }
