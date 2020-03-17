@@ -15,7 +15,7 @@
 		5A25203823E9792700A4FB72 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A25203623E9792700A4FB72 /* Main.storyboard */; };
 		5A25203A23E9792700A4FB72 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A25203923E9792700A4FB72 /* Assets.xcassets */; };
 		5A25203D23E9792700A4FB72 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A25203B23E9792700A4FB72 /* LaunchScreen.storyboard */; };
-		5A25205323E9792700A4FB72 /* FeistyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A25205223E9792700A4FB72 /* FeistyUITests.swift */; };
+		5A25205323E9792700A4FB72 /* LoginUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A25205223E9792700A4FB72 /* LoginUITests.swift */; };
 		5A5C184A23EAA1BD00C49076 /* MainMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A5C184923EAA1BD00C49076 /* MainMenuController.swift */; };
 		5A63349024121C8C008995E6 /* LoginModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A63348F24121C8C008995E6 /* LoginModelTest.swift */; };
 		5A63349824126F54008995E6 /* GameDataViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A63349724126F54008995E6 /* GameDataViewModelTest.swift */; };
@@ -28,6 +28,8 @@
 		5A8D222E2410F05B001578AE /* MockLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A8D222D2410F05B001578AE /* MockLoginView.swift */; };
 		5AA73FAA23EAEB5200E38782 /* FriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA73FA923EAEB5200E38782 /* FriendsViewController.swift */; };
 		5AA970B1241B7CCB001F6B5C /* LoginTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA970B0241B7CCB001F6B5C /* LoginTestCase.swift */; };
+		5AA970B6241F787F001F6B5C /* GameViewTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA970B5241F787F001F6B5C /* GameViewTestCase.swift */; };
+		5AA970BA241F7957001F6B5C /* GameViewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA970B9241F7957001F6B5C /* GameViewUITests.swift */; };
 		B9DDE4D614EB3A4718404DCC /* Pods_FeistyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A67E4BFBB5461E9CC01C2048 /* Pods_FeistyUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -63,7 +65,7 @@
 		5A25204323E9792700A4FB72 /* FeistyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FeistyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A25204923E9792700A4FB72 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5A25204E23E9792700A4FB72 /* FeistyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FeistyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		5A25205223E9792700A4FB72 /* FeistyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeistyUITests.swift; sourceTree = "<group>"; };
+		5A25205223E9792700A4FB72 /* LoginUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUITests.swift; sourceTree = "<group>"; };
 		5A25205423E9792700A4FB72 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5A5C184923EAA1BD00C49076 /* MainMenuController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuController.swift; sourceTree = "<group>"; };
 		5A63348F24121C8C008995E6 /* LoginModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModelTest.swift; sourceTree = "<group>"; };
@@ -77,6 +79,8 @@
 		5A8D222D2410F05B001578AE /* MockLoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockLoginView.swift; sourceTree = "<group>"; };
 		5AA73FA923EAEB5200E38782 /* FriendsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsViewController.swift; sourceTree = "<group>"; };
 		5AA970B0241B7CCB001F6B5C /* LoginTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginTestCase.swift; sourceTree = "<group>"; };
+		5AA970B5241F787F001F6B5C /* GameViewTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewTestCase.swift; sourceTree = "<group>"; };
+		5AA970B9241F7957001F6B5C /* GameViewUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewUITests.swift; sourceTree = "<group>"; };
 		5EB806D65E95D49432435A5E /* Pods_FeistyTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FeistyTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6C520CE4080DFD99AB044FD6 /* Pods-FeistyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FeistyTests.release.xcconfig"; path = "Target Support Files/Pods-FeistyTests/Pods-FeistyTests.release.xcconfig"; sourceTree = "<group>"; };
 		7AAB1CAE99A226578CDD426C /* Pods-FeistyUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FeistyUITests.debug.xcconfig"; path = "Target Support Files/Pods-FeistyUITests/Pods-FeistyUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -165,6 +169,7 @@
 		5A25205123E9792700A4FB72 /* FeistyUITests */ = {
 			isa = PBXGroup;
 			children = (
+				5AA970B4241F785E001F6B5C /* GameViewTests */,
 				5AA970AF241B7A3C001F6B5C /* LoginTests */,
 				5A25205423E9792700A4FB72 /* Info.plist */,
 			);
@@ -260,10 +265,19 @@
 		5AA970AF241B7A3C001F6B5C /* LoginTests */ = {
 			isa = PBXGroup;
 			children = (
-				5A25205223E9792700A4FB72 /* FeistyUITests.swift */,
+				5A25205223E9792700A4FB72 /* LoginUITests.swift */,
 				5AA970B0241B7CCB001F6B5C /* LoginTestCase.swift */,
 			);
 			path = LoginTests;
+			sourceTree = "<group>";
+		};
+		5AA970B4241F785E001F6B5C /* GameViewTests */ = {
+			isa = PBXGroup;
+			children = (
+				5AA970B5241F787F001F6B5C /* GameViewTestCase.swift */,
+				5AA970B9241F7957001F6B5C /* GameViewUITests.swift */,
+			);
+			path = GameViewTests;
 			sourceTree = "<group>";
 		};
 		8B5CC40DEEC6F8836724C8C6 /* Frameworks */ = {
@@ -592,7 +606,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5A25205323E9792700A4FB72 /* FeistyUITests.swift in Sources */,
+				5AA970B6241F787F001F6B5C /* GameViewTestCase.swift in Sources */,
+				5A25205323E9792700A4FB72 /* LoginUITests.swift in Sources */,
+				5AA970BA241F7957001F6B5C /* GameViewUITests.swift in Sources */,
 				5AA970B1241B7CCB001F6B5C /* LoginTestCase.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
