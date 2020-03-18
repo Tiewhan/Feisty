@@ -7,12 +7,23 @@
 //
 
 import XCTest
+@testable import OHHTTPStubs
 @testable import Feisty
 @testable import CommonFiles
 
 class GameViewUITests: GameViewTestCase {
 
   func testLoadGames() {
+    
+    //stub(condition: isHost("api.steampowered.com") && isPath("/ISteamApps/GetAppList/v2")) { _ in
+    stub(condition: isMethodGET()) { _ in
+      
+      let stubPath = OHPathForFile("gameList.json", type(of: self))
+      return HTTPStubsResponse(fileAtPath: stubPath!,
+                               statusCode: 200,
+                               headers: ["Content-Type": "application/json"])
+      
+    }
     
     application.launch()
     

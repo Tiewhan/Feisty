@@ -1,0 +1,46 @@
+{
+"applist": {
+    "apps": [
+        {
+            "appid": 216938,
+            "name": "Pieterw test app76 ( 216938 )"
+        },
+        {
+            "appid": 660010,
+            "name": "test2"
+        },
+        {
+            "appid": 660130,
+            "name": "Tiewhan Game"
+        },
+        {
+            "appid": 742220,
+            "name": "Escape Camp Waddalooh"
+        },
+        {
+            "appid": 742230,
+            "name": "A Day For A Kitten"
+        },
+        {
+            "appid": 742240,
+            "name": "Astebreed - Original Soundtrack"
+        },
+        {
+            "appid": 742280,
+            "name": "Yi and the Thousand Moons OST"
+        },
+        {
+            "appid": 742310,
+            "name": "Waste Walkers Survivor Pack DLC"
+        },
+        {
+            "appid": 742320,
+            "name": "Lantern of Worlds - The Story of Samir"
+        },
+        {
+            "appid": 742330,
+            "name": "Grand Pskov Story - Ost and Art"
+        }
+    ]
+  }
+}

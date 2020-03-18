@@ -1,22 +1,41 @@
 PODS:
   - CommonFiles (1.0.0)
+  - OHHTTPStubs/Core (9.0.0)
+  - OHHTTPStubs/Default (9.0.0):
+    - OHHTTPStubs/Core
+    - OHHTTPStubs/JSON
+    - OHHTTPStubs/NSURLSession
+    - OHHTTPStubs/OHPathHelpers
+  - OHHTTPStubs/JSON (9.0.0):
+    - OHHTTPStubs/Core
+  - OHHTTPStubs/NSURLSession (9.0.0):
+    - OHHTTPStubs/Core
+  - OHHTTPStubs/OHPathHelpers (9.0.0)
+  - OHHTTPStubs/Swift (9.0.0):
+    - OHHTTPStubs/Default
 
 DEPENDENCIES:
-  - CommonFiles (from `https://github.com/Tiewhan/FeistyCommonFiles.git`, branch `develop`)
+  - CommonFiles (from `https://github.com/Tiewhan/FeistyCommonFiles.git`, branch `EquatableServiceCallErrors`)
+  - OHHTTPStubs/Swift
+
+SPEC REPOS:
+  trunk:
+    - OHHTTPStubs
 
 EXTERNAL SOURCES:
   CommonFiles:
-    :branch: develop
+    :branch: EquatableServiceCallErrors
     :git: https://github.com/Tiewhan/FeistyCommonFiles.git
 
 CHECKOUT OPTIONS:
   CommonFiles:
-    :commit: 5582564350bc086702241e9f6c22ed69bdd368c0
+    :commit: feb2fe7e5fca08de76f7fa5776e803fde720eef6
     :git: https://github.com/Tiewhan/FeistyCommonFiles.git
 
 SPEC CHECKSUMS:
   CommonFiles: 494ccd0a3c0bd2cd3195150de00cbe00855f7af4
+  OHHTTPStubs: cb29d2a9d09a828ecb93349a2b0c64f99e0db89f
 
-PODFILE CHECKSUM: 90415d9c12ebe8cb82d798dce77f16e0e3f6bf66
+PODFILE CHECKSUM: 0407d11ca065f3f1b13c0a1568f2ac015dfa077a
 
 COCOAPODS: 1.8.4

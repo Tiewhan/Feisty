@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		37662238EFA626666E5350E1 /* Pods_Feisty.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 494A039A7CAC684E7BC18B82 /* Pods_Feisty.framework */; };
-		44AE83B6037952B059AECD6D /* Pods_FeistyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EB806D65E95D49432435A5E /* Pods_FeistyTests.framework */; };
 		5A25203123E9792700A4FB72 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A25203023E9792700A4FB72 /* AppDelegate.swift */; };
 		5A25203323E9792700A4FB72 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A25203223E9792700A4FB72 /* SceneDelegate.swift */; };
 		5A25203523E9792700A4FB72 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A25203423E9792700A4FB72 /* ViewController.swift */; };
@@ -30,7 +28,14 @@
 		5AA970B1241B7CCB001F6B5C /* LoginTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA970B0241B7CCB001F6B5C /* LoginTestCase.swift */; };
 		5AA970B6241F787F001F6B5C /* GameViewTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA970B5241F787F001F6B5C /* GameViewTestCase.swift */; };
 		5AA970BA241F7957001F6B5C /* GameViewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA970B9241F7957001F6B5C /* GameViewUITests.swift */; };
-		B9DDE4D614EB3A4718404DCC /* Pods_FeistyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A67E4BFBB5461E9CC01C2048 /* Pods_FeistyUITests.framework */; };
+		5AA970BD2420EC51001F6B5C /* ServiceCallerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA970BC2420EC51001F6B5C /* ServiceCallerTest.swift */; };
+		5AA970BF2421DA52001F6B5C /* gameList.json in Resources */ = {isa = PBXBuildFile; fileRef = 5AA970BE2421DA51001F6B5C /* gameList.json */; };
+		5AA970C12421DFD2001F6B5C /* XCTestCaseExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA970C02421DFD2001F6B5C /* XCTestCaseExtensions.swift */; };
+		5AA970C32421ED8D001F6B5C /* emptyJson.json in Resources */ = {isa = PBXBuildFile; fileRef = 5AA970C22421ED8D001F6B5C /* emptyJson.json */; };
+		5AA970C52421F612001F6B5C /* gameList.json in Resources */ = {isa = PBXBuildFile; fileRef = 5AA970C42421F612001F6B5C /* gameList.json */; };
+		6C5AFDDA4A5CDA9B98C3D653 /* Pods_FeistyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEEFDEA2C267CA1BBC80D5BD /* Pods_FeistyTests.framework */; };
+		D2EAD46E2ADE5D14501EE126 /* Pods_Feisty.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 116D30F1BA7B7775363C2FE7 /* Pods_Feisty.framework */; };
+		F34515CACB843CA29198E983 /* Pods_FeistyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A24620B0F162DFDE5498D045 /* Pods_FeistyUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,9 +56,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		3633C699D005CDAF4F3EFD78 /* Pods-FeistyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FeistyTests.debug.xcconfig"; path = "Target Support Files/Pods-FeistyTests/Pods-FeistyTests.debug.xcconfig"; sourceTree = "<group>"; };
-		494A039A7CAC684E7BC18B82 /* Pods_Feisty.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Feisty.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		597C4D8699C77686F115D433 /* Pods-Feisty.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Feisty.debug.xcconfig"; path = "Target Support Files/Pods-Feisty/Pods-Feisty.debug.xcconfig"; sourceTree = "<group>"; };
+		116D30F1BA7B7775363C2FE7 /* Pods_Feisty.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Feisty.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A25202D23E9792700A4FB72 /* Feisty.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Feisty.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A25203023E9792700A4FB72 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5A25203223E9792700A4FB72 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -81,12 +84,19 @@
 		5AA970B0241B7CCB001F6B5C /* LoginTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginTestCase.swift; sourceTree = "<group>"; };
 		5AA970B5241F787F001F6B5C /* GameViewTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewTestCase.swift; sourceTree = "<group>"; };
 		5AA970B9241F7957001F6B5C /* GameViewUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewUITests.swift; sourceTree = "<group>"; };
-		5EB806D65E95D49432435A5E /* Pods_FeistyTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FeistyTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		6C520CE4080DFD99AB044FD6 /* Pods-FeistyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FeistyTests.release.xcconfig"; path = "Target Support Files/Pods-FeistyTests/Pods-FeistyTests.release.xcconfig"; sourceTree = "<group>"; };
-		7AAB1CAE99A226578CDD426C /* Pods-FeistyUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FeistyUITests.debug.xcconfig"; path = "Target Support Files/Pods-FeistyUITests/Pods-FeistyUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		A67E4BFBB5461E9CC01C2048 /* Pods_FeistyUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FeistyUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		E72A5D42DEC425C3E00A86F3 /* Pods-FeistyUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FeistyUITests.release.xcconfig"; path = "Target Support Files/Pods-FeistyUITests/Pods-FeistyUITests.release.xcconfig"; sourceTree = "<group>"; };
-		FD12D430B9DBEE254804BBA3 /* Pods-Feisty.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Feisty.release.xcconfig"; path = "Target Support Files/Pods-Feisty/Pods-Feisty.release.xcconfig"; sourceTree = "<group>"; };
+		5AA970BC2420EC51001F6B5C /* ServiceCallerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceCallerTest.swift; sourceTree = "<group>"; };
+		5AA970BE2421DA51001F6B5C /* gameList.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = gameList.json; sourceTree = "<group>"; };
+		5AA970C02421DFD2001F6B5C /* XCTestCaseExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCTestCaseExtensions.swift; sourceTree = "<group>"; };
+		5AA970C22421ED8D001F6B5C /* emptyJson.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = emptyJson.json; sourceTree = "<group>"; };
+		5AA970C42421F612001F6B5C /* gameList.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = gameList.json; sourceTree = "<group>"; };
+		5D7FCE62E7B493E1B8B661D1 /* Pods-Feisty.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Feisty.release.xcconfig"; path = "Target Support Files/Pods-Feisty/Pods-Feisty.release.xcconfig"; sourceTree = "<group>"; };
+		8EB83C266913269055E69F50 /* Pods-FeistyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FeistyTests.release.xcconfig"; path = "Target Support Files/Pods-FeistyTests/Pods-FeistyTests.release.xcconfig"; sourceTree = "<group>"; };
+		A24620B0F162DFDE5498D045 /* Pods_FeistyUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FeistyUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AEEFDEA2C267CA1BBC80D5BD /* Pods_FeistyTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FeistyTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BA4F168045C42E839C2C9E1C /* Pods-Feisty.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Feisty.debug.xcconfig"; path = "Target Support Files/Pods-Feisty/Pods-Feisty.debug.xcconfig"; sourceTree = "<group>"; };
+		C9132C05C9D5D67814D194C3 /* Pods-FeistyUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FeistyUITests.release.xcconfig"; path = "Target Support Files/Pods-FeistyUITests/Pods-FeistyUITests.release.xcconfig"; sourceTree = "<group>"; };
+		CBC0D528740C092E15BEB311 /* Pods-FeistyUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FeistyUITests.debug.xcconfig"; path = "Target Support Files/Pods-FeistyUITests/Pods-FeistyUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		ED9F4173AE93735CBE07B0C1 /* Pods-FeistyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FeistyTests.debug.xcconfig"; path = "Target Support Files/Pods-FeistyTests/Pods-FeistyTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,7 +104,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				37662238EFA626666E5350E1 /* Pods_Feisty.framework in Frameworks */,
+				D2EAD46E2ADE5D14501EE126 /* Pods_Feisty.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -102,7 +112,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				44AE83B6037952B059AECD6D /* Pods_FeistyTests.framework in Frameworks */,
+				6C5AFDDA4A5CDA9B98C3D653 /* Pods_FeistyTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -110,7 +120,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B9DDE4D614EB3A4718404DCC /* Pods_FeistyUITests.framework in Frameworks */,
+				F34515CACB843CA29198E983 /* Pods_FeistyUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -125,7 +135,7 @@
 				5A25205123E9792700A4FB72 /* FeistyUITests */,
 				5A25202E23E9792700A4FB72 /* Products */,
 				CEFA2A4251FDEF1418F5D93B /* Pods */,
-				8B5CC40DEEC6F8836724C8C6 /* Frameworks */,
+				94632E03AD40909C20D7DC43 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -159,9 +169,13 @@
 		5A25204623E9792700A4FB72 /* FeistyTests */ = {
 			isa = PBXGroup;
 			children = (
+				5AA970BE2421DA51001F6B5C /* gameList.json */,
+				5AA970BB2420E985001F6B5C /* ServiceCallerTests */,
 				5A63349524126F18008995E6 /* GameTests */,
 				5A8D222A2410EE88001578AE /* LoginTests */,
 				5A25204923E9792700A4FB72 /* Info.plist */,
+				5AA970C02421DFD2001F6B5C /* XCTestCaseExtensions.swift */,
+				5AA970C22421ED8D001F6B5C /* emptyJson.json */,
 			);
 			path = FeistyTests;
 			sourceTree = "<group>";
@@ -169,6 +183,7 @@
 		5A25205123E9792700A4FB72 /* FeistyUITests */ = {
 			isa = PBXGroup;
 			children = (
+				5AA970C42421F612001F6B5C /* gameList.json */,
 				5AA970B4241F785E001F6B5C /* GameViewTests */,
 				5AA970AF241B7A3C001F6B5C /* LoginTests */,
 				5A25205423E9792700A4FB72 /* Info.plist */,
@@ -280,12 +295,20 @@
 			path = GameViewTests;
 			sourceTree = "<group>";
 		};
-		8B5CC40DEEC6F8836724C8C6 /* Frameworks */ = {
+		5AA970BB2420E985001F6B5C /* ServiceCallerTests */ = {
 			isa = PBXGroup;
 			children = (
-				494A039A7CAC684E7BC18B82 /* Pods_Feisty.framework */,
-				5EB806D65E95D49432435A5E /* Pods_FeistyTests.framework */,
-				A67E4BFBB5461E9CC01C2048 /* Pods_FeistyUITests.framework */,
+				5AA970BC2420EC51001F6B5C /* ServiceCallerTest.swift */,
+			);
+			path = ServiceCallerTests;
+			sourceTree = "<group>";
+		};
+		94632E03AD40909C20D7DC43 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				116D30F1BA7B7775363C2FE7 /* Pods_Feisty.framework */,
+				AEEFDEA2C267CA1BBC80D5BD /* Pods_FeistyTests.framework */,
+				A24620B0F162DFDE5498D045 /* Pods_FeistyUITests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -293,12 +316,12 @@
 		CEFA2A4251FDEF1418F5D93B /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				597C4D8699C77686F115D433 /* Pods-Feisty.debug.xcconfig */,
-				FD12D430B9DBEE254804BBA3 /* Pods-Feisty.release.xcconfig */,
-				3633C699D005CDAF4F3EFD78 /* Pods-FeistyTests.debug.xcconfig */,
-				6C520CE4080DFD99AB044FD6 /* Pods-FeistyTests.release.xcconfig */,
-				7AAB1CAE99A226578CDD426C /* Pods-FeistyUITests.debug.xcconfig */,
-				E72A5D42DEC425C3E00A86F3 /* Pods-FeistyUITests.release.xcconfig */,
+				BA4F168045C42E839C2C9E1C /* Pods-Feisty.debug.xcconfig */,
+				5D7FCE62E7B493E1B8B661D1 /* Pods-Feisty.release.xcconfig */,
+				ED9F4173AE93735CBE07B0C1 /* Pods-FeistyTests.debug.xcconfig */,
+				8EB83C266913269055E69F50 /* Pods-FeistyTests.release.xcconfig */,
+				CBC0D528740C092E15BEB311 /* Pods-FeistyUITests.debug.xcconfig */,
+				C9132C05C9D5D67814D194C3 /* Pods-FeistyUITests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -310,12 +333,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5A25205723E9792700A4FB72 /* Build configuration list for PBXNativeTarget "Feisty" */;
 			buildPhases = (
-				03EB7B6DAD57EF59B8643626 /* [CP] Check Pods Manifest.lock */,
+				A5F2E123269D2A2669B5C4A0 /* [CP] Check Pods Manifest.lock */,
 				5A25202923E9792700A4FB72 /* Sources */,
 				5A25202A23E9792700A4FB72 /* Frameworks */,
 				5A25202B23E9792700A4FB72 /* Resources */,
 				5A812AAF23F2D64900152639 /* ShellScript */,
-				3C197552201DCFFE44705D91 /* [CP] Embed Pods Frameworks */,
+				650A46395907ADB51400406A /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -330,11 +353,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5A25205A23E9792700A4FB72 /* Build configuration list for PBXNativeTarget "FeistyTests" */;
 			buildPhases = (
-				831056CBE07929E2D7074A5D /* [CP] Check Pods Manifest.lock */,
+				5205BC95475090BB84A2FA03 /* [CP] Check Pods Manifest.lock */,
 				5A25203F23E9792700A4FB72 /* Sources */,
 				5A25204023E9792700A4FB72 /* Frameworks */,
 				5A25204123E9792700A4FB72 /* Resources */,
-				94CF549BBD8D9CEED5FA5239 /* [CP] Embed Pods Frameworks */,
+				67964EDFA0F80337D2F7E297 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -350,11 +373,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5A25205D23E9792700A4FB72 /* Build configuration list for PBXNativeTarget "FeistyUITests" */;
 			buildPhases = (
-				710558D03F2153F6A6F55562 /* [CP] Check Pods Manifest.lock */,
+				5A86FB85325310A3A3E593F2 /* [CP] Check Pods Manifest.lock */,
 				5A25204A23E9792700A4FB72 /* Sources */,
 				5A25204B23E9792700A4FB72 /* Frameworks */,
 				5A25204C23E9792700A4FB72 /* Resources */,
-				66C41B16FA60F4C6E4008E08 /* [CP] Embed Pods Frameworks */,
+				E9DD744192B22D1DDE1DEC9A /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -424,6 +447,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5AA970C32421ED8D001F6B5C /* emptyJson.json in Resources */,
+				5AA970BF2421DA52001F6B5C /* gameList.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -431,108 +456,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5AA970C52421F612001F6B5C /* gameList.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		03EB7B6DAD57EF59B8643626 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Feisty-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		3C197552201DCFFE44705D91 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Feisty/Pods-Feisty-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Feisty/Pods-Feisty-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Feisty/Pods-Feisty-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		5A812AAF23F2D64900152639 /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "if which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
-		};
-		66C41B16FA60F4C6E4008E08 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-FeistyUITests/Pods-FeistyUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-FeistyUITests/Pods-FeistyUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FeistyUITests/Pods-FeistyUITests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		710558D03F2153F6A6F55562 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-FeistyUITests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		831056CBE07929E2D7074A5D /* [CP] Check Pods Manifest.lock */ = {
+		5205BC95475090BB84A2FA03 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -554,7 +485,63 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		94CF549BBD8D9CEED5FA5239 /* [CP] Embed Pods Frameworks */ = {
+		5A812AAF23F2D64900152639 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+		5A86FB85325310A3A3E593F2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FeistyUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		650A46395907ADB51400406A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Feisty/Pods-Feisty-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Feisty/Pods-Feisty-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Feisty/Pods-Feisty-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		67964EDFA0F80337D2F7E297 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -569,6 +556,45 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FeistyTests/Pods-FeistyTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A5F2E123269D2A2669B5C4A0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Feisty-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E9DD744192B22D1DDE1DEC9A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FeistyUITests/Pods-FeistyUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FeistyUITests/Pods-FeistyUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FeistyUITests/Pods-FeistyUITests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -595,8 +621,10 @@
 			files = (
 				5A63349024121C8C008995E6 /* LoginModelTest.swift in Sources */,
 				5A63349A24127000008995E6 /* MockGameView.swift in Sources */,
+				5AA970BD2420EC51001F6B5C /* ServiceCallerTest.swift in Sources */,
 				5A8D222E2410F05B001578AE /* MockLoginView.swift in Sources */,
 				5A6334AB241640D2008995E6 /* MockGameModel.swift in Sources */,
+				5AA970C12421DFD2001F6B5C /* XCTestCaseExtensions.swift in Sources */,
 				5A63349824126F54008995E6 /* GameDataViewModelTest.swift in Sources */,
 				5A8D222C2410EEBD001578AE /* LoginTest.swift in Sources */,
 			);
@@ -764,7 +792,7 @@
 		};
 		5A25205823E9792700A4FB72 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 597C4D8699C77686F115D433 /* Pods-Feisty.debug.xcconfig */;
+			baseConfigurationReference = BA4F168045C42E839C2C9E1C /* Pods-Feisty.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -782,7 +810,7 @@
 		};
 		5A25205923E9792700A4FB72 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FD12D430B9DBEE254804BBA3 /* Pods-Feisty.release.xcconfig */;
+			baseConfigurationReference = 5D7FCE62E7B493E1B8B661D1 /* Pods-Feisty.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -800,7 +828,7 @@
 		};
 		5A25205B23E9792700A4FB72 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3633C699D005CDAF4F3EFD78 /* Pods-FeistyTests.debug.xcconfig */;
+			baseConfigurationReference = ED9F4173AE93735CBE07B0C1 /* Pods-FeistyTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -822,7 +850,7 @@
 		};
 		5A25205C23E9792700A4FB72 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6C520CE4080DFD99AB044FD6 /* Pods-FeistyTests.release.xcconfig */;
+			baseConfigurationReference = 8EB83C266913269055E69F50 /* Pods-FeistyTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -844,7 +872,7 @@
 		};
 		5A25205E23E9792700A4FB72 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7AAB1CAE99A226578CDD426C /* Pods-FeistyUITests.debug.xcconfig */;
+			baseConfigurationReference = CBC0D528740C092E15BEB311 /* Pods-FeistyUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -864,7 +892,7 @@
 		};
 		5A25205F23E9792700A4FB72 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E72A5D42DEC425C3E00A86F3 /* Pods-FeistyUITests.release.xcconfig */;
+			baseConfigurationReference = C9132C05C9D5D67814D194C3 /* Pods-FeistyUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

@@ -7,6 +7,7 @@
 //
 
 import XCTest
+@testable import OHHTTPStubs
 
 class GameViewTestCase: XCTestCase {
   
@@ -17,6 +18,10 @@ class GameViewTestCase: XCTestCase {
     continueAfterFailure = false
     
     application = XCUIApplication()
+      }
+  
+  override func tearDown() {
+    [HTTPStubs .removeAllStubs()]
   }
   
   func loginUserWithDetails() {
