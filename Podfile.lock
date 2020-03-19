@@ -15,7 +15,7 @@ PODS:
     - OHHTTPStubs/Default
 
 DEPENDENCIES:
-  - CommonFiles (from `https://github.com/Tiewhan/FeistyCommonFiles.git`, branch `EquatableServiceCallErrors`)
+  - CommonFiles (from `/Users/tsmith/Documents/SwiftProjects/FeistyCommonFiles`)
   - OHHTTPStubs/Swift
 
 SPEC REPOS:
@@ -24,18 +24,12 @@ SPEC REPOS:
 
 EXTERNAL SOURCES:
   CommonFiles:
-    :branch: EquatableServiceCallErrors
-    :git: https://github.com/Tiewhan/FeistyCommonFiles.git
-
-CHECKOUT OPTIONS:
-  CommonFiles:
-    :commit: feb2fe7e5fca08de76f7fa5776e803fde720eef6
-    :git: https://github.com/Tiewhan/FeistyCommonFiles.git
+    :path: "/Users/tsmith/Documents/SwiftProjects/FeistyCommonFiles"
 
 SPEC CHECKSUMS:
   CommonFiles: 494ccd0a3c0bd2cd3195150de00cbe00855f7af4
   OHHTTPStubs: cb29d2a9d09a828ecb93349a2b0c64f99e0db89f
 
-PODFILE CHECKSUM: 0407d11ca065f3f1b13c0a1568f2ac015dfa077a
+PODFILE CHECKSUM: 56de2380665774a4d80f8ebc9b56cd8b6a91aa12
 
 COCOAPODS: 1.8.4
