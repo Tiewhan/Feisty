@@ -14,6 +14,7 @@ public class GameTableViewCell: UITableViewCell {
   @IBOutlet weak var detailsStackView: UIStackView!
   @IBOutlet public weak var txtViewGameName: UITextView!
   @IBOutlet public weak var txtGamePrice: UILabel!
+  public var cellTappedAction: (() -> Void)?
 
   private lazy var backGroundView: UIView = {
     let view = UIView()
@@ -33,12 +34,33 @@ public class GameTableViewCell: UITableViewCell {
     view.layer.cornerRadius = 10.0
     view.pin(to: stackView)
   }
-
+  
   ///The cell equivalent of viewDidLoad
   public override func layoutSubviews() {
     super.layoutSubviews()
     pinBackGround(backGroundView, to: detailsStackView)
+    
+    setUpTapGestureRecognizer()
 
+  }
+  
+  private func setUpTapGestureRecognizer() {
+    
+    let tapGesture = UITapGestureRecognizer(target: self, action: #selector(handleTap))
+    
+    tapGesture.delegate = self
+    self.addGestureRecognizer(tapGesture)
+    
+  }
+  
+  @IBAction private func handleTap(sender: UITapGestureRecognizer) {
+    
+    guard let cellTappedAction = cellTappedAction else {
+      return
+    }
+    
+    cellTappedAction()
+    
   }
 
 }

@@ -215,7 +215,7 @@
                         <color key="sectionIndexColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="sectionIndexBackgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
                         <activityIndicatorView key="tableFooterView" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="large" id="2ZQ-SA-f8T">
-                            <rect key="frame" x="0.0" y="112.66666793823242" width="414" height="44"/>
+                            <rect key="frame" x="0.0" y="112.66666793823241" width="414" height="44.000000000000014"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <color key="color" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </activityIndicatorView>
@@ -275,10 +275,10 @@
             </objects>
             <point key="canvasLocation" x="2997" y="-488"/>
         </scene>
-        <!--Game Details Controller-->
+        <!--Game Details View Controller-->
         <scene sceneID="CIU-jU-KhV">
             <objects>
-                <viewController id="5A0-Lk-Doh" customClass="GameDetailsController" customModule="Feisty" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="GameDetailsViewController" id="5A0-Lk-Doh" customClass="GameDetailsViewController" customModule="Feisty" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8wm-Dq-EDX">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

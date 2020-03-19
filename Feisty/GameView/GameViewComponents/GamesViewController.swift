@@ -46,6 +46,25 @@ class GamesViewController: UITableViewController {
     let gameDetails = dataViewModel.getGameDetails(at: indexPath.row)
     cell.txtViewGameName?.text = gameDetails.gameName
     cell.txtGamePrice?.text = gameDetails.gamePrice
+    
+    cell.cellTappedAction = { [weak self] in
+      
+      let storyboard = UIStoryboard(name: "Main", bundle: .main)
+      let detailView = storyboard.instantiateViewController(withIdentifier: "GameDetailsViewController") as? GameDetailsViewController
+      
+      guard let detailViewController = detailView else {
+        return
+      }
+      
+      guard let self = self else {
+        return
+      }
+      
+      let selectedGame = self.dataViewModel.getGameAt(at: indexPath.row)
+      detailViewController.selectedGame = selectedGame
+      
+      self.navigationController?.pushViewController(detailViewController, animated: true)
+    }
 
     return cell
 
@@ -61,7 +80,7 @@ class GamesViewController: UITableViewController {
     switch segue.identifier ?? "" {
     case "showGameDetails":
 
-      guard let gameDetailController = segue.destination as? GameDetailsController else {
+      guard let gameDetailController = segue.destination as? GameDetailsViewController else {
         fatalError("Unexpected Destination: \(segue.destination)")
       }
 
