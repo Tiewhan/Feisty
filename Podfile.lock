@@ -15,7 +15,7 @@ PODS:
     - OHHTTPStubs/Default
 
 DEPENDENCIES:
-  - CommonFiles (from `/Users/tsmith/Documents/SwiftProjects/FeistyCommonFiles`)
+  - CommonFiles (from `https://github.com/Tiewhan/FeistyCommonFiles.git`, branch `develop`)
   - OHHTTPStubs/Swift
 
 SPEC REPOS:
@@ -24,12 +24,18 @@ SPEC REPOS:
 
 EXTERNAL SOURCES:
   CommonFiles:
-    :path: "/Users/tsmith/Documents/SwiftProjects/FeistyCommonFiles"
+    :branch: develop
+    :git: https://github.com/Tiewhan/FeistyCommonFiles.git
+
+CHECKOUT OPTIONS:
+  CommonFiles:
+    :commit: 77424c2b39e81dee3fef1fe88edd2b95b8e065f8
+    :git: https://github.com/Tiewhan/FeistyCommonFiles.git
 
 SPEC CHECKSUMS:
   CommonFiles: 494ccd0a3c0bd2cd3195150de00cbe00855f7af4
   OHHTTPStubs: cb29d2a9d09a828ecb93349a2b0c64f99e0db89f
 
-PODFILE CHECKSUM: 56de2380665774a4d80f8ebc9b56cd8b6a91aa12
+PODFILE CHECKSUM: 2615a3628ef426c9b7e7b3a4fb38a6241d6b01df
 
 COCOAPODS: 1.8.4

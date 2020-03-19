@@ -1,14 +1,17 @@
 //
-//  GameViewTestCase.swift
+//  FriendViewTestCase.swift
 //  FeistyUITests
 //
-//  Created by Tiewhan Smith on 2020/03/16.
+//  Created by Tiewhan Smith on 2020/03/19.
 //  Copyright © 2020 DVT. All rights reserved.
 //
 
+import Foundation
 import XCTest
+@testable import Feisty
+@testable import CommonFiles
 
-class GameViewTestCase: XCTestCase {
+class FriendViewTestCase: XCTestCase {
   
   var application: XCUIApplication!
   
