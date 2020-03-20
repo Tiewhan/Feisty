@@ -1,16 +1,41 @@
 PODS:
   - CommonFiles (1.0.0)
+  - OHHTTPStubs/Core (9.0.0)
+  - OHHTTPStubs/Default (9.0.0):
+    - OHHTTPStubs/Core
+    - OHHTTPStubs/JSON
+    - OHHTTPStubs/NSURLSession
+    - OHHTTPStubs/OHPathHelpers
+  - OHHTTPStubs/JSON (9.0.0):
+    - OHHTTPStubs/Core
+  - OHHTTPStubs/NSURLSession (9.0.0):
+    - OHHTTPStubs/Core
+  - OHHTTPStubs/OHPathHelpers (9.0.0)
+  - OHHTTPStubs/Swift (9.0.0):
+    - OHHTTPStubs/Default
 
 DEPENDENCIES:
-  - CommonFiles (from `/Users/tsmith/Documents/SwiftProjects/FeistyCommonFiles`)
+  - CommonFiles (from `https://github.com/Tiewhan/FeistyCommonFiles.git`, branch `develop`)
+  - OHHTTPStubs/Swift
+
+SPEC REPOS:
+  trunk:
+    - OHHTTPStubs
 
 EXTERNAL SOURCES:
   CommonFiles:
-    :path: "/Users/tsmith/Documents/SwiftProjects/FeistyCommonFiles"
+    :branch: develop
+    :git: https://github.com/Tiewhan/FeistyCommonFiles.git
+
+CHECKOUT OPTIONS:
+  CommonFiles:
+    :commit: 77424c2b39e81dee3fef1fe88edd2b95b8e065f8
+    :git: https://github.com/Tiewhan/FeistyCommonFiles.git
 
 SPEC CHECKSUMS:
   CommonFiles: 494ccd0a3c0bd2cd3195150de00cbe00855f7af4
+  OHHTTPStubs: cb29d2a9d09a828ecb93349a2b0c64f99e0db89f
 
-PODFILE CHECKSUM: 0ab564a2c4e1ee31fc55112808ddaacde9c18cf5
+PODFILE CHECKSUM: 2615a3628ef426c9b7e7b3a4fb38a6241d6b01df
 
 COCOAPODS: 1.8.4

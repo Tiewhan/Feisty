@@ -8,7 +8,7 @@
 import UIKit
 import CommonFiles
 
-class GameDetailsController: UIViewController {
+class GameDetailsViewController: UIViewController {
 
   @IBOutlet weak var gameNameLabel: UITextView!
   @IBOutlet weak var lblAppID: UITextView!
@@ -37,7 +37,7 @@ class GameDetailsController: UIViewController {
 
 }
 
-extension GameDetailsController: GameDetailsLoadedType {
+extension GameDetailsViewController: GameDetailsLoadedType {
   
   func gameDetailsFound(gameDetails: (gameName: String, appID: String)) {
     

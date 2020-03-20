@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import OHHTTPStubs
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -14,9 +15,27 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication,
                      didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
       // Override point for customization after application launch.
+      setUpStubs()
       return true
     }
-
+  
+  private func setUpStubs() {
+    
+//    guard UserDefaults.standard.string(forKey: "UseStubs") != nil else {
+//      return
+//    }
+    
+    stub(condition: isHost("api.steampowered.com")) { _ in
+      
+      let stubPath = OHPathForFile("gameList.json", type(of: self))
+      return HTTPStubsResponse(fileAtPath: stubPath!,
+                               statusCode: 200,
+                               headers: ["Content-Type": "application/json"])
+      
+    }
+    
+  }
+  
     // MARK: UISceneSession Lifecycle
 
     func application(_ application: UIApplication, configurationForConnecting connectingSceneSession: UISceneSession,

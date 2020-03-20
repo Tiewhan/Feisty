@@ -275,10 +275,10 @@
             </objects>
             <point key="canvasLocation" x="2997" y="-488"/>
         </scene>
-        <!--Game Details Controller-->
+        <!--Game Details View Controller-->
         <scene sceneID="CIU-jU-KhV">
             <objects>
-                <viewController id="5A0-Lk-Doh" customClass="GameDetailsController" customModule="Feisty" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="GameDetailsViewController" id="5A0-Lk-Doh" customClass="GameDetailsViewController" customModule="Feisty" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8wm-Dq-EDX">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
