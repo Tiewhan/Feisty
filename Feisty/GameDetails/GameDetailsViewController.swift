@@ -11,7 +11,10 @@ import CommonFiles
 class GameDetailsViewController: UIViewController {
 
   @IBOutlet weak var gameNameLabel: UITextView!
-  @IBOutlet weak var lblAppID: UITextView!
+  @IBOutlet weak var lblPrice: UITextView!
+  @IBOutlet weak var lblShortDescription: UITextView!
+  @IBOutlet weak var lblDevelopers: UITextView!
+  @IBOutlet weak var lblPublishers: UITextView!
   
   internal var selectedGame: Game?
   
@@ -39,7 +42,10 @@ class GameDetailsViewController: UIViewController {
                               andPublishers publishers: String) {
 
     gameNameLabel.text = gameName
-    lblAppID.text = appID
+    lblPrice.text = price
+    lblShortDescription.text = shortDescription
+    lblDevelopers.text = developers
+    lblPublishers.text = publishers
 
   }
 
