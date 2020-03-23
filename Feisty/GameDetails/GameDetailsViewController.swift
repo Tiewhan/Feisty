@@ -16,22 +16,25 @@ class GameDetailsViewController: UIViewController {
   internal var selectedGame: Game?
   
   private lazy var viewModel: GameDetailsViewModel = {
-    return GameDetailsViewModel(self, game: selectedGame)
+    
+    if let selectedGame = selectedGame {
+      return GameDetailsViewModel(self, selectedGame)
+    } else {
+      return GameDetailsViewModel(self, Game(appid: "N/A", name: "No Game"))
+    }
+    
   }()
 
   override func viewDidLoad() {
     super.viewDidLoad()
     
     viewModel.getGameData()
-
   }
 
   private func setGameDetails(name: String, appID: String) {
 
-    if let selectedGame = selectedGame {
-      gameNameLabel.text = selectedGame.name
-      lblAppID.text = selectedGame.appID
-    }
+    gameNameLabel.text = name
+    lblAppID.text = appID
 
   }
 
@@ -39,10 +42,8 @@ class GameDetailsViewController: UIViewController {
 
 extension GameDetailsViewController: GameDetailsLoadedType {
   
-  func gameDetailsFound(gameDetails: (gameName: String, appID: String)) {
-    
-    setGameDetails(name: gameDetails.gameName, appID: gameDetails.appID)
-    
+  func gameDetailsFound(_ withGameName: String, _ andAppID: String) {
+    setGameDetails(name: withGameName, appID: andAppID)
   }
-
+  
 }
