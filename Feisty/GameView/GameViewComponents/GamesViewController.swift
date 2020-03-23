@@ -50,7 +50,8 @@ class GamesViewController: UITableViewController {
     cell.cellTappedAction = { [weak self] in
       
       let storyboard = UIStoryboard(name: "Main", bundle: .main)
-      let detailView = storyboard.instantiateViewController(withIdentifier: "GameDetailsViewController") as? GameDetailsViewController
+      let className = self?.className ?? ""
+      let detailView = storyboard.instantiateViewController(withIdentifier: className) as? GameDetailsViewController
       
       guard let detailViewController = detailView else {
         return
