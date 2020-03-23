@@ -33,7 +33,7 @@ class GameDetailsViewController: UIViewController {
     
     viewModel.getGameData()
   }
-
+  
   private func setGameDetails(with gameName: String,
                               andAppID appID: String,
                               andPrice price: String,
@@ -48,7 +48,7 @@ class GameDetailsViewController: UIViewController {
     lblPublishers.text = publishers
 
   }
-
+  
 }
 
 extension GameDetailsViewController: GameDetailsLoadedType {
