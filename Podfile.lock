@@ -29,11 +29,11 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   CommonFiles:
-    :commit: 77424c2b39e81dee3fef1fe88edd2b95b8e065f8
+    :commit: 6d658bb9ab382bafbb23f8d2158b771e71231245
     :git: https://github.com/Tiewhan/FeistyCommonFiles.git
 
 SPEC CHECKSUMS:
-  CommonFiles: 494ccd0a3c0bd2cd3195150de00cbe00855f7af4
+  CommonFiles: e79fba99057436f9e8966f37f1bc23ebdbfd6532
   OHHTTPStubs: cb29d2a9d09a828ecb93349a2b0c64f99e0db89f
 
 PODFILE CHECKSUM: 2615a3628ef426c9b7e7b3a4fb38a6241d6b01df
