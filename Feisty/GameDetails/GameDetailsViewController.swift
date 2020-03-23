@@ -20,7 +20,7 @@ class GameDetailsViewController: UIViewController {
     if let selectedGame = selectedGame {
       return GameDetailsViewModel(self, selectedGame)
     } else {
-      return GameDetailsViewModel(self, Game(appid: "N/A", name: "No Game"))
+      return GameDetailsViewModel(self, Game.defaultValue())
     }
     
   }()
@@ -31,9 +31,14 @@ class GameDetailsViewController: UIViewController {
     viewModel.getGameData()
   }
 
-  private func setGameDetails(name: String, appID: String) {
+  private func setGameDetails(with gameName: String,
+                              andAppID appID: String,
+                              andPrice price: String,
+                              andShortDescription shortDescription: String,
+                              andDevelopers developers: String,
+                              andPublishers publishers: String) {
 
-    gameNameLabel.text = name
+    gameNameLabel.text = gameName
     lblAppID.text = appID
 
   }
@@ -42,8 +47,20 @@ class GameDetailsViewController: UIViewController {
 
 extension GameDetailsViewController: GameDetailsLoadedType {
   
-  func gameDetailsFound(_ withGameName: String, _ andAppID: String) {
-    setGameDetails(name: withGameName, appID: andAppID)
+  func gameDetailsFound(_ withGameName: String,
+                        _ andAppID: String,
+                        _ price: String,
+                        _ shortDescription: String,
+                        _ developers: String,
+                        _ publishers: String) {
+    
+    setGameDetails(with: withGameName,
+                   andAppID: andAppID,
+                   andPrice: price,
+                   andShortDescription: shortDescription,
+                   andDevelopers: developers,
+                   andPublishers: publishers)
+    
   }
   
 }
