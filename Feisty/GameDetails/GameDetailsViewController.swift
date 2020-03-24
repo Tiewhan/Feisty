@@ -23,7 +23,7 @@ class GameDetailsViewController: UIViewController {
     if let selectedGame = selectedGame {
       return GameDetailsViewModel(self, selectedGame)
     } else {
-      return GameDetailsViewModel(self, Game.defaultValue())
+      return GameDetailsViewModel(self, Game.defaultValue)
     }
     
   }()
