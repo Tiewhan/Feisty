@@ -6,6 +6,11 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="TimesNewRoman.ttf">
+            <string>.SFUI-Regular</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Login Screen-->
         <scene sceneID="tne-QT-ifu">
@@ -215,7 +220,7 @@
                         <color key="sectionIndexColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="sectionIndexBackgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
                         <activityIndicatorView key="tableFooterView" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="large" id="2ZQ-SA-f8T">
-                            <rect key="frame" x="0.0" y="112.66666793823241" width="414" height="44.000000000000014"/>
+                            <rect key="frame" x="0.0" y="112.66666793823242" width="414" height="44"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <color key="color" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </activityIndicatorView>
@@ -287,20 +292,55 @@
                                 <rect key="frame" x="20" y="66" width="374" height="601"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="cM3-zL-HgI">
-                                        <rect key="frame" x="5" y="0.0" width="364" height="75.333333333333329"/>
+                                        <rect key="frame" x="5" y="0.0" width="364" height="278"/>
                                         <subviews>
-                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" text="Game Name" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QDv-q9-sDs">
-                                                <rect key="frame" x="0.0" y="0.0" width="364" height="42.333333333333336"/>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" text="Game Name" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QDv-q9-sDs">
+                                                <rect key="frame" x="0.0" y="0.0" width="364" height="50"/>
                                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="22"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                             </textView>
-                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" text="AppID" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fpo-b0-lzY">
-                                                <rect key="frame" x="0.0" y="42.333333333333329" width="364" height="33"/>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" text="gamePrice" textAlignment="right" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fpo-b0-lzY">
+                                                <rect key="frame" x="0.0" y="50" width="364" height="33"/>
                                                 <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" text="shortDescription" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ege-Vf-VSN">
+                                                <rect key="frame" x="0.0" y="83" width="364" height="37"/>
+                                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" name=".SFUI-Regular" family=".AppleSystemUIFont" pointSize="18"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" text="Developer:" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hB2-eC-Lwy">
+                                                <rect key="frame" x="0.0" y="120" width="364" height="41"/>
+                                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" text="developers" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bea-Uz-p60">
+                                                <rect key="frame" x="0.0" y="161" width="364" height="38"/>
+                                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" text="Publisher:" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7GN-DJ-vW2">
+                                                <rect key="frame" x="0.0" y="199" width="364" height="41"/>
+                                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" text="publishers" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nKC-yn-Tjj">
+                                                <rect key="frame" x="0.0" y="240" width="364" height="38"/>
+                                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                             </textView>
                                         </subviews>
@@ -329,7 +369,10 @@
                     <navigationItem key="navigationItem" id="i5f-mN-x10"/>
                     <connections>
                         <outlet property="gameNameLabel" destination="QDv-q9-sDs" id="gtC-DN-QYD"/>
-                        <outlet property="lblAppID" destination="Fpo-b0-lzY" id="Z9I-K8-qSV"/>
+                        <outlet property="lblDevelopers" destination="Bea-Uz-p60" id="qfV-LI-cYI"/>
+                        <outlet property="lblPrice" destination="Fpo-b0-lzY" id="3MV-fL-u3X"/>
+                        <outlet property="lblPublishers" destination="nKC-yn-Tjj" id="nwz-W8-Ptu"/>
+                        <outlet property="lblShortDescription" destination="Ege-Vf-VSN" id="75b-je-JEP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="djY-yJ-YRJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

@@ -11,7 +11,10 @@ import CommonFiles
 class GameDetailsViewController: UIViewController {
 
   @IBOutlet weak var gameNameLabel: UITextView!
-  @IBOutlet weak var lblAppID: UITextView!
+  @IBOutlet weak var lblPrice: UITextView!
+  @IBOutlet weak var lblShortDescription: UITextView!
+  @IBOutlet weak var lblDevelopers: UITextView!
+  @IBOutlet weak var lblPublishers: UITextView!
   
   internal var selectedGame: Game?
   
@@ -20,7 +23,7 @@ class GameDetailsViewController: UIViewController {
     if let selectedGame = selectedGame {
       return GameDetailsViewModel(self, selectedGame)
     } else {
-      return GameDetailsViewModel(self, Game(appid: "N/A", name: "No Game"))
+      return GameDetailsViewModel(self, Game.defaultValue)
     }
     
   }()
@@ -30,20 +33,40 @@ class GameDetailsViewController: UIViewController {
     
     viewModel.getGameData()
   }
+  
+  private func setGameDetails(with gameName: String,
+                              andAppID appID: String,
+                              andPrice price: String,
+                              andShortDescription shortDescription: String,
+                              andDevelopers developers: String,
+                              andPublishers publishers: String) {
 
-  private func setGameDetails(name: String, appID: String) {
-
-    gameNameLabel.text = name
-    lblAppID.text = appID
+    gameNameLabel.text = gameName
+    lblPrice.text = price
+    lblShortDescription.text = shortDescription
+    lblDevelopers.text = developers
+    lblPublishers.text = publishers
 
   }
-
+  
 }
 
 extension GameDetailsViewController: GameDetailsLoadedType {
   
-  func gameDetailsFound(_ withGameName: String, _ andAppID: String) {
-    setGameDetails(name: withGameName, appID: andAppID)
+  func gameDetailsFound(_ withGameName: String,
+                        _ andAppID: String,
+                        _ price: String,
+                        _ shortDescription: String,
+                        _ developers: String,
+                        _ publishers: String) {
+    
+    setGameDetails(with: withGameName,
+                   andAppID: andAppID,
+                   andPrice: price,
+                   andShortDescription: shortDescription,
+                   andDevelopers: developers,
+                   andPublishers: publishers)
+    
   }
   
 }
