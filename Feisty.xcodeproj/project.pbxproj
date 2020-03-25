@@ -23,8 +23,6 @@
 		5AA970B1241B7CCB001F6B5C /* LoginTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA970B0241B7CCB001F6B5C /* LoginTestCase.swift */; };
 		5AA970B6241F787F001F6B5C /* GameViewTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA970B5241F787F001F6B5C /* GameViewTestCase.swift */; };
 		5AA970BA241F7957001F6B5C /* GameViewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA970B9241F7957001F6B5C /* GameViewUITests.swift */; };
-		5AA970BF2421DA52001F6B5C /* gameList.json in Resources */ = {isa = PBXBuildFile; fileRef = 5AA970BE2421DA51001F6B5C /* gameList.json */; };
-		5AA970C32421ED8D001F6B5C /* emptyJson.json in Resources */ = {isa = PBXBuildFile; fileRef = 5AA970C22421ED8D001F6B5C /* emptyJson.json */; };
 		5AA970C52421F612001F6B5C /* gameList.json in Resources */ = {isa = PBXBuildFile; fileRef = 5AA970C42421F612001F6B5C /* gameList.json */; };
 		5AA970C72423338D001F6B5C /* gameList.json in Resources */ = {isa = PBXBuildFile; fileRef = 5AA970C62423338C001F6B5C /* gameList.json */; };
 		5AA970CC2423544C001F6B5C /* FriendViewTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA970CB2423544C001F6B5C /* FriendViewTestCase.swift */; };
@@ -76,8 +74,6 @@
 		5AA970B0241B7CCB001F6B5C /* LoginTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginTestCase.swift; sourceTree = "<group>"; };
 		5AA970B5241F787F001F6B5C /* GameViewTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewTestCase.swift; sourceTree = "<group>"; };
 		5AA970B9241F7957001F6B5C /* GameViewUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewUITests.swift; sourceTree = "<group>"; };
-		5AA970BE2421DA51001F6B5C /* gameList.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = gameList.json; sourceTree = "<group>"; };
-		5AA970C22421ED8D001F6B5C /* emptyJson.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = emptyJson.json; sourceTree = "<group>"; };
 		5AA970C42421F612001F6B5C /* gameList.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = gameList.json; sourceTree = "<group>"; };
 		5AA970C62423338C001F6B5C /* gameList.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = gameList.json; path = MockResources/gameList.json; sourceTree = "<group>"; };
 		5AA970CB2423544C001F6B5C /* FriendViewTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendViewTestCase.swift; sourceTree = "<group>"; };
@@ -163,9 +159,7 @@
 		5A25204623E9792700A4FB72 /* FeistyTests */ = {
 			isa = PBXGroup;
 			children = (
-				5AA970BE2421DA51001F6B5C /* gameList.json */,
 				5A25204923E9792700A4FB72 /* Info.plist */,
-				5AA970C22421ED8D001F6B5C /* emptyJson.json */,
 			);
 			path = FeistyTests;
 			sourceTree = "<group>";
@@ -397,8 +391,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5AA970C32421ED8D001F6B5C /* emptyJson.json in Resources */,
-				5AA970BF2421DA52001F6B5C /* gameList.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
