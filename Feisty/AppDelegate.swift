@@ -8,6 +8,7 @@
 
 import UIKit
 import OHHTTPStubs
+import Firebase
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,8 +17,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                      didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
       // Override point for customization after application launch.
       setUpStubs()
+      setUpFirebase()
       return true
     }
+  
+  private func setUpFirebase() {
+    FirebaseApp.configure()
+  }
   
   private func setUpStubs() {
     

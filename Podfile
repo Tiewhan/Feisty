@@ -5,12 +5,14 @@ target 'Feisty' do
   pod 'CommonFiles', :git => 'https://github.com/Tiewhan/FeistyCommonFiles.git', :branch => 'develop'
   #pod 'CommonFiles', :path => '/Users/tsmith/Documents/SwiftProjects/FeistyCommonFiles'
   pod 'OHHTTPStubs/Swift'
+  pod 'Firebase/Analytics'
 
   target 'FeistyTests' do
     inherit! :search_paths
     pod 'CommonFiles', :git => 'https://github.com/Tiewhan/FeistyCommonFiles.git', :branch => 'develop'
     #pod 'CommonFiles', :path => '/Users/tsmith/Documents/SwiftProjects/FeistyCommonFiles'
     pod 'OHHTTPStubs/Swift'
+    pod 'Firebase/Analytics'
   end
 
   target 'FeistyUITests' do
@@ -18,6 +20,7 @@ target 'Feisty' do
     pod 'CommonFiles', :git => 'https://github.com/Tiewhan/FeistyCommonFiles.git', :branch => 'develop'
     #pod 'CommonFiles', :path => '/Users/tsmith/Documents/SwiftProjects/FeistyCommonFiles'
     pod 'OHHTTPStubs/Swift'
+    pod 'Firebase/Analytics'
   end
 
 end
