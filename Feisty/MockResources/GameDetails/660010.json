@@ -1,0 +1,15 @@
+{
+  "66010": {
+    "success": true,
+    "data": {
+      "name": "test2",
+      "developers": [
+          "Developer One"
+      ],
+      "publishers": [
+          "Kutako"
+      ],
+      "short_description": "This is game two"
+    }
+  }
+}

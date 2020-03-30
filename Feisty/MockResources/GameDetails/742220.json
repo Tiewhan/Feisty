@@ -1,0 +1,15 @@
+{
+  "742220": {
+    "success": true,
+    "data": {
+      "name": "Escape Camp Waddalooh",
+      "developers": [
+          "Jagex"
+      ],
+      "publishers": [
+          "Jagex"
+      ],
+      "short_description": "This is game four"
+    }
+  }
+}

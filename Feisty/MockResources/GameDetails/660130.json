@@ -1,0 +1,15 @@
+{
+  "660130": {
+    "success": true,
+    "data": {
+      "name": "Tiewhan Game",
+      "developers": [
+          "Mystic Games"
+      ],
+      "publishers": [
+          "Kutako"
+      ],
+      "short_description": "This is game three"
+    }
+  }
+}
