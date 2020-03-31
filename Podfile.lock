@@ -1,5 +1,6 @@
 PODS:
-  - CommonFiles (1.0.0)
+  - CommonFiles (1.0.0):
+    - Firebase/Analytics
   - Firebase/Analytics (6.21.0):
     - Firebase/Core
   - Firebase/Core (6.21.0):
@@ -108,11 +109,11 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   CommonFiles:
-    :commit: bbf12dc9d33b408f35c833582f38f753528e4314
+    :commit: a13ffa42ff8ac726297fd7b5bffa4bfd28e722a7
     :git: https://github.com/Tiewhan/FeistyCommonFiles.git
 
 SPEC CHECKSUMS:
-  CommonFiles: e79fba99057436f9e8966f37f1bc23ebdbfd6532
+  CommonFiles: 939dd3f30570c8fb6a30cb1abdddb3fac91a928f
   Firebase: f378c80340dd41c0ad0914af740c021eb282a04b
   FirebaseAnalytics: a1a0b3327ceb5cd5b4bacffdb293f6c909aa087d
   FirebaseCore: 9f495d3afacb7b558711e6218ebb14b1c51b5802
