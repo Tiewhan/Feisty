@@ -1,14 +1,23 @@
 {
   "742320": {
     "success": true,
-    "name": "Lantern of Worlds - The Story of Samir",
-    "developers": [
-        "Blizzard"
-    ],
-    "publishers": [
-        "Blizzard"
-    ],
-    "short_description": "This is game nine"
+    "data": {
+      "name": "Lantern of Worlds - The Story of Samir",
+      "developers": [
+          "Blizzard"
+      ],
+      "publishers": [
+          "Blizzard"
+      ],
+      "short_description": "This is game nine",
+      "price_overview": {
+          "currency": "ZAR",
+          "initial": 7200,
+          "final": 7200,
+          "discount_percent": 0,
+          "initial_formatted": "",
+          "final_formatted": "R 72.00"
+      }
     }
   }
 }

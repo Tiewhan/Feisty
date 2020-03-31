@@ -9,7 +9,15 @@
       "publishers": [
           "Jagex"
       ],
-      "short_description": "This is game four"
+      "short_description": "This is game four",
+      "price_overview": {
+          "currency": "ZAR",
+          "initial": 2500,
+          "final": 2500,
+          "discount_percent": 0,
+          "initial_formatted": "",
+          "final_formatted": "R 25.00"
+      }
     }
   }
 }

@@ -1,14 +1,23 @@
 {
   "742330": {
     "success": true,
-    "name": "Grand Pskov Story - Ost and Art",
-    "developers": [
-        "EA Games"
-    ],
-    "publishers": [
-        "EA Games"
-    ],
-    "short_description": "This is game ten"
+    "data": {
+      "name": "Grand Pskov Story - Ost and Art",
+      "developers": [
+          "EA Games"
+      ],
+      "publishers": [
+          "EA Games"
+      ],
+      "short_description": "This is game ten",
+      "price_overview": {
+          "currency": "ZAR",
+          "initial": 1000,
+          "final": 1000,
+          "discount_percent": 0,
+          "initial_formatted": "",
+          "final_formatted": "R 10.00"
+      }
     }
   }
 }
