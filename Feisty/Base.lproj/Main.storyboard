@@ -220,7 +220,7 @@
                         <color key="sectionIndexColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="sectionIndexBackgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
                         <activityIndicatorView key="tableFooterView" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="large" id="2ZQ-SA-f8T">
-                            <rect key="frame" x="0.0" y="112.66666793823242" width="414" height="44"/>
+                            <rect key="frame" x="0.0" y="112.66666793823241" width="414" height="44.000000000000014"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <color key="color" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </activityIndicatorView>
@@ -289,55 +289,55 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="l3g-JF-XDo">
-                                <rect key="frame" x="20" y="66" width="374" height="601"/>
+                                <rect key="frame" x="18" y="66" width="378" height="601"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="cM3-zL-HgI">
-                                        <rect key="frame" x="5" y="0.0" width="364" height="278"/>
+                                        <rect key="frame" x="5" y="0.0" width="368" height="278"/>
                                         <subviews>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" text="Game Name" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QDv-q9-sDs">
-                                                <rect key="frame" x="0.0" y="0.0" width="364" height="50"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="368" height="50"/>
                                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                             </textView>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" text="gamePrice" textAlignment="right" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fpo-b0-lzY">
-                                                <rect key="frame" x="0.0" y="50" width="364" height="33"/>
+                                                <rect key="frame" x="0.0" y="50" width="368" height="33"/>
                                                 <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                             </textView>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" text="shortDescription" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ege-Vf-VSN">
-                                                <rect key="frame" x="0.0" y="83" width="364" height="37"/>
+                                                <rect key="frame" x="0.0" y="83" width="368" height="37"/>
                                                 <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" name=".SFUI-Regular" family=".AppleSystemUIFont" pointSize="18"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                             </textView>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" text="Developer:" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hB2-eC-Lwy">
-                                                <rect key="frame" x="0.0" y="120" width="364" height="41"/>
+                                                <rect key="frame" x="0.0" y="120" width="368" height="41"/>
                                                 <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                             </textView>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" text="developers" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bea-Uz-p60">
-                                                <rect key="frame" x="0.0" y="161" width="364" height="38"/>
+                                                <rect key="frame" x="0.0" y="161" width="368" height="38"/>
                                                 <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                             </textView>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" text="Publisher:" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7GN-DJ-vW2">
-                                                <rect key="frame" x="0.0" y="199" width="364" height="41"/>
+                                                <rect key="frame" x="0.0" y="199" width="368" height="41"/>
                                                 <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                             </textView>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" text="publishers" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nKC-yn-Tjj">
-                                                <rect key="frame" x="0.0" y="240" width="364" height="38"/>
+                                                <rect key="frame" x="0.0" y="240" width="368" height="38"/>
                                                 <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
@@ -358,11 +358,13 @@
                         <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="bcV-lk-UEE" firstAttribute="trailing" secondItem="l3g-JF-XDo" secondAttribute="trailing" priority="750" constant="20" id="IMj-az-hUS"/>
-                            <constraint firstItem="l3g-JF-XDo" firstAttribute="leading" secondItem="bcV-lk-UEE" secondAttribute="leading" priority="750" constant="20" id="K7a-6D-Iyb"/>
+                            <constraint firstItem="bcV-lk-UEE" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="l3g-JF-XDo" secondAttribute="trailing" constant="18" id="IMj-az-hUS"/>
+                            <constraint firstItem="l3g-JF-XDo" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="bcV-lk-UEE" secondAttribute="leading" constant="18" id="K7a-6D-Iyb"/>
                             <constraint firstItem="l3g-JF-XDo" firstAttribute="centerX" secondItem="bcV-lk-UEE" secondAttribute="centerX" id="VjP-th-g3r"/>
                             <constraint firstItem="l3g-JF-XDo" firstAttribute="top" secondItem="bcV-lk-UEE" secondAttribute="top" constant="10" id="b3d-dE-jfQ"/>
+                            <constraint firstItem="l3g-JF-XDo" firstAttribute="leading" secondItem="bcV-lk-UEE" secondAttribute="leading" priority="750" constant="18" placeholder="YES" id="bFP-OD-N72"/>
                             <constraint firstItem="bcV-lk-UEE" firstAttribute="bottom" secondItem="l3g-JF-XDo" secondAttribute="bottom" id="dfS-aq-OaQ"/>
+                            <constraint firstItem="bcV-lk-UEE" firstAttribute="trailing" secondItem="l3g-JF-XDo" secondAttribute="trailing" priority="750" constant="18" id="rTB-iB-SiU"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="bcV-lk-UEE"/>
                     </view>
@@ -377,7 +379,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="djY-yJ-YRJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3818.8405797101454" y="-488.16964285714283"/>
+            <point key="canvasLocation" x="3818.8405797101454" y="-488.31521739130437"/>
         </scene>
         <!--Main Menu-->
         <scene sceneID="Rmp-r6-mxT">
