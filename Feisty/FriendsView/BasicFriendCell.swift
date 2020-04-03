@@ -10,19 +10,26 @@ import UIKit
 
 class BasicFriendCell: UITableViewCell {
 
+  @IBOutlet weak var cellView: UIView!
   @IBOutlet weak var friendAvatar: UIImageView!
   @IBOutlet weak var username: UILabel!
   @IBOutlet weak var status: UILabel!
   
-  override func awakeFromNib() {
-      super.awakeFromNib()
-      // Initialization code
+  override func layoutSubviews() {
+    super.layoutSubviews()
+    
+    setUpCellDropShadow()
+    
   }
-
-  override func setSelected(_ selected: Bool, animated: Bool) {
-      super.setSelected(selected, animated: animated)
-
-      // Configure the view for the selected state
+  
+  private func setUpCellDropShadow() {
+    
+    cellView.layer.shadowColor = UIColor.black.cgColor
+    cellView.layer.shadowOpacity = 0.25
+    cellView.layer.shadowOffset = CGSize(width: 2, height: 2)
+    cellView.layer.shadowRadius = 5
+    //cellView.layer.shadowPath = UIBezierPath(rect: cellView.bounds).cgPath
+    
   }
 
 }

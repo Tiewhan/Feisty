@@ -16,6 +16,7 @@
 		5A25203D23E9792700A4FB72 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A25203B23E9792700A4FB72 /* LaunchScreen.storyboard */; };
 		5A25205323E9792700A4FB72 /* LoginUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A25205223E9792700A4FB72 /* LoginUITests.swift */; };
 		5A3085DD2437033A0035106E /* BasicFriendCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A3085DC2437033A0035106E /* BasicFriendCell.swift */; };
+		5A3085DF2437103F0035106E /* FriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A3085DE2437103F0035106E /* FriendsViewController.swift */; };
 		5A5C184A23EAA1BD00C49076 /* MainMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A5C184923EAA1BD00C49076 /* MainMenuController.swift */; };
 		5A6F57AA242CC7E7009190FA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5A6F57A9242CC7E7009190FA /* GoogleService-Info.plist */; };
 		5A6F57AB242CC865009190FA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5A6F57A9242CC7E7009190FA /* GoogleService-Info.plist */; };
@@ -23,7 +24,6 @@
 		5A8D210524050C70001578AE /* GameDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A8D210424050C70001578AE /* GameDetailsViewController.swift */; };
 		5A8D2181240CE01B001578AE /* GamesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A8D2180240CE01B001578AE /* GamesViewController.swift */; };
 		5A8D21D8240D3284001578AE /* GameTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A8D21D7240D3284001578AE /* GameTableViewCell.swift */; };
-		5AA73FAA23EAEB5200E38782 /* FriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA73FA923EAEB5200E38782 /* FriendsViewController.swift */; };
 		5AA970B1241B7CCB001F6B5C /* LoginTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA970B0241B7CCB001F6B5C /* LoginTestCase.swift */; };
 		5AA970B6241F787F001F6B5C /* GameViewTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA970B5241F787F001F6B5C /* GameViewTestCase.swift */; };
 		5AA970BA241F7957001F6B5C /* GameViewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA970B9241F7957001F6B5C /* GameViewUITests.swift */; };
@@ -72,12 +72,12 @@
 		5A25205223E9792700A4FB72 /* LoginUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUITests.swift; sourceTree = "<group>"; };
 		5A25205423E9792700A4FB72 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5A3085DC2437033A0035106E /* BasicFriendCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicFriendCell.swift; sourceTree = "<group>"; };
+		5A3085DE2437103F0035106E /* FriendsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsViewController.swift; sourceTree = "<group>"; };
 		5A5C184923EAA1BD00C49076 /* MainMenuController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuController.swift; sourceTree = "<group>"; };
 		5A6F57A9242CC7E7009190FA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		5A8D210424050C70001578AE /* GameDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameDetailsViewController.swift; sourceTree = "<group>"; };
 		5A8D2180240CE01B001578AE /* GamesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamesViewController.swift; sourceTree = "<group>"; };
 		5A8D21D7240D3284001578AE /* GameTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameTableViewCell.swift; sourceTree = "<group>"; };
-		5AA73FA923EAEB5200E38782 /* FriendsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsViewController.swift; sourceTree = "<group>"; };
 		5AA970B0241B7CCB001F6B5C /* LoginTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginTestCase.swift; sourceTree = "<group>"; };
 		5AA970B5241F787F001F6B5C /* GameViewTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewTestCase.swift; sourceTree = "<group>"; };
 		5AA970B9241F7957001F6B5C /* GameViewUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewUITests.swift; sourceTree = "<group>"; };
@@ -190,8 +190,8 @@
 		5A6F5A1C243609AF009190FA /* FriendsView */ = {
 			isa = PBXGroup;
 			children = (
-				5AA73FA923EAEB5200E38782 /* FriendsViewController.swift */,
 				5A3085DC2437033A0035106E /* BasicFriendCell.swift */,
+				5A3085DE2437103F0035106E /* FriendsViewController.swift */,
 			);
 			path = FriendsView;
 			sourceTree = "<group>";
@@ -574,9 +574,9 @@
 				5A25203323E9792700A4FB72 /* SceneDelegate.swift in Sources */,
 				5A5C184A23EAA1BD00C49076 /* MainMenuController.swift in Sources */,
 				5A3085DD2437033A0035106E /* BasicFriendCell.swift in Sources */,
+				5A3085DF2437103F0035106E /* FriendsViewController.swift in Sources */,
 				5AC4887F2424E57900757B0D /* NSObjectExtemsion.swift in Sources */,
 				5A8D210524050C70001578AE /* GameDetailsViewController.swift in Sources */,
-				5AA73FAA23EAEB5200E38782 /* FriendsViewController.swift in Sources */,
 				5A8D21D8240D3284001578AE /* GameTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
