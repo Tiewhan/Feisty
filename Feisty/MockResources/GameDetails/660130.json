@@ -1,0 +1,23 @@
+{
+  "660130": {
+    "success": true,
+    "data": {
+      "name": "Tiewhan Game",
+      "developers": [
+          "Mystic Games"
+      ],
+      "publishers": [
+          "Kutako"
+      ],
+      "short_description": "This is game three",
+      "price_overview": {
+          "currency": "ZAR",
+          "initial": 10000,
+          "final": 10000,
+          "discount_percent": 0,
+          "initial_formatted": "",
+          "final_formatted": "R 100.00"
+      }
+    }
+  }
+}

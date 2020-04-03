@@ -27,14 +27,39 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   
   private func setUpStubs() {
     
-//    guard UserDefaults.standard.string(forKey: "UseStubs") != nil else {
-//      return
-//    }
+    let option = UserDefaults.standard.bool(forKey: "UseStubs")
+    
+    guard option == true else {
+      return
+    }
     
     stub(condition: isHost("api.steampowered.com")) { _ in
       
       let stubPath = OHPathForFile("gameList.json", type(of: self))
       return HTTPStubsResponse(fileAtPath: stubPath!,
+                               statusCode: 200,
+                               headers: ["Content-Type": "application/json"])
+      
+    }
+    
+    stub(condition: isHost("store.steampowered.com") && isPath("/api/appdetails")) { request in
+      
+      guard let queries = request.url?.query else {
+        return HTTPStubsResponse()
+      }
+      
+      var index = queries.firstIndex(of: "=") ?? queries.startIndex
+      index = queries.index(after: index)
+      
+      let appID = queries[index..<queries.endIndex]
+      
+      let stubPath = OHPathForFile("\(appID).json", type(of: self))
+      
+      guard let unboxedStubPath = stubPath else {
+        return HTTPStubsResponse()
+      }
+      
+      return HTTPStubsResponse(fileAtPath: unboxedStubPath,
                                statusCode: 200,
                                headers: ["Content-Type": "application/json"])
       
