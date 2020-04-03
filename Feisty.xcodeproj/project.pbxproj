@@ -15,6 +15,7 @@
 		5A25203A23E9792700A4FB72 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A25203923E9792700A4FB72 /* Assets.xcassets */; };
 		5A25203D23E9792700A4FB72 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A25203B23E9792700A4FB72 /* LaunchScreen.storyboard */; };
 		5A25205323E9792700A4FB72 /* LoginUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A25205223E9792700A4FB72 /* LoginUITests.swift */; };
+		5A3085DD2437033A0035106E /* BasicFriendCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A3085DC2437033A0035106E /* BasicFriendCell.swift */; };
 		5A5C184A23EAA1BD00C49076 /* MainMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A5C184923EAA1BD00C49076 /* MainMenuController.swift */; };
 		5A6F57AA242CC7E7009190FA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5A6F57A9242CC7E7009190FA /* GoogleService-Info.plist */; };
 		5A6F57AB242CC865009190FA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5A6F57A9242CC7E7009190FA /* GoogleService-Info.plist */; };
@@ -70,6 +71,7 @@
 		5A25204E23E9792700A4FB72 /* FeistyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FeistyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A25205223E9792700A4FB72 /* LoginUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUITests.swift; sourceTree = "<group>"; };
 		5A25205423E9792700A4FB72 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5A3085DC2437033A0035106E /* BasicFriendCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicFriendCell.swift; sourceTree = "<group>"; };
 		5A5C184923EAA1BD00C49076 /* MainMenuController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuController.swift; sourceTree = "<group>"; };
 		5A6F57A9242CC7E7009190FA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		5A8D210424050C70001578AE /* GameDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameDetailsViewController.swift; sourceTree = "<group>"; };
@@ -147,6 +149,7 @@
 		5A25202F23E9792700A4FB72 /* Feisty */ = {
 			isa = PBXGroup;
 			children = (
+				5A6F5A1C243609AF009190FA /* FriendsView */,
 				5AA970C62423338C001F6B5C /* gameList.json */,
 				5A8D218D240CE4FD001578AE /* GameDetails */,
 				5A8D2178240CDF4E001578AE /* GameView */,
@@ -182,6 +185,15 @@
 				5A25205423E9792700A4FB72 /* Info.plist */,
 			);
 			path = FeistyUITests;
+			sourceTree = "<group>";
+		};
+		5A6F5A1C243609AF009190FA /* FriendsView */ = {
+			isa = PBXGroup;
+			children = (
+				5AA73FA923EAEB5200E38782 /* FriendsViewController.swift */,
+				5A3085DC2437033A0035106E /* BasicFriendCell.swift */,
+			);
+			path = FriendsView;
 			sourceTree = "<group>";
 		};
 		5A8D21192407B466001578AE /* Login */ = {
@@ -221,7 +233,6 @@
 			isa = PBXGroup;
 			children = (
 				5A5C184923EAA1BD00C49076 /* MainMenuController.swift */,
-				5AA73FA923EAEB5200E38782 /* FriendsViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -562,6 +573,7 @@
 				5A8D2181240CE01B001578AE /* GamesViewController.swift in Sources */,
 				5A25203323E9792700A4FB72 /* SceneDelegate.swift in Sources */,
 				5A5C184A23EAA1BD00C49076 /* MainMenuController.swift in Sources */,
+				5A3085DD2437033A0035106E /* BasicFriendCell.swift in Sources */,
 				5AC4887F2424E57900757B0D /* NSObjectExtemsion.swift in Sources */,
 				5A8D210524050C70001578AE /* GameDetailsViewController.swift in Sources */,
 				5AA73FAA23EAEB5200E38782 /* FriendsViewController.swift in Sources */,
@@ -746,6 +758,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = GLK7J5PP82;
 				INFOPLIST_FILE = Feisty/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -767,6 +780,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = GLK7J5PP82;
 				INFOPLIST_FILE = Feisty/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

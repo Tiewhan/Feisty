@@ -10,12 +10,12 @@ import UIKit
 
 class FriendsViewController: UIViewController {
 
-    override var preferredStatusBarStyle: UIStatusBarStyle {
-        return .lightContent
-    }
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
+  override var preferredStatusBarStyle: UIStatusBarStyle {
+      return .darkContent
+  }
+  
+  override func viewDidLoad() {
+      super.viewDidLoad()
+  }
 
 }
