@@ -76,7 +76,7 @@
             isEnabled = "YES">
          </CommandLineArgument>
          <CommandLineArgument
-            argument = "-UseStubs true"
+            argument = "-UseStubs"
             isEnabled = "YES">
          </CommandLineArgument>
          <CommandLineArgument
