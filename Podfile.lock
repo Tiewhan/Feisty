@@ -109,7 +109,7 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   CommonFiles:
-    :commit: a13ffa42ff8ac726297fd7b5bffa4bfd28e722a7
+    :commit: 7bf3a5fa60a7c988ca88bb5e123f2e39a5a7227c
     :git: https://github.com/Tiewhan/FeistyCommonFiles.git
 
 SPEC CHECKSUMS:
