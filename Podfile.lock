@@ -82,7 +82,7 @@ PODS:
   - PromisesObjC (1.2.8)
 
 DEPENDENCIES:
-  - CommonFiles (from `https://github.com/Tiewhan/FeistyCommonFiles.git`, branch `develop`)
+  - CommonFiles (from `/Users/tsmith/Documents/SwiftProjects/FeistyCommonFiles`)
   - Firebase/Analytics
   - OHHTTPStubs/Swift
 
@@ -104,13 +104,7 @@ SPEC REPOS:
 
 EXTERNAL SOURCES:
   CommonFiles:
-    :branch: develop
-    :git: https://github.com/Tiewhan/FeistyCommonFiles.git
-
-CHECKOUT OPTIONS:
-  CommonFiles:
-    :commit: 7bf3a5fa60a7c988ca88bb5e123f2e39a5a7227c
-    :git: https://github.com/Tiewhan/FeistyCommonFiles.git
+    :path: "/Users/tsmith/Documents/SwiftProjects/FeistyCommonFiles"
 
 SPEC CHECKSUMS:
   CommonFiles: 939dd3f30570c8fb6a30cb1abdddb3fac91a928f
@@ -128,6 +122,6 @@ SPEC CHECKSUMS:
   OHHTTPStubs: cb29d2a9d09a828ecb93349a2b0c64f99e0db89f
   PromisesObjC: c119f3cd559f50b7ae681fa59dc1acd19173b7e6
 
-PODFILE CHECKSUM: 43fef8f88cb73cffa890cc80d01c2f5caf93659b
+PODFILE CHECKSUM: c81d39db56c890c718070fbab7a0724c63d5c972
 
 COCOAPODS: 1.8.4
