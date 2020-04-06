@@ -14,9 +14,12 @@ class LoginTestCase: XCTestCase {
 
   override func setUp() {
     
-      continueAfterFailure = false
+    continueAfterFailure = false
 
-      application = XCUIApplication()
+    application = XCUIApplication()
+    
+    application.launchArguments += ["-UseStubs true"]
+    
   }
   
   func loginUser(with username: String, and password: String) {
