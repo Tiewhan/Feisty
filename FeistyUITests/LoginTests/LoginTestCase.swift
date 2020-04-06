@@ -18,7 +18,7 @@ class LoginTestCase: XCTestCase {
 
     application = XCUIApplication()
     
-    application.launchArguments += ["-UseStubs true"]
+    application.launchArguments += ["-UseStubs"]
     
   }
   

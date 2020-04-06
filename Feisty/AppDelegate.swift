@@ -27,7 +27,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   
   private func setUpStubs() {
     
-    let option = UserDefaults.standard.bool(forKey: "UseStubs")
+    let option = ProcessInfo.processInfo.arguments.contains("-UseStubs")
     
     guard option == true else {
       return
