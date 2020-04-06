@@ -28,7 +28,6 @@ class BasicFriendCell: UITableViewCell {
     cellView.layer.shadowOpacity = 0.25
     cellView.layer.shadowOffset = CGSize(width: 2, height: 2)
     cellView.layer.shadowRadius = 5
-    //cellView.layer.shadowPath = UIBezierPath(rect: cellView.bounds).cgPath
     
   }
 
