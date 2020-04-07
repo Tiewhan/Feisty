@@ -6,6 +6,7 @@ target 'Feisty' do
   #pod 'CommonFiles', :path => '/Users/tsmith/Documents/SwiftProjects/FeistyCommonFiles'
   pod 'OHHTTPStubs/Swift'
   pod 'Firebase/Analytics'
+  pod 'Firebase/Crashlytics'
 
   target 'FeistyTests' do
     inherit! :search_paths
@@ -13,6 +14,7 @@ target 'Feisty' do
     #pod 'CommonFiles', :path => '/Users/tsmith/Documents/SwiftProjects/FeistyCommonFiles'
     pod 'OHHTTPStubs/Swift'
     pod 'Firebase/Analytics'
+    pod 'Firebase/Crashlytics'
   end
 
   target 'FeistyUITests' do
@@ -21,6 +23,7 @@ target 'Feisty' do
     #pod 'CommonFiles', :path => '/Users/tsmith/Documents/SwiftProjects/FeistyCommonFiles'
     pod 'OHHTTPStubs/Swift'
     pod 'Firebase/Analytics'
+    pod 'Firebase/Crashlytics'
   end
 
 end
