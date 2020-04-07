@@ -7,6 +7,7 @@ target 'Feisty' do
   pod 'OHHTTPStubs/Swift'
   pod 'Firebase/Analytics'
   pod 'Firebase/Crashlytics'
+  pod 'Firebase/Performance'
 
   target 'FeistyTests' do
     inherit! :search_paths
@@ -15,6 +16,7 @@ target 'Feisty' do
     pod 'OHHTTPStubs/Swift'
     pod 'Firebase/Analytics'
     pod 'Firebase/Crashlytics'
+    pod 'Firebase/Performance'
   end
 
   target 'FeistyUITests' do
@@ -24,6 +26,7 @@ target 'Feisty' do
     pod 'OHHTTPStubs/Swift'
     pod 'Firebase/Analytics'
     pod 'Firebase/Crashlytics'
+    pod 'Firebase/Performance'
   end
 
 end
