@@ -21,12 +21,19 @@ class ViewController: UIViewController {
 
   override func viewDidLoad() {
     super.viewDidLoad()
-    // Do any additional setup after loading the view.
+    
+    let colour = UIColor(red: 240, green: 240, blue: 240, alpha: 1)
+    let stringColour = [NSAttributedString.Key.foregroundColor: colour]
+    
+    txtUsername.attributedPlaceholder = NSAttributedString(string: "Username",
+                                                           attributes: stringColour)
+    txtPassword.attributedPlaceholder = NSAttributedString(string: "Password",
+                                                           attributes: stringColour)
+    
   }
 
-  //Changes the status bar style to lightstyle. Contrasts the dark theme of the app
   override var preferredStatusBarStyle: UIStatusBarStyle {
-    return .lightContent
+    return .darkContent
   }
 
   //When login is pressed authenticate and if valid move on
@@ -41,10 +48,15 @@ class ViewController: UIViewController {
     }
     
     viewModel.attemptLogin(with: username, and: password)
+    
   }
 
   func moveToMainMenu() {
-      performSegue(withIdentifier: "segToMain", sender: nil)
+    
+    DispatchQueue.main.async {
+      self.performSegue(withIdentifier: "segToMain", sender: nil)
+    }
+    
   }
 
 }
@@ -52,11 +64,7 @@ class ViewController: UIViewController {
 extension ViewController: LoginType {
   
   func authenticationSuccess() {
-    
-    createAndShowAlert(message: "Successfully Logged In") { [weak self] _ in
-      self?.moveToMainMenu()
-    }
-    
+    self.moveToMainMenu()
   }
   
   func authenticationFailure() {
