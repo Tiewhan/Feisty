@@ -1,0 +1,23 @@
+{
+  "742310": {
+    "success": true,
+    "data": {
+      "name": "Waste Walkers Survivor Pack DLC",
+      "developers": [
+          "Blizzard"
+      ],
+      "publishers": [
+          "Blizzard"
+      ],
+      "short_description": "This is game eight",
+      "price_overview": {
+          "currency": "ZAR",
+          "initial": 17000,
+          "final": 17000,
+          "discount_percent": 0,
+          "initial_formatted": "",
+          "final_formatted": "R 170.00"
+      }
+    }
+  }
+}
