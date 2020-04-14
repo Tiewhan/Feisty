@@ -133,7 +133,7 @@ PODS:
   - Protobuf (3.11.4)
 
 DEPENDENCIES:
-  - CommonFiles (from `/Users/tsmith/Documents/SwiftProjects/FeistyCommonFiles`)
+  - CommonFiles (from `https://github.com/Tiewhan/FeistyCommonFiles.git`, branch `develop`)
   - Firebase/Analytics
   - Firebase/Crashlytics
   - Firebase/Performance
