@@ -171,7 +171,7 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   CommonFiles:
-    :commit: c7b304b0a698a53c2c70307aa808c63a0eafdc4e
+    :commit: 2115f78c244331a9d6b87b6dc63ed3ef6512ca18
     :git: https://github.com/Tiewhan/FeistyCommonFiles.git
 
 SPEC CHECKSUMS:
