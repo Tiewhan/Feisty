@@ -241,6 +241,8 @@
 				5A6F57DD2432070A009190FA /* 742330.json */,
 			);
 			path = GameDetails;
+      sourceTree = "<group>";
+      };
 		5A6F5A1C243609AF009190FA /* FriendsView */ = {
 			isa = PBXGroup;
 			children = (
