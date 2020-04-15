@@ -15,6 +15,9 @@
 		5A25203A23E9792700A4FB72 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A25203923E9792700A4FB72 /* Assets.xcassets */; };
 		5A25203D23E9792700A4FB72 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A25203B23E9792700A4FB72 /* LaunchScreen.storyboard */; };
 		5A25205323E9792700A4FB72 /* LoginUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A25205223E9792700A4FB72 /* LoginUITests.swift */; };
+		5A308CF4244719010035106E /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A308CF3244719010035106E /* UIViewExtensions.swift */; };
+		5A308CF824471B170035106E /* FloatingActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A308CF724471B170035106E /* FloatingActionButton.swift */; };
+		5A308CFA24471B3E0035106E /* FloatingActionButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A308CF924471B3D0035106E /* FloatingActionButton.xib */; };
 		5A5C184A23EAA1BD00C49076 /* MainMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A5C184923EAA1BD00C49076 /* MainMenuController.swift */; };
 		5A6F57AA242CC7E7009190FA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5A6F57A9242CC7E7009190FA /* GoogleService-Info.plist */; };
 		5A6F57AB242CC865009190FA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5A6F57A9242CC7E7009190FA /* GoogleService-Info.plist */; };
@@ -90,6 +93,9 @@
 		5A25204E23E9792700A4FB72 /* FeistyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FeistyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A25205223E9792700A4FB72 /* LoginUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUITests.swift; sourceTree = "<group>"; };
 		5A25205423E9792700A4FB72 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5A308CF3244719010035106E /* UIViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
+		5A308CF724471B170035106E /* FloatingActionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingActionButton.swift; sourceTree = "<group>"; };
+		5A308CF924471B3D0035106E /* FloatingActionButton.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FloatingActionButton.xib; sourceTree = "<group>"; };
 		5A5C184923EAA1BD00C49076 /* MainMenuController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuController.swift; sourceTree = "<group>"; };
 		5A6F57A9242CC7E7009190FA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		5A6F57D6243203BC009190FA /* gameList.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = gameList.json; sourceTree = "<group>"; };
@@ -177,6 +183,8 @@
 		5A25202F23E9792700A4FB72 /* Feisty */ = {
 			isa = PBXGroup;
 			children = (
+				5A308CF524471AAE0035106E /* UIComponents */,
+				5A308CF2244718E80035106E /* ExtensionsToClasses */,
 				5A6F57D5243203BC009190FA /* MockResources */,
 				5A8D218D240CE4FD001578AE /* GameDetails */,
 				5A8D2178240CDF4E001578AE /* GameView */,
@@ -212,6 +220,31 @@
 				5A25205423E9792700A4FB72 /* Info.plist */,
 			);
 			path = FeistyUITests;
+			sourceTree = "<group>";
+		};
+		5A308CF2244718E80035106E /* ExtensionsToClasses */ = {
+			isa = PBXGroup;
+			children = (
+				5A308CF3244719010035106E /* UIViewExtensions.swift */,
+			);
+			path = ExtensionsToClasses;
+			sourceTree = "<group>";
+		};
+		5A308CF524471AAE0035106E /* UIComponents */ = {
+			isa = PBXGroup;
+			children = (
+				5A308CF624471AC40035106E /* FloatingActionButtons */,
+			);
+			path = UIComponents;
+			sourceTree = "<group>";
+		};
+		5A308CF624471AC40035106E /* FloatingActionButtons */ = {
+			isa = PBXGroup;
+			children = (
+				5A308CF724471B170035106E /* FloatingActionButton.swift */,
+				5A308CF924471B3D0035106E /* FloatingActionButton.xib */,
+			);
+			path = FloatingActionButtons;
 			sourceTree = "<group>";
 		};
 		5A6F57D5243203BC009190FA /* MockResources */ = {
@@ -451,6 +484,7 @@
 				5A6F57EE2432070B009190FA /* 660130.json in Resources */,
 				5A6F57E92432070B009190FA /* 742320.json in Resources */,
 				5A6F57E62432070B009190FA /* 742230.json in Resources */,
+				5A308CFA24471B3E0035106E /* FloatingActionButton.xib in Resources */,
 				5A6F57AA242CC7E7009190FA /* GoogleService-Info.plist in Resources */,
 				5A6F57EB2432070B009190FA /* 742240.json in Resources */,
 				5A6F57E82432070B009190FA /* 216938.json in Resources */,
@@ -641,8 +675,10 @@
 				5A25203323E9792700A4FB72 /* SceneDelegate.swift in Sources */,
 				5A5C184A23EAA1BD00C49076 /* MainMenuController.swift in Sources */,
 				5AC4887F2424E57900757B0D /* NSObjectExtemsion.swift in Sources */,
+				5A308CF4244719010035106E /* UIViewExtensions.swift in Sources */,
 				5A8D210524050C70001578AE /* GameDetailsViewController.swift in Sources */,
 				5AA73FAA23EAEB5200E38782 /* FriendsViewController.swift in Sources */,
+				5A308CF824471B170035106E /* FloatingActionButton.swift in Sources */,
 				5A8D21D8240D3284001578AE /* GameTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
