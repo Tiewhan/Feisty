@@ -30,6 +30,9 @@ class ViewController: UIViewController {
     txtPassword.attributedPlaceholder = NSAttributedString(string: "Password",
                                                            attributes: stringColour)
     
+    setUpButtonDropShadow()
+    setUpButtonCornerRadius()
+    
   }
 
   override var preferredStatusBarStyle: UIStatusBarStyle {
@@ -52,11 +55,7 @@ class ViewController: UIViewController {
   }
 
   func moveToMainMenu() {
-    
-    DispatchQueue.main.async {
-      self.performSegue(withIdentifier: "segToMain", sender: nil)
-    }
-    
+    self.performSegue(withIdentifier: "segToMain", sender: nil)
   }
 
 }
@@ -64,12 +63,18 @@ class ViewController: UIViewController {
 extension ViewController: LoginType {
   
   func authenticationSuccess() {
-    self.moveToMainMenu()
+    
+    DispatchQueue.main.async {
+      self.moveToMainMenu()
+    }
+    
   }
   
   func authenticationFailure() {
     
-    createAndShowAlert(message: "Failed To Log In") { _ in }
+    DispatchQueue.main.async {
+      self.createAndShowAlert(message: "Failed To Log In") { _ in }
+    }
     
   }
   
@@ -80,6 +85,19 @@ extension ViewController: LoginType {
     alertController.addAction(UIAlertAction(title: "Dismiss", style: .default, handler: handler))
     self.present(alertController, animated: true, completion: nil)
     
+  }
+  
+  private func setUpButtonDropShadow() {
+    
+    btnLogin.layer.shadowColor = UIColor.black.cgColor
+    btnLogin.layer.shadowOpacity = 0.25
+    btnLogin.layer.shadowOffset = CGSize(width: 4, height: 4)
+    btnLogin.layer.shadowRadius = 4
+    
+  }
+  
+  private func setUpButtonCornerRadius() {
+    btnLogin.layer.cornerRadius = 25
   }
   
 }
