@@ -262,8 +262,8 @@
             <objects>
                 <navigationController id="ene-Cn-Xsc" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="" image="Game Tab Bar Icon" id="FzE-lg-e4D"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="jht-Kj-66G">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="56"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="jht-Kj-66G">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="108"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <textAttributes key="titleTextAttributes">
@@ -381,7 +381,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="3Yc-Za-Tmc">
-                                <rect key="frame" x="0.0" y="56" width="375" height="619"/>
+                                <rect key="frame" x="0.0" y="108" width="375" height="567"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="8sq-kv-XkZ" userLabel="Content View">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="1000"/>
@@ -570,7 +570,7 @@
         <image name="Profile Icon" width="40" height="41"/>
         <image name="folder.fill" catalog="system" width="64" height="46"/>
         <image name="square.and.arrow.down" catalog="system" width="60" height="64"/>
-        <image name="trash" catalog="system" width="60" height="64"/>
         <image name="square.and.arrow.up.on.square.fill" catalog="system" width="58" height="64"/>
+        <image name="trash" catalog="system" width="60" height="64"/>
     </resources>
 </document>
