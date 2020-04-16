@@ -10,11 +10,12 @@ import CommonFiles
 
 class GameDetailsViewController: UIViewController {
 
-  @IBOutlet weak var gameNameLabel: UITextView!
-  @IBOutlet weak var lblPrice: UITextView!
+  @IBOutlet weak var gameNameLabel: UILabel!
+  @IBOutlet weak var lblPrice: UILabel!
   @IBOutlet weak var lblShortDescription: UITextView!
   @IBOutlet weak var lblDevelopers: UITextView!
   @IBOutlet weak var lblPublishers: UITextView!
+  @IBOutlet weak var gameCard: UIView!
   
   internal var selectedGame: Game?
   
@@ -32,6 +33,7 @@ class GameDetailsViewController: UIViewController {
     super.viewDidLoad()
     
     viewModel.getGameData()
+    setUpGameCardDropShadow()
   }
   
   private func setGameDetails(with gameName: String,
@@ -47,6 +49,15 @@ class GameDetailsViewController: UIViewController {
     lblDevelopers.text = developers
     lblPublishers.text = publishers
 
+  }
+  
+  private func setUpGameCardDropShadow() {
+    
+    gameCard.layer.shadowColor = UIColor.black.cgColor
+    gameCard.layer.shadowOpacity = 0.25
+    gameCard.layer.shadowOffset = CGSize(width: 4, height: 4)
+    gameCard.layer.shadowRadius = 10
+    
   }
   
 }
