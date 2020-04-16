@@ -16,6 +16,8 @@ class GameDetailsViewController: UIViewController {
   @IBOutlet weak var lblDevelopers: UITextView!
   @IBOutlet weak var lblPublishers: UITextView!
   @IBOutlet weak var gameCard: UIView!
+  @IBOutlet weak var shoppingCartFAB: FloatingActionButton!
+  @IBOutlet weak var addToCartFAB: FloatingActionButton!
   
   internal var selectedGame: Game?
   
@@ -34,6 +36,11 @@ class GameDetailsViewController: UIViewController {
     
     viewModel.getGameData()
     setUpGameCardDropShadow()
+    
+    shoppingCartFAB.backgroundColor = UIColor.clear
+    addToCartFAB.backgroundColor = UIColor.clear
+    shoppingCartFAB.button.setImage(#imageLiteral(resourceName: "ShoppingCart"), for: .normal)
+    
   }
   
   private func setGameDetails(with gameName: String,

@@ -325,7 +325,7 @@
                                                     </label>
                                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2p6-ah-uSP" userLabel="Game Description">
                                                         <rect key="frame" x="21" y="303.66666666666669" width="301" height="368.00000000000006"/>
-                                                        <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </mutableString>
+                                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </string>
                                                         <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                                         <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -411,25 +411,47 @@
                                 <viewLayoutGuide key="contentLayoutGuide" id="3Wd-mf-d5L"/>
                                 <viewLayoutGuide key="frameLayoutGuide" id="AdI-qJ-Y8B"/>
                             </scrollView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oss-0j-w89" userLabel="AddFloatingActionButton" customClass="FloatingActionButton" customModule="Feisty" customModuleProvider="target">
+                                <rect key="frame" x="303" y="531" width="56" height="56"/>
+                                <color key="backgroundColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="56" id="DRR-id-5N2"/>
+                                    <constraint firstAttribute="height" constant="56" id="vku-Uh-2Yx"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="waV-mG-zUx" userLabel="ShoppingCartFloatingActionButton" customClass="FloatingActionButton" customModule="Feisty" customModuleProvider="target">
+                                <rect key="frame" x="303" y="603" width="56" height="56"/>
+                                <color key="backgroundColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="56" id="3MF-ga-Yll"/>
+                                    <constraint firstAttribute="height" constant="56" id="Y4m-Yd-EJN"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="0.94117647058823528" green="0.94117647058823528" blue="0.94117647058823528" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="bcV-lk-UEE" firstAttribute="trailing" secondItem="waV-mG-zUx" secondAttribute="trailing" constant="16" id="AhF-Y7-ww4"/>
                             <constraint firstItem="3Yc-Za-Tmc" firstAttribute="bottom" secondItem="bcV-lk-UEE" secondAttribute="bottom" id="C4k-OT-sIm"/>
                             <constraint firstItem="bcV-lk-UEE" firstAttribute="top" secondItem="3Yc-Za-Tmc" secondAttribute="top" id="Hpu-51-DsK"/>
+                            <constraint firstItem="bcV-lk-UEE" firstAttribute="bottom" secondItem="waV-mG-zUx" secondAttribute="bottom" constant="16" id="I7O-bu-UKD"/>
+                            <constraint firstItem="oss-0j-w89" firstAttribute="bottom" secondItem="waV-mG-zUx" secondAttribute="top" constant="-16" id="Oe2-8j-nOO"/>
                             <constraint firstItem="3Yc-Za-Tmc" firstAttribute="leading" secondItem="bcV-lk-UEE" secondAttribute="leading" id="QqE-Gt-X5Y"/>
                             <constraint firstItem="bcV-lk-UEE" firstAttribute="trailing" secondItem="3Yc-Za-Tmc" secondAttribute="trailing" id="UIS-xh-n7j"/>
+                            <constraint firstItem="bcV-lk-UEE" firstAttribute="trailing" secondItem="oss-0j-w89" secondAttribute="trailing" constant="16" id="xg4-sY-iqt"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="bcV-lk-UEE"/>
                     </view>
                     <navigationItem key="navigationItem" title="Game Details" id="i5f-mN-x10"/>
                     <connections>
+                        <outlet property="addToCartFAB" destination="oss-0j-w89" id="Ahh-PF-c0z"/>
                         <outlet property="gameCard" destination="l3g-JF-XDo" id="IaS-UZ-qe8"/>
                         <outlet property="gameNameLabel" destination="I6Q-rv-fVI" id="hke-W1-8Le"/>
                         <outlet property="lblDevelopers" destination="Wc1-JP-Kq5" id="VPu-5A-TY8"/>
                         <outlet property="lblPrice" destination="m15-ul-wOF" id="AjG-Kh-Z9p"/>
                         <outlet property="lblPublishers" destination="TQn-97-pz4" id="TLe-Et-9MC"/>
                         <outlet property="lblShortDescription" destination="2p6-ah-uSP" id="ezQ-2H-tFt"/>
+                        <outlet property="shoppingCartFAB" destination="waV-mG-zUx" id="GYO-Yh-v3l"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="djY-yJ-YRJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
