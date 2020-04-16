@@ -10,7 +10,11 @@ import UIKit
 
 class FloatingActionButton: UIButton {
 
-  private let nibName = "FloatingActionBar"
+  private let nibName = "FloatingActionButton"
+  
+  @IBOutlet weak var button: UIButton!
+  
+  var actionToPerform: (() -> Void)?
   
   required init?(coder: NSCoder) {
     super.init(coder: coder)
@@ -28,16 +32,20 @@ class FloatingActionButton: UIButton {
     view.frame = self.bounds
     self.addSubview(view)
     
-    self.setUpDropShadow()
-    self.setUpCornerRadiusWith(radiusOf: 25)
+    button.setUpDropShadow(opacity: 0.5)
+    button.setUpCornerRadiusWith(radiusOf: 25)
     
   }
   
-  private func loadViewFromNib() -> UIView?{
+  private func loadViewFromNib() -> UIView? {
     
     let nib = UINib(nibName: nibName, bundle: nil)
     return nib.instantiate(withOwner: self, options: nil).first as? UIView
     
+  }
+  
+  @IBAction func buttonPressed(_ sender: Any) {
+    actionToPerform?()
   }
 
 }
