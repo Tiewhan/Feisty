@@ -10,7 +10,7 @@ import UIKit
 
 class FloatingActionButton: UIButton {
 
-  private let nibName = "FloatingActionButton"
+  private let nibName = FloatingActionButton.className
   
   @IBOutlet weak var button: UIButton!
   

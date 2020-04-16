@@ -21,12 +21,22 @@ class ViewController: UIViewController {
 
   override func viewDidLoad() {
     super.viewDidLoad()
-    // Do any additional setup after loading the view.
+    
+    let colour = UIColor(red: 240, green: 240, blue: 240, alpha: 1)
+    let stringColour = [NSAttributedString.Key.foregroundColor: colour]
+    
+    txtUsername.attributedPlaceholder = NSAttributedString(string: "Username",
+                                                           attributes: stringColour)
+    txtPassword.attributedPlaceholder = NSAttributedString(string: "Password",
+                                                           attributes: stringColour)
+    
+    setUpButtonDropShadow()
+    setUpButtonCornerRadius()
+    
   }
 
-  //Changes the status bar style to lightstyle. Contrasts the dark theme of the app
   override var preferredStatusBarStyle: UIStatusBarStyle {
-    return .lightContent
+    return .darkContent
   }
 
   //When login is pressed authenticate and if valid move on
@@ -41,10 +51,11 @@ class ViewController: UIViewController {
     }
     
     viewModel.attemptLogin(with: username, and: password)
+    
   }
 
   func moveToMainMenu() {
-      performSegue(withIdentifier: "segToMain", sender: nil)
+    self.performSegue(withIdentifier: "segToMain", sender: nil)
   }
 
 }
@@ -53,15 +64,17 @@ extension ViewController: LoginType {
   
   func authenticationSuccess() {
     
-    createAndShowAlert(message: "Successfully Logged In") { [weak self] _ in
-      self?.moveToMainMenu()
+    DispatchQueue.main.async {
+      self.moveToMainMenu()
     }
     
   }
   
   func authenticationFailure() {
     
-    createAndShowAlert(message: "Failed To Log In") { _ in }
+    DispatchQueue.main.async {
+      self.createAndShowAlert(message: "Failed To Log In") { _ in }
+    }
     
   }
   
@@ -72,6 +85,19 @@ extension ViewController: LoginType {
     alertController.addAction(UIAlertAction(title: "Dismiss", style: .default, handler: handler))
     self.present(alertController, animated: true, completion: nil)
     
+  }
+  
+  private func setUpButtonDropShadow() {
+    
+    btnLogin.layer.shadowColor = UIColor.black.cgColor
+    btnLogin.layer.shadowOpacity = 0.25
+    btnLogin.layer.shadowOffset = CGSize(width: 4, height: 4)
+    btnLogin.layer.shadowRadius = 4
+    
+  }
+  
+  private func setUpButtonCornerRadius() {
+    btnLogin.layer.cornerRadius = 25
   }
   
 }
