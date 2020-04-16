@@ -3,6 +3,7 @@
     <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -215,7 +216,7 @@
                         <color key="sectionIndexColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="sectionIndexBackgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
                         <activityIndicatorView key="tableFooterView" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="large" id="2ZQ-SA-f8T">
-                            <rect key="frame" x="0.0" y="112.66666793823241" width="375" height="44.000000000000014"/>
+                            <rect key="frame" x="0.0" y="112.66666793823242" width="375" height="44"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <color key="color" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </activityIndicatorView>
@@ -434,11 +435,56 @@
                         <outlet property="lblPublishers" destination="TQn-97-pz4" id="TLe-Et-9MC"/>
                         <outlet property="lblShortDescription" destination="2p6-ah-uSP" id="ezQ-2H-tFt"/>
                         <outlet property="shoppingCartFAB" destination="waV-mG-zUx" id="GYO-Yh-v3l"/>
+                        <segue destination="Yk9-p9-Bdf" kind="presentation" identifier="showShoppingCart" id="tIC-H4-3dB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="djY-yJ-YRJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3818.4000000000001" y="-488.42364532019707"/>
+        </scene>
+        <!--Shopping Cart-->
+        <scene sceneID="t3d-bk-fxb">
+            <objects>
+                <viewController storyboardIdentifier="ShoppingCartViewController" title="Shopping Cart" id="Yk9-p9-Bdf" customClass="ShoppingCartViewController" customModule="Feisty" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="aJk-lo-Rfb">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="758"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" largeTitles="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0dj-hP-Xd7">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <color key="barTintColor" name="LightGrey"/>
+                                <items>
+                                    <navigationItem title="Shopping Cart" largeTitleDisplayMode="always" id="gYz-dL-meM"/>
+                                </items>
+                            </navigationBar>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bkD-a9-kk8">
+                                <rect key="frame" x="16" y="653" width="343" height="53"/>
+                                <color key="backgroundColor" name="BaseBlue"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="53" id="OVq-JJ-4ue"/>
+                                </constraints>
+                                <state key="normal" title="Proceed to Checkout">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" name="LightGrey"/>
+                        <color key="tintColor" name="LightBlue"/>
+                        <constraints>
+                            <constraint firstItem="p4M-9G-diF" firstAttribute="bottom" secondItem="bkD-a9-kk8" secondAttribute="bottom" constant="18" id="BgL-9w-0sS"/>
+                            <constraint firstItem="bkD-a9-kk8" firstAttribute="leading" secondItem="p4M-9G-diF" secondAttribute="leading" constant="16" id="IGp-xn-4aY"/>
+                            <constraint firstItem="p4M-9G-diF" firstAttribute="trailing" secondItem="bkD-a9-kk8" secondAttribute="trailing" constant="16" id="TQV-OG-Wbq"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="p4M-9G-diF"/>
+                    </view>
+                    <connections>
+                        <outlet property="checkoutButton" destination="bkD-a9-kk8" id="tkr-Ix-JHt"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="G77-aM-gQx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4806" y="-488"/>
         </scene>
         <!--Main Menu-->
         <scene sceneID="Rmp-r6-mxT">
@@ -467,5 +513,14 @@
         <image name="folder.fill" catalog="system" width="64" height="46"/>
         <image name="square.and.arrow.down" catalog="system" width="60" height="64"/>
         <image name="trash" catalog="system" width="60" height="64"/>
+        <namedColor name="BaseBlue">
+            <color red="0.37647058823529411" green="0.53725490196078429" blue="0.70196078431372544" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="LightBlue">
+            <color red="0.12549019607843137" green="0.54509803921568623" blue="0.96078431372549022" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="LightGrey">
+            <color red="0.94117647058823528" green="0.94117647058823528" blue="0.94117647058823528" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
     </resources>
 </document>

@@ -40,6 +40,22 @@ class GameDetailsViewController: UIViewController {
     shoppingCartFAB.backgroundColor = UIColor.clear
     addToCartFAB.backgroundColor = UIColor.clear
     shoppingCartFAB.button.setImage(#imageLiteral(resourceName: "ShoppingCart"), for: .normal)
+    shoppingCartFAB.actionToPerform = {
+      
+      let storyboard = UIStoryboard(name: "Main", bundle: .main)
+      let className = ShoppingCartViewController.className
+      let shoppingModal = storyboard.instantiateViewController(withIdentifier: className) as? ShoppingCartViewController
+      
+      guard let shoppingCartViewController = shoppingModal else {
+        return
+      }
+//
+//      guard let self = self else {
+//        return
+//      }
+
+      self.present(shoppingCartViewController, animated: true, completion: nil)
+    }
     
   }
   
