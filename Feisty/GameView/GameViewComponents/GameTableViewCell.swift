@@ -11,8 +11,8 @@ import UIKit
 /// Represents an individual cell for the Game Table View
 public class GameTableViewCell: UITableViewCell {
 
-  @IBOutlet weak var detailsStackView: UIStackView!
-  @IBOutlet public weak var txtViewGameName: UITextView!
+  @IBOutlet weak var cellView: UIView!
+  @IBOutlet weak var txtViewGameName: UILabel!
   @IBOutlet public weak var txtGamePrice: UILabel!
   public var cellTappedAction: (() -> Void)?
 
@@ -22,24 +22,11 @@ public class GameTableViewCell: UITableViewCell {
     return view
   }()
 
-  /**
-   Pings the given view as a background to the given stackview
-   
-   - parameter view: The view that will be the background
-   - parameter stackView: The stack that needs to have the background added to
-   */
-  private func pinBackGround(_ view: UIView, to stackView: UIStackView) {
-    view.translatesAutoresizingMaskIntoConstraints = false
-    stackView.insertSubview(view, at: 0)
-    view.layer.cornerRadius = 10.0
-    view.pin(to: stackView)
-  }
-  
   ///The cell equivalent of viewDidLoad
   public override func layoutSubviews() {
     super.layoutSubviews()
-    pinBackGround(backGroundView, to: detailsStackView)
     
+    setUpCellDropShadow()
     setUpTapGestureRecognizer()
 
   }
@@ -62,23 +49,14 @@ public class GameTableViewCell: UITableViewCell {
     cellTappedAction()
     
   }
-
-}
-
-public extension UIView {
-
-  /**
-   All constraints of the given view are set equal to the corresponding anchors of this view
-   */
-  func pin(to view: UIView) {
-
-    NSLayoutConstraint.activate([
-      leadingAnchor.constraint(equalTo: view.leadingAnchor),
-      trailingAnchor.constraint(equalTo: view.trailingAnchor),
-      topAnchor.constraint(equalTo: view.topAnchor),
-      bottomAnchor.constraint(equalTo: view.bottomAnchor)
-    ])
-
+  
+  private func setUpCellDropShadow() {
+    
+    cellView.layer.shadowColor = UIColor.black.cgColor
+    cellView.layer.shadowOpacity = 0.25
+    cellView.layer.shadowOffset = CGSize(width: 2, height: 2)
+    cellView.layer.shadowRadius = 5
+    
   }
 
 }

@@ -71,10 +71,6 @@ class GamesViewController: UITableViewController {
 
   }
 
-  override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-    return "Games In Store"
-  }
-
   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
     super.prepare(for: segue, sender: sender)
 
