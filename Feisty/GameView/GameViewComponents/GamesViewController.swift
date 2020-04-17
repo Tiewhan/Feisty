@@ -16,6 +16,8 @@ class GamesViewController: UITableViewController {
     return GameDataViewModel(self, with: GameModel(GameAPIRepo()))
   }()
   
+  var shoppingCart: ShoppingCart = ShoppingCart()
+  
   @IBOutlet var mainView: UITableView!
   @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
 
@@ -63,38 +65,12 @@ class GamesViewController: UITableViewController {
       
       let selectedGame = self.dataViewModel.getGameAt(at: indexPath.row)
       detailViewController.selectedGame = selectedGame
+      detailViewController.shoppingCart = self.shoppingCart
       
       self.navigationController?.pushViewController(detailViewController, animated: true)
     }
 
     return cell
-
-  }
-
-  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-    super.prepare(for: segue, sender: sender)
-
-    switch segue.identifier ?? "" {
-    case "showGameDetails":
-
-      guard let gameDetailController = segue.destination as? GameDetailsViewController else {
-        fatalError("Unexpected Destination: \(segue.destination)")
-      }
-
-      guard let selectedGameCell = sender as? GameTableViewCell else {
-        fatalError("Unextected Sender: \(sender ?? "")")
-      }
-
-      guard let indexPath = tableView.indexPath(for: selectedGameCell) else {
-        fatalError("Cell is not being displayed")
-      }
-
-      let selectedGame = dataViewModel.getGameAt(at: indexPath.row)
-      gameDetailController.selectedGame = selectedGame
-
-    default:
-      fatalError("Unexpected Segue Identifier")
-    }
 
   }
 

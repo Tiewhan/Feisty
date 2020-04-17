@@ -172,11 +172,11 @@
             </objects>
             <point key="canvasLocation" x="2996" y="574"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Friends-->
         <scene sceneID="rqO-Um-ZDW">
             <objects>
                 <navigationController id="YH9-Ii-VNV" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="Friends Tab Bar Icon" id="vCH-N9-xkD"/>
+                    <tabBarItem key="tabBarItem" title="Friends" image="Friends Tab Bar Icon" id="vCH-N9-xkD"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="c4f-e0-LwU">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="108"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -189,11 +189,11 @@
             </objects>
             <point key="canvasLocation" x="1870" y="574"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Game Nav-->
         <scene sceneID="Shv-BQ-ZwN">
             <objects>
-                <navigationController id="ene-Cn-Xsc" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="Game Tab Bar Icon" id="FzE-lg-e4D"/>
+                <navigationController title="Game Nav" id="ene-Cn-Xsc" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Games" image="Game Tab Bar Icon" id="FzE-lg-e4D"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="jht-Kj-66G">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="108"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -221,7 +221,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="675"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" red="0.94117647058823528" green="0.94117647058823528" blue="0.94117647058823528" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" name="LightBlue"/>
                         <color key="separatorColor" red="0.94117647058823528" green="0.94117647058823528" blue="0.94117647058823528" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="sectionIndexColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="sectionIndexBackgroundColor" red="0.94117647058823528" green="0.94117647058823528" blue="0.94117647058823528" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -285,6 +285,7 @@
                                 <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
                                 <connections>
                                     <outlet property="cellView" destination="MHi-Re-yqs" id="tqN-od-E2X"/>
+                                    <outlet property="gameImage" destination="O8e-UC-XXd" id="L51-9Q-r9t"/>
                                     <outlet property="txtGamePrice" destination="AcT-pe-Jbq" id="OND-f3-YUv"/>
                                     <outlet property="txtViewGameName" destination="pPR-QF-GvY" id="zu2-4g-a8Q"/>
                                     <segue destination="5A0-Lk-Doh" kind="show" identifier="showGameDetails" id="y88-HK-PCh"/>
@@ -458,12 +459,14 @@
                         <outlet property="addToCartFAB" destination="oss-0j-w89" id="Ahh-PF-c0z"/>
                         <outlet property="gameCard" destination="l3g-JF-XDo" id="IaS-UZ-qe8"/>
                         <outlet property="gameNameLabel" destination="I6Q-rv-fVI" id="hke-W1-8Le"/>
+                        <outlet property="imageView" destination="nBw-uf-MDQ" id="WMD-7Z-UF2"/>
                         <outlet property="lblDevelopers" destination="Wc1-JP-Kq5" id="VPu-5A-TY8"/>
                         <outlet property="lblPrice" destination="m15-ul-wOF" id="AjG-Kh-Z9p"/>
                         <outlet property="lblPublishers" destination="TQn-97-pz4" id="TLe-Et-9MC"/>
                         <outlet property="lblShortDescription" destination="2p6-ah-uSP" id="ezQ-2H-tFt"/>
                         <outlet property="shoppingCartFAB" destination="waV-mG-zUx" id="GYO-Yh-v3l"/>
-                        <segue destination="Yk9-p9-Bdf" kind="presentation" identifier="showShoppingCart" id="tIC-H4-3dB"/>
+                        <outlet property="shoppingCartRightConstraint" destination="AhF-Y7-ww4" id="8Rw-Qp-L0R"/>
+                        <segue destination="Yk9-p9-Bdf" kind="presentation" identifier="showShoppingCart" modalTransitionStyle="crossDissolve" id="tIC-H4-3dB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="djY-yJ-YRJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -478,9 +481,73 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="758"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" largeTitles="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0dj-hP-Xd7">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="88" estimatedRowHeight="88" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Eas-pk-ww8">
+                                <rect key="frame" x="0.0" y="108" width="375" height="616"/>
+                                <color key="backgroundColor" name="LightGrey"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ShoppingCartGameCell" id="4SE-KE-9ZE" customClass="ShoppingCartTableCell" customModule="Feisty" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="88"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="4SE-KE-9ZE" id="ht5-5m-Jim">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="88"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2ti-il-2Kt" userLabel="Cell View">
+                                                    <rect key="frame" x="12" y="4" width="351" height="80"/>
+                                                    <subviews>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="square.and.arrow.up.on.square.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="dJI-f8-R8k" userLabel="Game Image">
+                                                            <rect key="frame" x="0.0" y="-2" width="99.333333333333329" height="84.333333333333343"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" secondItem="dJI-f8-R8k" secondAttribute="height" multiplier="31:25" id="ZAi-jo-syy"/>
+                                                            </constraints>
+                                                        </imageView>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qGF-Ow-Q1T">
+                                                            <rect key="frame" x="107.33333333333333" y="50" width="235.66666666666669" height="20.666666666666671"/>
+                                                            <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Game Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zcu-6s-9HS">
+                                                            <rect key="frame" x="107.33333333333333" y="18" width="235.66666666666669" height="24"/>
+                                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <color key="backgroundColor" red="0.94117647059999998" green="0.94117647059999998" blue="0.94117647059999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <constraints>
+                                                        <constraint firstItem="Zcu-6s-9HS" firstAttribute="top" secondItem="2ti-il-2Kt" secondAttribute="top" constant="18" id="79O-x6-H6D"/>
+                                                        <constraint firstItem="Zcu-6s-9HS" firstAttribute="leading" secondItem="dJI-f8-R8k" secondAttribute="trailing" constant="8" id="B2Z-De-PH4"/>
+                                                        <constraint firstItem="qGF-Ow-Q1T" firstAttribute="leading" secondItem="dJI-f8-R8k" secondAttribute="trailing" constant="8" id="Cef-nX-l89"/>
+                                                        <constraint firstItem="dJI-f8-R8k" firstAttribute="top" secondItem="2ti-il-2Kt" secondAttribute="top" id="EKM-0l-Ydh"/>
+                                                        <constraint firstAttribute="trailing" secondItem="Zcu-6s-9HS" secondAttribute="trailing" constant="8" id="L4T-I1-g4c"/>
+                                                        <constraint firstItem="dJI-f8-R8k" firstAttribute="leading" secondItem="2ti-il-2Kt" secondAttribute="leading" id="T8F-h1-ADn"/>
+                                                        <constraint firstItem="qGF-Ow-Q1T" firstAttribute="top" secondItem="Zcu-6s-9HS" secondAttribute="bottom" constant="8" id="U1V-FA-pex"/>
+                                                        <constraint firstAttribute="bottom" secondItem="dJI-f8-R8k" secondAttribute="bottom" id="htN-l4-Nji"/>
+                                                        <constraint firstAttribute="trailing" secondItem="qGF-Ow-Q1T" secondAttribute="trailing" constant="8" id="ygp-oh-hbU"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <color key="backgroundColor" red="0.94117647059999998" green="0.94117647059999998" blue="0.94117647059999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <constraints>
+                                                <constraint firstItem="2ti-il-2Kt" firstAttribute="height" secondItem="ht5-5m-Jim" secondAttribute="height" constant="-8" id="2Hx-Cu-4Jk"/>
+                                                <constraint firstItem="2ti-il-2Kt" firstAttribute="top" secondItem="ht5-5m-Jim" secondAttribute="top" constant="4" id="3cN-Cw-0aK"/>
+                                                <constraint firstItem="2ti-il-2Kt" firstAttribute="leading" secondItem="ht5-5m-Jim" secondAttribute="leading" constant="12" id="Mog-Xa-Nlw"/>
+                                                <constraint firstAttribute="trailing" secondItem="2ti-il-2Kt" secondAttribute="trailing" constant="12" id="fT9-8R-BD1"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                        <connections>
+                                            <outlet property="cellView" destination="2ti-il-2Kt" id="awF-ii-3h8"/>
+                                            <outlet property="gameImage" destination="dJI-f8-R8k" id="t4F-w3-UKO"/>
+                                            <outlet property="txtGamePrice" destination="qGF-Ow-Q1T" id="lD5-g6-hCX"/>
+                                            <outlet property="txtViewGameName" destination="Zcu-6s-9HS" id="qhi-Y9-ToA"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <navigationBar contentMode="scaleToFill" largeTitles="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0dj-hP-Xd7">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="108"/>
                                 <color key="barTintColor" name="LightGrey"/>
                                 <items>
                                     <navigationItem title="Shopping Cart" largeTitleDisplayMode="always" id="gYz-dL-meM"/>
@@ -500,14 +567,23 @@
                         <color key="backgroundColor" name="LightGrey"/>
                         <color key="tintColor" name="LightBlue"/>
                         <constraints>
+                            <constraint firstItem="p4M-9G-diF" firstAttribute="bottom" secondItem="Eas-pk-ww8" secondAttribute="bottom" id="BGk-p2-Nlm"/>
                             <constraint firstItem="p4M-9G-diF" firstAttribute="bottom" secondItem="bkD-a9-kk8" secondAttribute="bottom" constant="18" id="BgL-9w-0sS"/>
                             <constraint firstItem="bkD-a9-kk8" firstAttribute="leading" secondItem="p4M-9G-diF" secondAttribute="leading" constant="16" id="IGp-xn-4aY"/>
+                            <constraint firstItem="0dj-hP-Xd7" firstAttribute="trailing" secondItem="p4M-9G-diF" secondAttribute="trailing" id="PkU-zT-m5d"/>
+                            <constraint firstItem="p4M-9G-diF" firstAttribute="trailing" secondItem="Eas-pk-ww8" secondAttribute="trailing" id="T1g-d1-I1a"/>
                             <constraint firstItem="p4M-9G-diF" firstAttribute="trailing" secondItem="bkD-a9-kk8" secondAttribute="trailing" constant="16" id="TQV-OG-Wbq"/>
+                            <constraint firstItem="Eas-pk-ww8" firstAttribute="leading" secondItem="p4M-9G-diF" secondAttribute="leading" id="bwK-xX-A2K"/>
+                            <constraint firstItem="Eas-pk-ww8" firstAttribute="top" secondItem="0dj-hP-Xd7" secondAttribute="bottom" id="kNA-NE-jhe"/>
+                            <constraint firstItem="0dj-hP-Xd7" firstAttribute="top" secondItem="p4M-9G-diF" secondAttribute="top" id="rrg-v4-EyX"/>
+                            <constraint firstItem="0dj-hP-Xd7" firstAttribute="leading" secondItem="p4M-9G-diF" secondAttribute="leading" id="w9u-jd-yz4"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="p4M-9G-diF"/>
                     </view>
+                    <navigationItem key="navigationItem" id="KWo-oS-0jz"/>
                     <connections>
                         <outlet property="checkoutButton" destination="bkD-a9-kk8" id="tkr-Ix-JHt"/>
+                        <outlet property="tableView" destination="Eas-pk-ww8" id="5Dk-UM-Yxo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="G77-aM-gQx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
