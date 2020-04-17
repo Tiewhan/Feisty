@@ -53,15 +53,21 @@ extension ViewController: LoginType {
   
   func authenticationSuccess() {
     
-    createAndShowAlert(message: "Successfully Logged In") { [weak self] _ in
-      self?.moveToMainMenu()
+    DispatchQueue.main.async {
+      
+      self.createAndShowAlert(message: "Successfully Logged In") { [weak self] _ in
+        self?.moveToMainMenu()
+      }
+      
     }
     
   }
   
   func authenticationFailure() {
     
-    createAndShowAlert(message: "Failed To Log In") { _ in }
+    DispatchQueue.main.async {
+      self.createAndShowAlert(message: "Failed To Log In") { _ in }
+    }
     
   }
   
