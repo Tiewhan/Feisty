@@ -16,7 +16,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YKP-Xa-PfI">
-                                <rect key="frame" x="16" y="545" width="382" height="53"/>
+                                <rect key="frame" x="16" y="587" width="343" height="53"/>
                                 <color key="backgroundColor" red="0.37647058823529411" green="0.53725490196078429" blue="0.70196078431372544" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="53" id="1Cr-8i-ZuL"/>
@@ -37,16 +37,16 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Feisty" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FXf-3i-2ws">
-                                <rect key="frame" x="16" y="19.999999999999996" width="382" height="40.666666666666657"/>
+                                <rect key="frame" x="16" y="64" width="343" height="40.666666666666657"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="ng2-Cb-083">
-                                <rect key="frame" x="16" y="287" width="382" height="118"/>
+                                <rect key="frame" x="16" y="329" width="343" height="118"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Fa9-ia-2r4">
-                                        <rect key="frame" x="0.0" y="0.0" width="382" height="53"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="53"/>
                                         <color key="backgroundColor" red="0.63921568627450975" green="0.63921568627450975" blue="0.63921568627450975" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="53" id="zP3-5A-r8R"/>
@@ -56,7 +56,7 @@
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aan-iG-gdG">
-                                        <rect key="frame" x="0.0" y="65" width="382" height="53"/>
+                                        <rect key="frame" x="0.0" y="65" width="343" height="53"/>
                                         <color key="backgroundColor" red="0.63921568627450975" green="0.63921568627450975" blue="0.63921568627450975" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
@@ -166,6 +166,9 @@
                     </tableView>
                     <tabBarItem key="tabBarItem" title="" image="Friends Tab Bar Icon" id="pdt-89-lkb"/>
                     <navigationItem key="navigationItem" title="Friends" id="17j-7l-ewa"/>
+                    <connections>
+                        <outlet property="table" destination="gFu-iq-Krw" id="lBS-k8-nyl"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="awj-qX-pU4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -500,7 +503,6 @@
         <image name="Game Tab Bar Icon" width="44" height="20"/>
         <image name="Profile Icon" width="40" height="41"/>
         <image name="folder.fill" catalog="system" width="64" height="46"/>
-        <image name="square.and.arrow.down" catalog="system" width="60" height="64"/>
         <image name="square.and.arrow.up.on.square.fill" catalog="system" width="58" height="64"/>
         <image name="trash" catalog="system" width="60" height="64"/>
     </resources>

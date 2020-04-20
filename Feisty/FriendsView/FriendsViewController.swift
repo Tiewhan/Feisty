@@ -11,8 +11,12 @@ import CommonFiles
 
 class FriendsViewController: UITableViewController {
   
+  @IBOutlet var table: UITableView!
+  
   private lazy var viewModel: FriendListViewModelType = {
-    return FriendListViewModel(withView: self, andModel: FriendListModel(withRepo: FriendListAPIRepo()))
+    return FriendListViewModel(withView: self,
+                               andModel: FriendListModel(withRepo: FriendListAPIRepo(),
+                                                         andImageRepo: FriendImageAPIRepo()))
   }()
   
   override var preferredStatusBarStyle: UIStatusBarStyle {
@@ -68,6 +72,19 @@ class FriendsViewController: UITableViewController {
 }
 
 extension FriendsViewController: FriendListViewType {
+  
+  func foundImageOfCell(at index: Int, image: UIImage?) {
+    
+    DispatchQueue.main.async {
+      
+      let indexPath = IndexPath(row: index, section: 0)
+      let cell = self.table.cellForRow(at: indexPath) as? BasicFriendCell
+      
+      cell?.friendAvatar.image = image
+      
+    }
+    
+  }
   
   func errorLoadingData() {
     createAndShowAlert(message: "Could Not Load Friends") { _ in }
