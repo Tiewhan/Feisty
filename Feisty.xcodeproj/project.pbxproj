@@ -20,6 +20,8 @@
 		5A308CF4244719010035106E /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A308CF3244719010035106E /* UIViewExtensions.swift */; };
 		5A308CF824471B170035106E /* FloatingActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A308CF724471B170035106E /* FloatingActionButton.swift */; };
 		5A308CFA24471B3E0035106E /* FloatingActionButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A308CF924471B3D0035106E /* FloatingActionButton.xib */; };
+		5A308D01244837E30035106E /* ShoppingCartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A308D00244837E30035106E /* ShoppingCartViewController.swift */; };
+		5A308D1A2449856B0035106E /* ShoppingCartTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A308D192449856B0035106E /* ShoppingCartTableCell.swift */; };
 		5A5C184A23EAA1BD00C49076 /* MainMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A5C184923EAA1BD00C49076 /* MainMenuController.swift */; };
 		5A6F57AA242CC7E7009190FA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5A6F57A9242CC7E7009190FA /* GoogleService-Info.plist */; };
 		5A6F57AB242CC865009190FA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5A6F57A9242CC7E7009190FA /* GoogleService-Info.plist */; };
@@ -99,6 +101,8 @@
 		5A308CF3244719010035106E /* UIViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
 		5A308CF724471B170035106E /* FloatingActionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingActionButton.swift; sourceTree = "<group>"; };
 		5A308CF924471B3D0035106E /* FloatingActionButton.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FloatingActionButton.xib; sourceTree = "<group>"; };
+		5A308D00244837E30035106E /* ShoppingCartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingCartViewController.swift; sourceTree = "<group>"; };
+		5A308D192449856B0035106E /* ShoppingCartTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingCartTableCell.swift; sourceTree = "<group>"; };
 		5A5C184923EAA1BD00C49076 /* MainMenuController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuController.swift; sourceTree = "<group>"; };
 		5A6F57A9242CC7E7009190FA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		5A6F57D6243203BC009190FA /* gameList.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = gameList.json; sourceTree = "<group>"; };
@@ -185,6 +189,7 @@
 		5A25202F23E9792700A4FB72 /* Feisty */ = {
 			isa = PBXGroup;
 			children = (
+				5A308CFB244837410035106E /* ShoppingCart */,
 				5A6F5A1C243609AF009190FA /* FriendsView */,
 				5A308CF524471AAE0035106E /* UIComponents */,
 				5A308CF2244718E80035106E /* ExtensionsToClasses */,
@@ -250,6 +255,15 @@
 			path = FloatingActionButtons;
 			sourceTree = "<group>";
 		};
+		5A308CFB244837410035106E /* ShoppingCart */ = {
+			isa = PBXGroup;
+			children = (
+				5A308D00244837E30035106E /* ShoppingCartViewController.swift */,
+				5A308D192449856B0035106E /* ShoppingCartTableCell.swift */,
+			);
+			path = ShoppingCart;
+			sourceTree = "<group>";
+		};
 		5A6F57D5243203BC009190FA /* MockResources */ = {
 			isa = PBXGroup;
 			children = (
@@ -274,8 +288,8 @@
 				5A6F57DD2432070A009190FA /* 742330.json */,
 			);
 			path = GameDetails;
-      sourceTree = "<group>";
-      };
+			sourceTree = "<group>";
+		};
 		5A6F5A1C243609AF009190FA /* FriendsView */ = {
 			isa = PBXGroup;
 			children = (
@@ -688,9 +702,10 @@
 				5A3085DD2437033A0035106E /* BasicFriendCell.swift in Sources */,
 				5A3085DF2437103F0035106E /* FriendsViewController.swift in Sources */,
 				5AC4887F2424E57900757B0D /* NSObjectExtemsion.swift in Sources */,
+				5A308D1A2449856B0035106E /* ShoppingCartTableCell.swift in Sources */,
 				5A308CF4244719010035106E /* UIViewExtensions.swift in Sources */,
 				5A8D210524050C70001578AE /* GameDetailsViewController.swift in Sources */,
-				5AA73FAA23EAEB5200E38782 /* FriendsViewController.swift in Sources */,
+				5A308D01244837E30035106E /* ShoppingCartViewController.swift in Sources */,
 				5A308CF824471B170035106E /* FloatingActionButton.swift in Sources */,
 				5A8D21D8240D3284001578AE /* GameTableViewCell.swift in Sources */,
 			);

@@ -14,13 +14,8 @@ public class GameTableViewCell: UITableViewCell {
   @IBOutlet weak var cellView: UIView!
   @IBOutlet weak var txtViewGameName: UILabel!
   @IBOutlet public weak var txtGamePrice: UILabel!
+  @IBOutlet weak var gameImage: UIImageView!
   public var cellTappedAction: (() -> Void)?
-
-  private lazy var backGroundView: UIView = {
-    let view = UIView()
-    view.backgroundColor = .darkGray
-    return view
-  }()
 
   ///The cell equivalent of viewDidLoad
   public override func layoutSubviews() {
