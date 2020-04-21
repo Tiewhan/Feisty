@@ -71,11 +71,7 @@ class GameDetailsViewController: UIViewController {
     addToCartFAB.backgroundColor = UIColor.clear
     addToCartFAB.actionToPerform = { [weak self] in
       
-      guard let self = self else {
-        return
-      }
-      
-      guard let game = self.selectedGame else {
+      guard let self = self, let game = self.selectedGame else {
         return
       }
       
@@ -87,7 +83,7 @@ class GameDetailsViewController: UIViewController {
         self?.view.layoutIfNeeded()
       }
       
-      let completion: (Bool) -> Void = { [weak self] completed in
+      let completion: (Bool) -> Void = { [weak self] _ in
         
         self?.shoppingCartRightConstraint.constant = 16
         
