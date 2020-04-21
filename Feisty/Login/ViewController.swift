@@ -22,16 +22,15 @@ class ViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     
-    let colour = UIColor(red: 240, green: 240, blue: 240, alpha: 1)
-    let stringColour = [NSAttributedString.Key.foregroundColor: colour]
+    let stringColour = [NSAttributedString.Key.foregroundColor: #colorLiteral(red: 0.9411764706, green: 0.9411764706, blue: 0.9411764706, alpha: 1)]
     
     txtUsername.attributedPlaceholder = NSAttributedString(string: "Username",
                                                            attributes: stringColour)
     txtPassword.attributedPlaceholder = NSAttributedString(string: "Password",
                                                            attributes: stringColour)
     
-    setUpButtonDropShadow()
-    setUpButtonCornerRadius()
+    btnLogin.setUpDropShadow()
+    btnLogin.setUpCornerRadiusWith(radiusOf: 25)
     
   }
 
@@ -85,19 +84,6 @@ extension ViewController: LoginType {
     alertController.addAction(UIAlertAction(title: "Dismiss", style: .default, handler: handler))
     self.present(alertController, animated: true, completion: nil)
     
-  }
-  
-  private func setUpButtonDropShadow() {
-    
-    btnLogin.layer.shadowColor = UIColor.black.cgColor
-    btnLogin.layer.shadowOpacity = 0.25
-    btnLogin.layer.shadowOffset = CGSize(width: 4, height: 4)
-    btnLogin.layer.shadowRadius = 4
-    
-  }
-  
-  private func setUpButtonCornerRadius() {
-    btnLogin.layer.cornerRadius = 25
   }
   
 }

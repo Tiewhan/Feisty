@@ -62,10 +62,14 @@ class FriendsViewController: UITableViewController {
   
   func createAndShowAlert(message: String, handler: @escaping((UIAlertAction) -> Void)) {
     
-    let alertController = UIAlertController(title: "Error", message: "", preferredStyle: .alert)
-    alertController.message = message
-    alertController.addAction(UIAlertAction(title: "Dismiss", style: .default, handler: handler))
-    self.present(alertController, animated: true, completion: nil)
+    DispatchQueue.main.async {
+      
+      let alertController = UIAlertController(title: "Error", message: "", preferredStyle: .alert)
+      alertController.message = message
+      alertController.addAction(UIAlertAction(title: "Dismiss", style: .default, handler: handler))
+      self.present(alertController, animated: true, completion: nil)
+      
+    }
     
   }
     

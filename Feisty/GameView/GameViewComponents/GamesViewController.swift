@@ -30,12 +30,11 @@ class GamesViewController: UITableViewController {
   }
 
   override var preferredStatusBarStyle: UIStatusBarStyle {
-    return .lightContent
+    return .darkContent
   }
 
   // MARK: - Table view data source
   override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    
     return dataViewModel.getPageCount()
   }
 
@@ -57,11 +56,7 @@ class GamesViewController: UITableViewController {
       let className = GameDetailsViewController.className
       let detailView = storyboard.instantiateViewController(withIdentifier: className) as? GameDetailsViewController
       
-      guard let detailViewController = detailView else {
-        return
-      }
-      
-      guard let self = self else {
+      guard let detailViewController = detailView, let self = self else {
         return
       }
       
