@@ -287,6 +287,7 @@
                                 <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
                                 <connections>
                                     <outlet property="cellView" destination="MHi-Re-yqs" id="tqN-od-E2X"/>
+                                    <outlet property="headerImage" destination="O8e-UC-XXd" id="Y1P-07-XDb"/>
                                     <outlet property="txtGamePrice" destination="AcT-pe-Jbq" id="OND-f3-YUv"/>
                                     <outlet property="txtViewGameName" destination="pPR-QF-GvY" id="zu2-4g-a8Q"/>
                                     <segue destination="5A0-Lk-Doh" kind="show" identifier="showGameDetails" id="y88-HK-PCh"/>

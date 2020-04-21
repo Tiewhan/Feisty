@@ -13,7 +13,8 @@ class GamesViewController: UITableViewController {
 
   // MARK: Properties and Outlets
   private lazy var dataViewModel: GameDataViewModel = {
-    return GameDataViewModel(self, with: GameModel(GameAPIRepo()))
+    return GameDataViewModel(self, with: GameModel(GameAPIRepo(),
+                                                   andImageRepo: GameImageAPIRepo()))
   }()
   
   @IBOutlet var mainView: UITableView!
@@ -46,6 +47,7 @@ class GamesViewController: UITableViewController {
     let gameDetails = dataViewModel.getGameDetails(at: indexPath.row)
     cell.txtViewGameName?.text = gameDetails.gameName
     cell.txtGamePrice?.text = gameDetails.gamePrice
+    cell.headerImage?.image = gameDetails.gameHeader ?? #imageLiteral(resourceName: "Default Game Icon")
     
     cell.cellTappedAction = { [weak self] in
       
@@ -157,6 +159,19 @@ class GamesViewController: UITableViewController {
  Extend the ViewController with the GameDataLoadedType from the MVVC architecture
  */
 extension GamesViewController: GameDataLoadedType {
+  
+  func headerImageLoadedForGame(at index: Int, withImage image: UIImage?) {
+    
+    DispatchQueue.main.async {
+      
+      let indexPath = IndexPath(row: index, section: 0)
+      let cell = self.mainView.cellForRow(at: indexPath) as? GameTableViewCell
+      
+      cell?.headerImage.image = image
+      
+    }
+    
+  }
   
   /**
    When the View Model finished loading the data this function will be invoked
