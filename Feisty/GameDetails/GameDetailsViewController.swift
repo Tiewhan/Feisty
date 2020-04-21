@@ -18,8 +18,11 @@ class GameDetailsViewController: UIViewController {
   @IBOutlet weak var gameCard: UIView!
   @IBOutlet weak var shoppingCartFAB: FloatingActionButton!
   @IBOutlet weak var addToCartFAB: FloatingActionButton!
+  @IBOutlet weak var shoppingCartRightConstraint: NSLayoutConstraint!
+  @IBOutlet weak var imageView: UIImageView!
   
-  internal var selectedGame: Game?
+  var selectedGame: Game?
+  var shoppingCart: ShoppingCart?
   
   private lazy var viewModel: GameDetailsViewModel = {
     
@@ -37,9 +40,60 @@ class GameDetailsViewController: UIViewController {
     viewModel.getGameData()
     setUpGameCardDropShadow()
     
+    setUpShoppingCartFloatingActionButton()
+    setUpAddToCartFloatingActionButton()
+    
+  }
+  
+  private func setUpShoppingCartFloatingActionButton() {
+    
     shoppingCartFAB.backgroundColor = UIColor.clear
-    addToCartFAB.backgroundColor = UIColor.clear
     shoppingCartFAB.button.setImage(#imageLiteral(resourceName: "ShoppingCart"), for: .normal)
+    shoppingCartFAB.actionToPerform = {
+      
+      let storyboard = UIStoryboard(name: "Main", bundle: .main)
+      let className = ShoppingCartViewController.className
+      let shoppingModal = storyboard.instantiateViewController(withIdentifier: className) as? ShoppingCartViewController
+      
+      guard let shoppingCartViewController = shoppingModal else {
+        return
+      }
+      
+      shoppingCartViewController.shoppingCart = self.shoppingCart
+      
+      self.present(shoppingCartViewController, animated: true, completion: nil)
+    }
+    
+  }
+  
+  private func setUpAddToCartFloatingActionButton() {
+    
+    addToCartFAB.backgroundColor = UIColor.clear
+    addToCartFAB.actionToPerform = { [weak self] in
+      
+      guard let self = self, let game = self.selectedGame else {
+        return
+      }
+      
+      self.shoppingCart?.shoppingList.append(game)
+      
+      self.shoppingCartRightConstraint.constant = 32
+      
+      let animations: () -> Void = { [weak self] in
+        self?.view.layoutIfNeeded()
+      }
+      
+      let completion: (Bool) -> Void = { [weak self] _ in
+        
+        self?.shoppingCartRightConstraint.constant = 16
+        
+        UIView.animate(withDuration: 0.25, animations: animations)
+        
+      }
+      
+      UIView.animate(withDuration: 0.25, animations: animations, completion: completion)
+      
+    }
     
   }
   
