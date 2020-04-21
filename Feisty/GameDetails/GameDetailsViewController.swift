@@ -102,13 +102,15 @@ class GameDetailsViewController: UIViewController {
                               andPrice price: String,
                               andShortDescription shortDescription: String,
                               andDevelopers developers: String,
-                              andPublishers publishers: String) {
+                              andPublishers publishers: String,
+                              andHeaderImage headerImage: UIImage?) {
 
     gameNameLabel.text = gameName
     lblPrice.text = price
     lblShortDescription.text = shortDescription
     lblDevelopers.text = developers
     lblPublishers.text = publishers
+    imageView.image = headerImage ?? #imageLiteral(resourceName: "Default Game Icon")
 
   }
   
@@ -130,14 +132,16 @@ extension GameDetailsViewController: GameDetailsLoadedType {
                         _ price: String,
                         _ shortDescription: String,
                         _ developers: String,
-                        _ publishers: String) {
+                        _ publishers: String,
+                        _ headerImage: UIImage?) {
     
     setGameDetails(with: withGameName,
                    andAppID: andAppID,
                    andPrice: price,
                    andShortDescription: shortDescription,
                    andDevelopers: developers,
-                   andPublishers: publishers)
+                   andPublishers: publishers,
+                   andHeaderImage: headerImage)
     
   }
   

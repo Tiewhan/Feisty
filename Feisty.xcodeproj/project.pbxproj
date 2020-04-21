@@ -403,7 +403,6 @@
 				5A25202B23E9792700A4FB72 /* Resources */,
 				5A812AAF23F2D64900152639 /* ShellScript */,
 				A33135280DAA73892094E303 /* [CP] Embed Pods Frameworks */,
-				AF96732E41142EB61B3DE3C7 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -423,7 +422,6 @@
 				5A25204023E9792700A4FB72 /* Frameworks */,
 				5A25204123E9792700A4FB72 /* Resources */,
 				2A86A1E692D8B0FD3006BDE6 /* [CP] Embed Pods Frameworks */,
-				2ABDCCB6D20652A362140C18 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -444,7 +442,6 @@
 				5A25204B23E9792700A4FB72 /* Frameworks */,
 				5A25204C23E9792700A4FB72 /* Resources */,
 				30EB22B1A37DB1B60CF4CE7D /* [CP] Embed Pods Frameworks */,
-				21AD37BE6459357806F33390 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -576,23 +573,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		21AD37BE6459357806F33390 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-FeistyUITests/Pods-FeistyUITests-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-FeistyUITests/Pods-FeistyUITests-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FeistyUITests/Pods-FeistyUITests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		2A86A1E692D8B0FD3006BDE6 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -608,23 +588,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FeistyTests/Pods-FeistyTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		2ABDCCB6D20652A362140C18 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-FeistyTests/Pods-FeistyTests-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-FeistyTests/Pods-FeistyTests-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FeistyTests/Pods-FeistyTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		30EB22B1A37DB1B60CF4CE7D /* [CP] Embed Pods Frameworks */ = {
@@ -700,23 +663,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Feisty/Pods-Feisty-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		AF96732E41142EB61B3DE3C7 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Feisty/Pods-Feisty-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Feisty/Pods-Feisty-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Feisty/Pods-Feisty-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		BE20CCDBD30E0053B475BCA0 /* [CP] Check Pods Manifest.lock */ = {

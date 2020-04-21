@@ -133,7 +133,7 @@ PODS:
   - Protobuf (3.11.4)
 
 DEPENDENCIES:
-  - CommonFiles (from `/Users/tsmith/Documents/SwiftProjects/FeistyCommonFiles`)
+  - CommonFiles (from `https://github.com/Tiewhan/FeistyCommonFiles.git`, branch `develop`)
   - Firebase/Analytics
   - Firebase/Crashlytics
   - Firebase/Performance
@@ -171,11 +171,11 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   CommonFiles:
-    :commit: ee2b79cda20f85943d043f1e4acf84f3983d553b
+    :commit: 54c0de8da0a9c50418f9e8ffa03e2ce99a45c56a
     :git: https://github.com/Tiewhan/FeistyCommonFiles.git
 
 SPEC CHECKSUMS:
-  CommonFiles: 355d15e03498e51ea4f13a463eec06f716396ff2
+  CommonFiles: 939dd3f30570c8fb6a30cb1abdddb3fac91a928f
   Firebase: 32f9520684e87c7af3f0704f7f88042626d6b536
   FirebaseABTesting: 821a3a3e4a145987e80fee3657c4de1cb9adf693
   FirebaseAnalytics: 83f822fd0d33a46f49f89b8c3ab16ab4d89df08a
@@ -199,6 +199,6 @@ SPEC CHECKSUMS:
   PromisesObjC: c119f3cd559f50b7ae681fa59dc1acd19173b7e6
   Protobuf: 176220c526ad8bd09ab1fb40a978eac3fef665f7
 
-PODFILE CHECKSUM: 318982e7743eaf2782143ee98886590478e72e03
+PODFILE CHECKSUM: 9150a570d85b4976cbeb5698dc448ca1ca5a4cd2
 
 COCOAPODS: 1.8.4
