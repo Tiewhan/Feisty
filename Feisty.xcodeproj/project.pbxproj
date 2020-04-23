@@ -58,6 +58,7 @@
 		5AA970CC2423544C001F6B5C /* FriendViewTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA970CB2423544C001F6B5C /* FriendViewTestCase.swift */; };
 		5AA970CE242354A5001F6B5C /* FriendViewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA970CD242354A5001F6B5C /* FriendViewUITests.swift */; };
 		5AC4887F2424E57900757B0D /* NSObjectExtemsion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AC4887E2424E57900757B0D /* NSObjectExtemsion.swift */; };
+		5ADD16622451669700B72078 /* SnapshotHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ADD16612451669700B72078 /* SnapshotHelper.swift */; };
 		9B4B61123858AEED894A6F9C /* Pods_FeistyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50F446061D95531E5B46B679 /* Pods_FeistyUITests.framework */; };
 		D7147FD667D1A72ADF262062 /* Pods_FeistyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8685D4AAC529E20A24214CA3 /* Pods_FeistyTests.framework */; };
 /* End PBXBuildFile section */
@@ -127,6 +128,7 @@
 		5AA970CB2423544C001F6B5C /* FriendViewTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendViewTestCase.swift; sourceTree = "<group>"; };
 		5AA970CD242354A5001F6B5C /* FriendViewUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendViewUITests.swift; sourceTree = "<group>"; };
 		5AC4887E2424E57900757B0D /* NSObjectExtemsion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSObjectExtemsion.swift; sourceTree = "<group>"; };
+		5ADD16612451669700B72078 /* SnapshotHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnapshotHelper.swift; sourceTree = "<group>"; };
 		666D0E31ABA5F364E4A609D9 /* Pods-Feisty.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Feisty.release.xcconfig"; path = "Target Support Files/Pods-Feisty/Pods-Feisty.release.xcconfig"; sourceTree = "<group>"; };
 		8685D4AAC529E20A24214CA3 /* Pods_FeistyTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FeistyTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EAE55A9D05C66B1ABA53077 /* Pods-FeistyUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FeistyUITests.release.xcconfig"; path = "Target Support Files/Pods-FeistyUITests/Pods-FeistyUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -221,6 +223,7 @@
 		5A25205123E9792700A4FB72 /* FeistyUITests */ = {
 			isa = PBXGroup;
 			children = (
+				5ADD16612451669700B72078 /* SnapshotHelper.swift */,
 				5AA970CA24235417001F6B5C /* FriendsViewTests */,
 				5AA970C42421F612001F6B5C /* gameList.json */,
 				5AA970B4241F785E001F6B5C /* GameViewTests */,
@@ -725,6 +728,7 @@
 			files = (
 				5AA970B6241F787F001F6B5C /* GameViewTestCase.swift in Sources */,
 				5A25205323E9792700A4FB72 /* LoginUITests.swift in Sources */,
+				5ADD16622451669700B72078 /* SnapshotHelper.swift in Sources */,
 				5AA970CC2423544C001F6B5C /* FriendViewTestCase.swift in Sources */,
 				5AA970BA241F7957001F6B5C /* GameViewUITests.swift in Sources */,
 				5AA970CE242354A5001F6B5C /* FriendViewUITests.swift in Sources */,

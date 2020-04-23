@@ -23,6 +23,7 @@ class GameViewUITests: GameViewTestCase {
     
     expectation(for: exsists, evaluatedWith: listItem, handler: nil)
     waitForExpectations(timeout: 20, handler: nil)
+    snapshot("01GameStore")
     
   }
   

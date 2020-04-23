@@ -26,6 +26,7 @@ class LoginUITests: LoginTestCase {
     sleep(1)
     
     XCTAssert(application.staticTexts["Games"].exists)
+    snapshot("01LoginScreen")
     
   }
   
@@ -41,6 +42,7 @@ class LoginUITests: LoginTestCase {
     sleep(1)
     
     XCTAssert(application.alerts["Login Message"].staticTexts["Failed To Log In"].exists)
+    snapshot("02LoginScreen")
     
   }
   
@@ -56,6 +58,7 @@ class LoginUITests: LoginTestCase {
     sleep(1)
     
     XCTAssert(application.alerts["Login Message"].staticTexts["Failed To Log In"].exists)
+    snapshot("03LoginScreen")
     
   }
   
@@ -71,6 +74,7 @@ class LoginUITests: LoginTestCase {
     sleep(1)
     
     XCTAssert(application.alerts["Login Message"].staticTexts["Failed To Log In"].exists)
+    snapshot("04LoginScreen")
     
   }
   
@@ -86,6 +90,7 @@ class LoginUITests: LoginTestCase {
     sleep(1)
     
     XCTAssert(application.alerts["Login Message"].staticTexts["Failed To Log In"].exists)
+    snapshot("05LoginScreen")
     
   }
   

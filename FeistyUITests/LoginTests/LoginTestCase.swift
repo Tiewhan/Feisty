@@ -17,6 +17,7 @@ class LoginTestCase: XCTestCase {
     continueAfterFailure = false
 
     application = XCUIApplication()
+    setupSnapshot(application)
     
     application.launchArguments += ["-UseStubs"]
     
