@@ -173,7 +173,7 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   CommonFiles:
-    :commit: 7a2e62541431df9035e6591edc96136dd3113a13
+    :commit: 69261cffc3df109a9efe2d2d05119551fb14b08c
     :git: https://github.com/Tiewhan/FeistyCommonFiles.git
 
 SPEC CHECKSUMS:
@@ -203,4 +203,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: 9150a570d85b4976cbeb5698dc448ca1ca5a4cd2
 
-COCOAPODS: 1.8.4
+COCOAPODS: 1.9.1

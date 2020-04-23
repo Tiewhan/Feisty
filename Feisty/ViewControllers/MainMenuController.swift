@@ -12,7 +12,7 @@ class MainMenuController: UITabBarController {
 
     //Changes the status bar style to lightstyle. Contrasts the dark theme of the app
     override var preferredStatusBarStyle: UIStatusBarStyle {
-        return .lightContent
+        return .darkContent
     }
 
 }
