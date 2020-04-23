@@ -19,7 +19,8 @@ class BasicFriendCell: UITableViewCell {
     super.layoutSubviews()
     
     setUpCellDropShadow()
-    
+    friendAvatar.setUpCornerRadiusWith(radiusOf: 40)
+      
   }
   
   private func setUpCellDropShadow() {

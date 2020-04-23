@@ -167,6 +167,9 @@
                     </tableView>
                     <tabBarItem key="tabBarItem" title="" image="Friends Tab Bar Icon" id="pdt-89-lkb"/>
                     <navigationItem key="navigationItem" title="Friends" id="17j-7l-ewa"/>
+                    <connections>
+                        <outlet property="table" destination="gFu-iq-Krw" id="lBS-k8-nyl"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="awj-qX-pU4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -285,7 +288,7 @@
                                 <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
                                 <connections>
                                     <outlet property="cellView" destination="MHi-Re-yqs" id="tqN-od-E2X"/>
-                                    <outlet property="gameImage" destination="O8e-UC-XXd" id="L51-9Q-r9t"/>
+                                    <outlet property="headerImage" destination="O8e-UC-XXd" id="Y1P-07-XDb"/>
                                     <outlet property="txtGamePrice" destination="AcT-pe-Jbq" id="OND-f3-YUv"/>
                                     <outlet property="txtViewGameName" destination="pPR-QF-GvY" id="zu2-4g-a8Q"/>
                                     <segue destination="5A0-Lk-Doh" kind="show" identifier="showGameDetails" id="y88-HK-PCh"/>

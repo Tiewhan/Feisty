@@ -11,6 +11,7 @@ import UIKit
 /// Represents an individual cell for the Game Table View
 public class GameTableViewCell: UITableViewCell {
 
+  @IBOutlet weak var headerImage: UIImageView!
   @IBOutlet weak var cellView: UIView!
   @IBOutlet weak var txtViewGameName: UILabel!
   @IBOutlet public weak var txtGamePrice: UILabel!
