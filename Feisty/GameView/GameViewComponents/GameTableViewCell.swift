@@ -11,6 +11,7 @@ import UIKit
 /// Represents an individual cell for the Game Table View
 public class GameTableViewCell: UITableViewCell {
 
+  @IBOutlet weak var headerImage: UIImageView!
   @IBOutlet weak var cellView: UIView!
   @IBOutlet weak var txtViewGameName: UILabel!
   @IBOutlet public weak var txtGamePrice: UILabel!
@@ -21,7 +22,7 @@ public class GameTableViewCell: UITableViewCell {
   public override func layoutSubviews() {
     super.layoutSubviews()
     
-    setUpCellDropShadow()
+    cellView.setUpDropShadow(shadowOffset: CGSize(width: 2, height: 2), shadowRadius: 5)
     setUpTapGestureRecognizer()
 
   }
@@ -45,13 +46,4 @@ public class GameTableViewCell: UITableViewCell {
     
   }
   
-  private func setUpCellDropShadow() {
-    
-    cellView.layer.shadowColor = UIColor.black.cgColor
-    cellView.layer.shadowOpacity = 0.25
-    cellView.layer.shadowOffset = CGSize(width: 2, height: 2)
-    cellView.layer.shadowRadius = 5
-    
-  }
-
 }

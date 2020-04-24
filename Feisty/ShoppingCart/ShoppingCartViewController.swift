@@ -84,6 +84,7 @@ extension ShoppingCartViewController: UITableViewDataSource {
     let gameDetails = viewModel.getGame(at: indexPath.row)
     cell.txtGamePrice.text = gameDetails.price
     cell.txtViewGameName.text = gameDetails.name
+    cell.gameImage.image = gameDetails.headerImage ?? #imageLiteral(resourceName: "Default Game Icon")
     
     return cell
     
