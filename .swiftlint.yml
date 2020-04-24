@@ -4,3 +4,5 @@ disabled_rules:
 excluded:
   - Carthage
   - Pods
+  - fastlane
+  - FeistyUITests/SnapshotHelper.swift
