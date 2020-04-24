@@ -21,3 +21,6 @@ profile
 DerivedData
 *.hmap
 *.ipa
+
+# Fastlane
+/fastlane/screenshots

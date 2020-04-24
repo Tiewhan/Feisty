@@ -13,7 +13,7 @@ import XCTest
 class GameViewUITests: GameViewTestCase {
 
   func testLoadGames() {
-     
+
   }
   
   func testLoadGameDetailsThenBack() {

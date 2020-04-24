@@ -13,7 +13,7 @@ import XCTest
 class LoginUITests: LoginTestCase {
 
   func testGivenRightCredentialsWhenLoginIsCalledThenGiveGoodResponse() {
-    
+
   }
   
   func testGivenWrongCredentialsWhenLoginIsCalledThenGiveBadResponse() {

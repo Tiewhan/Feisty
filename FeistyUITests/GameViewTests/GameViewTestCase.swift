@@ -17,6 +17,7 @@ class GameViewTestCase: XCTestCase {
     continueAfterFailure = false
     
     application = XCUIApplication()
+    setupSnapshot(application)
     
     application.launchArguments += ["-UseStubs"]
     
