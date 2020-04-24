@@ -11,8 +11,12 @@ import CommonFiles
 
 class FriendsViewController: UITableViewController {
   
+  @IBOutlet var table: UITableView!
+  
   private lazy var viewModel: FriendListViewModelType = {
-    return FriendListViewModel(withView: self, andModel: FriendListModel(withRepo: FriendListAPIRepo()))
+    return FriendListViewModel(withView: self,
+                               andModel: FriendListModel(withRepo: FriendListAPIRepo(),
+                                                         andImageRepo: FriendImageAPIRepo()))
   }()
   
   override var preferredStatusBarStyle: UIStatusBarStyle {
@@ -58,16 +62,33 @@ class FriendsViewController: UITableViewController {
   
   func createAndShowAlert(message: String, handler: @escaping((UIAlertAction) -> Void)) {
     
-    let alertController = UIAlertController(title: "Error", message: "", preferredStyle: .alert)
-    alertController.message = message
-    alertController.addAction(UIAlertAction(title: "Dismiss", style: .default, handler: handler))
-    self.present(alertController, animated: true, completion: nil)
+    DispatchQueue.main.async {
+      
+      let alertController = UIAlertController(title: "Error", message: "", preferredStyle: .alert)
+      alertController.message = message
+      alertController.addAction(UIAlertAction(title: "Dismiss", style: .default, handler: handler))
+      self.present(alertController, animated: true, completion: nil)
+      
+    }
     
   }
     
 }
 
 extension FriendsViewController: FriendListViewType {
+  
+  func foundImageOfCell(at index: Int, image: UIImage?) {
+    
+    DispatchQueue.main.async {
+      
+      let indexPath = IndexPath(row: index, section: 0)
+      let cell = self.table.cellForRow(at: indexPath) as? BasicFriendCell
+      
+      cell?.friendAvatar.image = image
+      
+    }
+    
+  }
   
   func errorLoadingData() {
     createAndShowAlert(message: "Could Not Load Friends") { _ in }

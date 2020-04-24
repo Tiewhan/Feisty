@@ -9,7 +9,8 @@
       "publishers": [
           "Blizzard"
       ],
-      "short_description": "This is game seven"
+      "short_description": "This is game seven",
+      "header_image": "https://steamcdn-a.akamaihd.net/steam/apps/742280/header.jpg?t=1542818233"
     }
   }
 }

@@ -9,7 +9,8 @@
       "publishers": [
           "Bethesda"
       ],
-      "short_description": "This is game six"
+      "short_description": "This is game six",
+      "header_image": "https://steamcdn-a.akamaihd.net/steam/apps/742240/header.jpg?t=1581550419"
     }
   }
 }

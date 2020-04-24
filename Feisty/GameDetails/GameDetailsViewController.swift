@@ -26,11 +26,8 @@ class GameDetailsViewController: UIViewController {
   
   private lazy var viewModel: GameDetailsViewModel = {
     
-    if let selectedGame = selectedGame {
-      return GameDetailsViewModel(self, selectedGame)
-    } else {
-      return GameDetailsViewModel(self, Game.defaultValue)
-    }
+    let game = selectedGame ?? Game.defaultValue
+    return GameDetailsViewModel(self, game)
     
   }()
 
@@ -38,7 +35,7 @@ class GameDetailsViewController: UIViewController {
     super.viewDidLoad()
     
     viewModel.getGameData()
-    setUpGameCardDropShadow()
+    gameCard.setUpDropShadow(shadowRadius: 10)
     
     setUpShoppingCartFloatingActionButton()
     setUpAddToCartFloatingActionButton()
@@ -76,24 +73,28 @@ class GameDetailsViewController: UIViewController {
       }
       
       self.shoppingCart?.shoppingList.append(game)
+      self.animateShoppingCart()
+    }
+    
+  }
+  
+  private func animateShoppingCart() {
+    
+    self.shoppingCartRightConstraint.constant = 32
+    
+    let animations: () -> Void = { [weak self] in
+      self?.view.layoutIfNeeded()
+    }
+    
+    let completion: (Bool) -> Void = { [weak self] _ in
       
-      self.shoppingCartRightConstraint.constant = 32
+      self?.shoppingCartRightConstraint.constant = 16
       
-      let animations: () -> Void = { [weak self] in
-        self?.view.layoutIfNeeded()
-      }
-      
-      let completion: (Bool) -> Void = { [weak self] _ in
-        
-        self?.shoppingCartRightConstraint.constant = 16
-        
-        UIView.animate(withDuration: 0.25, animations: animations)
-        
-      }
-      
-      UIView.animate(withDuration: 0.25, animations: animations, completion: completion)
+      UIView.animate(withDuration: 0.25, animations: animations)
       
     }
+    
+    UIView.animate(withDuration: 0.25, animations: animations, completion: completion)
     
   }
   
@@ -102,23 +103,16 @@ class GameDetailsViewController: UIViewController {
                               andPrice price: String,
                               andShortDescription shortDescription: String,
                               andDevelopers developers: String,
-                              andPublishers publishers: String) {
+                              andPublishers publishers: String,
+                              andHeaderImage headerImage: UIImage?) {
 
     gameNameLabel.text = gameName
     lblPrice.text = price
     lblShortDescription.text = shortDescription
     lblDevelopers.text = developers
     lblPublishers.text = publishers
+    imageView.image = headerImage ?? #imageLiteral(resourceName: "Default Game Icon")
 
-  }
-  
-  private func setUpGameCardDropShadow() {
-    
-    gameCard.layer.shadowColor = UIColor.black.cgColor
-    gameCard.layer.shadowOpacity = 0.25
-    gameCard.layer.shadowOffset = CGSize(width: 4, height: 4)
-    gameCard.layer.shadowRadius = 10
-    
   }
   
 }
@@ -130,14 +124,16 @@ extension GameDetailsViewController: GameDetailsLoadedType {
                         _ price: String,
                         _ shortDescription: String,
                         _ developers: String,
-                        _ publishers: String) {
+                        _ publishers: String,
+                        _ headerImage: UIImage?) {
     
     setGameDetails(with: withGameName,
                    andAppID: andAppID,
                    andPrice: price,
                    andShortDescription: shortDescription,
                    andDevelopers: developers,
-                   andPublishers: publishers)
+                   andPublishers: publishers,
+                   andHeaderImage: headerImage)
     
   }
   
