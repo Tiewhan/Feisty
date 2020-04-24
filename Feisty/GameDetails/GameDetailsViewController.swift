@@ -98,20 +98,14 @@ class GameDetailsViewController: UIViewController {
     
   }
   
-  private func setGameDetails(with gameName: String,
-                              andAppID appID: String,
-                              andPrice price: String,
-                              andShortDescription shortDescription: String,
-                              andDevelopers developers: String,
-                              andPublishers publishers: String,
-                              andHeaderImage headerImage: UIImage?) {
+  private func setGameDetails(gameDTO: GameDataTransferObject) {
 
-    gameNameLabel.text = gameName
-    lblPrice.text = price
-    lblShortDescription.text = shortDescription
-    lblDevelopers.text = developers
-    lblPublishers.text = publishers
-    imageView.image = headerImage ?? #imageLiteral(resourceName: "Default Game Icon")
+    gameNameLabel.text = gameDTO.name
+    lblPrice.text = gameDTO.price
+    lblShortDescription.text = gameDTO.shortDescription
+    lblDevelopers.text = gameDTO.developers[0]
+    lblPublishers.text = gameDTO.publishers[0]
+    imageView.image = gameDTO.headerImage ?? #imageLiteral(resourceName: "Default Game Icon")
 
   }
   
@@ -119,22 +113,8 @@ class GameDetailsViewController: UIViewController {
 
 extension GameDetailsViewController: GameDetailsLoadedType {
   
-  func gameDetailsFound(_ withGameName: String,
-                        _ andAppID: String,
-                        _ price: String,
-                        _ shortDescription: String,
-                        _ developers: String,
-                        _ publishers: String,
-                        _ headerImage: UIImage?) {
-    
-    setGameDetails(with: withGameName,
-                   andAppID: andAppID,
-                   andPrice: price,
-                   andShortDescription: shortDescription,
-                   andDevelopers: developers,
-                   andPublishers: publishers,
-                   andHeaderImage: headerImage)
-    
+  func gameDetailsFound(_ gameDTO: GameDataTransferObject) {
+    setGameDetails(gameDTO: gameDTO)
   }
   
 }

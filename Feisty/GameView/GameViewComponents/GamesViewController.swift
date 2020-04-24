@@ -14,7 +14,8 @@ class GamesViewController: UITableViewController {
   // MARK: Properties and Outlets
   private lazy var dataViewModel: GameDataViewModel = {
     return GameDataViewModel(self, with: GameModel(GameAPIRepo(),
-                                                   andImageRepo: GameImageAPIRepo()))
+                                                   andImageRepo: GameImageAPIRepo(),
+                                                   andDetailsRepo: GameDetailsAPIRepo()))
   }()
   
   var shoppingCart: ShoppingCart = ShoppingCart()
