@@ -23,6 +23,15 @@
 		5A308D01244837E30035106E /* ShoppingCartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A308D00244837E30035106E /* ShoppingCartViewController.swift */; };
 		5A308D1A2449856B0035106E /* ShoppingCartTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A308D192449856B0035106E /* ShoppingCartTableCell.swift */; };
 		5A5C184A23EAA1BD00C49076 /* MainMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A5C184923EAA1BD00C49076 /* MainMenuController.swift */; };
+		5A62710C2458324700077D17 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A62710A2458324700077D17 /* Interface.storyboard */; };
+		5A62710E2458324800077D17 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A62710D2458324800077D17 /* Assets.xcassets */; };
+		5A6271152458324900077D17 /* FeistyWatch Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 5A6271142458324900077D17 /* FeistyWatch Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		5A62711A2458324900077D17 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A6271192458324900077D17 /* InterfaceController.swift */; };
+		5A62711C2458324900077D17 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A62711B2458324900077D17 /* ExtensionDelegate.swift */; };
+		5A62711E2458324900077D17 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A62711D2458324900077D17 /* NotificationController.swift */; };
+		5A6271202458324900077D17 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A62711F2458324900077D17 /* Assets.xcassets */; };
+		5A6271252458324900077D17 /* FeistyWatch.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 5A6271082458324700077D17 /* FeistyWatch.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		5A6271302458373F00077D17 /* SessionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A62712F2458373F00077D17 /* SessionHandler.swift */; };
 		5A6F57AA242CC7E7009190FA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5A6F57A9242CC7E7009190FA /* GoogleService-Info.plist */; };
 		5A6F57AB242CC865009190FA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5A6F57A9242CC7E7009190FA /* GoogleService-Info.plist */; };
 		5A6F57AC242CC865009190FA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5A6F57A9242CC7E7009190FA /* GoogleService-Info.plist */; };
@@ -79,7 +88,46 @@
 			remoteGlobalIDString = 5A25202C23E9792700A4FB72;
 			remoteInfo = Feisty;
 		};
+		5A6271162458324900077D17 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5A25202523E9792700A4FB72 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5A6271132458324900077D17;
+			remoteInfo = "FeistyWatch Extension";
+		};
+		5A6271232458324900077D17 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5A25202523E9792700A4FB72 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5A6271072458324700077D17;
+			remoteInfo = FeistyWatch;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		5A6271262458324900077D17 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				5A6271252458324900077D17 /* FeistyWatch.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5A6271292458324900077D17 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				5A6271152458324900077D17 /* FeistyWatch Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		0042F5EA7E82374979AE6642 /* Pods-FeistyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FeistyTests.release.xcconfig"; path = "Target Support Files/Pods-FeistyTests/Pods-FeistyTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -106,6 +154,18 @@
 		5A308D00244837E30035106E /* ShoppingCartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingCartViewController.swift; sourceTree = "<group>"; };
 		5A308D192449856B0035106E /* ShoppingCartTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingCartTableCell.swift; sourceTree = "<group>"; };
 		5A5C184923EAA1BD00C49076 /* MainMenuController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuController.swift; sourceTree = "<group>"; };
+		5A6271082458324700077D17 /* FeistyWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FeistyWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5A62710B2458324700077D17 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		5A62710D2458324800077D17 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5A62710F2458324800077D17 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5A6271142458324900077D17 /* FeistyWatch Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "FeistyWatch Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5A6271192458324900077D17 /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+		5A62711B2458324900077D17 /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
+		5A62711D2458324900077D17 /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
+		5A62711F2458324900077D17 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5A6271212458324900077D17 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5A6271222458324900077D17 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		5A62712F2458373F00077D17 /* SessionHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionHandler.swift; sourceTree = "<group>"; };
 		5A6F57A9242CC7E7009190FA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		5A6F57D6243203BC009190FA /* gameList.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = gameList.json; sourceTree = "<group>"; };
 		5A6F57DB2432070A009190FA /* 660010.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = 660010.json; sourceTree = "<group>"; };
@@ -164,6 +224,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		5A6271112458324900077D17 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -174,6 +241,8 @@
 				5A25202F23E9792700A4FB72 /* Feisty */,
 				5A25204623E9792700A4FB72 /* FeistyTests */,
 				5A25205123E9792700A4FB72 /* FeistyUITests */,
+				5A6271092458324700077D17 /* FeistyWatch */,
+				5A6271182458324900077D17 /* FeistyWatch Extension */,
 				5A25202E23E9792700A4FB72 /* Products */,
 				CEFA2A4251FDEF1418F5D93B /* Pods */,
 				A66485246F46090B354B04DF /* Frameworks */,
@@ -186,6 +255,8 @@
 				5A25202D23E9792700A4FB72 /* Feisty.app */,
 				5A25204323E9792700A4FB72 /* FeistyTests.xctest */,
 				5A25204E23E9792700A4FB72 /* FeistyUITests.xctest */,
+				5A6271082458324700077D17 /* FeistyWatch.app */,
+				5A6271142458324900077D17 /* FeistyWatch Extension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -193,6 +264,7 @@
 		5A25202F23E9792700A4FB72 /* Feisty */ = {
 			isa = PBXGroup;
 			children = (
+				5A62712E2458372E00077D17 /* AppleWatchFiles */,
 				5A308CFB244837410035106E /* ShoppingCart */,
 				5A6F5A1C243609AF009190FA /* FriendsView */,
 				5A308CF524471AAE0035106E /* UIComponents */,
@@ -268,6 +340,37 @@
 				5A308D192449856B0035106E /* ShoppingCartTableCell.swift */,
 			);
 			path = ShoppingCart;
+			sourceTree = "<group>";
+		};
+		5A6271092458324700077D17 /* FeistyWatch */ = {
+			isa = PBXGroup;
+			children = (
+				5A62710A2458324700077D17 /* Interface.storyboard */,
+				5A62710D2458324800077D17 /* Assets.xcassets */,
+				5A62710F2458324800077D17 /* Info.plist */,
+			);
+			path = FeistyWatch;
+			sourceTree = "<group>";
+		};
+		5A6271182458324900077D17 /* FeistyWatch Extension */ = {
+			isa = PBXGroup;
+			children = (
+				5A6271192458324900077D17 /* InterfaceController.swift */,
+				5A62711B2458324900077D17 /* ExtensionDelegate.swift */,
+				5A62711D2458324900077D17 /* NotificationController.swift */,
+				5A62711F2458324900077D17 /* Assets.xcassets */,
+				5A6271212458324900077D17 /* Info.plist */,
+				5A6271222458324900077D17 /* PushNotificationPayload.apns */,
+			);
+			path = "FeistyWatch Extension";
+			sourceTree = "<group>";
+		};
+		5A62712E2458372E00077D17 /* AppleWatchFiles */ = {
+			isa = PBXGroup;
+			children = (
+				5A62712F2458373F00077D17 /* SessionHandler.swift */,
+			);
+			path = AppleWatchFiles;
 			sourceTree = "<group>";
 		};
 		5A6F57D5243203BC009190FA /* MockResources */ = {
@@ -409,10 +512,12 @@
 				5A25202B23E9792700A4FB72 /* Resources */,
 				5A812AAF23F2D64900152639 /* ShellScript */,
 				A33135280DAA73892094E303 /* [CP] Embed Pods Frameworks */,
+				5A6271262458324900077D17 /* Embed Watch Content */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				5A6271242458324900077D17 /* PBXTargetDependency */,
 			);
 			name = Feisty;
 			productName = Feisty;
@@ -459,13 +564,47 @@
 			productReference = 5A25204E23E9792700A4FB72 /* FeistyUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		5A6271072458324700077D17 /* FeistyWatch */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5A62712D2458324900077D17 /* Build configuration list for PBXNativeTarget "FeistyWatch" */;
+			buildPhases = (
+				5A6271062458324700077D17 /* Resources */,
+				5A6271292458324900077D17 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5A6271172458324900077D17 /* PBXTargetDependency */,
+			);
+			name = FeistyWatch;
+			productName = FeistyWatch;
+			productReference = 5A6271082458324700077D17 /* FeistyWatch.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		5A6271132458324900077D17 /* FeistyWatch Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5A62712C2458324900077D17 /* Build configuration list for PBXNativeTarget "FeistyWatch Extension" */;
+			buildPhases = (
+				5A6271102458324900077D17 /* Sources */,
+				5A6271112458324900077D17 /* Frameworks */,
+				5A6271122458324900077D17 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "FeistyWatch Extension";
+			productName = "FeistyWatch Extension";
+			productReference = 5A6271142458324900077D17 /* FeistyWatch Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		5A25202523E9792700A4FB72 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1130;
+				LastSwiftUpdateCheck = 1140;
 				LastUpgradeCheck = 1130;
 				ORGANIZATIONNAME = DVT;
 				TargetAttributes = {
@@ -480,6 +619,12 @@
 					5A25204D23E9792700A4FB72 = {
 						CreatedOnToolsVersion = 11.3.1;
 						TestTargetID = 5A25202C23E9792700A4FB72;
+					};
+					5A6271072458324700077D17 = {
+						CreatedOnToolsVersion = 11.4.1;
+					};
+					5A6271132458324900077D17 = {
+						CreatedOnToolsVersion = 11.4.1;
 					};
 				};
 			};
@@ -499,6 +644,8 @@
 				5A25202C23E9792700A4FB72 /* Feisty */,
 				5A25204223E9792700A4FB72 /* FeistyTests */,
 				5A25204D23E9792700A4FB72 /* FeistyUITests */,
+				5A6271072458324700077D17 /* FeistyWatch */,
+				5A6271132458324900077D17 /* FeistyWatch Extension */,
 			);
 		};
 /* End PBXProject section */
@@ -552,6 +699,23 @@
 				5A6F57F4243213A3009190FA /* 742240.json in Resources */,
 				5A6F57F1243213A3009190FA /* 660130.json in Resources */,
 				5A6F57F7243213A3009190FA /* 742320.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5A6271062458324700077D17 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5A62710E2458324800077D17 /* Assets.xcassets in Resources */,
+				5A62710C2458324700077D17 /* Interface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5A6271122458324900077D17 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5A6271202458324900077D17 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -705,6 +869,7 @@
 				5A25203123E9792700A4FB72 /* AppDelegate.swift in Sources */,
 				5A8D2181240CE01B001578AE /* GamesViewController.swift in Sources */,
 				5A25203323E9792700A4FB72 /* SceneDelegate.swift in Sources */,
+				5A6271302458373F00077D17 /* SessionHandler.swift in Sources */,
 				5A5C184A23EAA1BD00C49076 /* MainMenuController.swift in Sources */,
 				5A3085DD2437033A0035106E /* BasicFriendCell.swift in Sources */,
 				5A3085DF2437103F0035106E /* FriendsViewController.swift in Sources */,
@@ -740,6 +905,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		5A6271102458324900077D17 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5A62711E2458324900077D17 /* NotificationController.swift in Sources */,
+				5A62711C2458324900077D17 /* ExtensionDelegate.swift in Sources */,
+				5A62711A2458324900077D17 /* InterfaceController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -752,6 +927,16 @@
 			isa = PBXTargetDependency;
 			target = 5A25202C23E9792700A4FB72 /* Feisty */;
 			targetProxy = 5A25204F23E9792700A4FB72 /* PBXContainerItemProxy */;
+		};
+		5A6271172458324900077D17 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5A6271132458324900077D17 /* FeistyWatch Extension */;
+			targetProxy = 5A6271162458324900077D17 /* PBXContainerItemProxy */;
+		};
+		5A6271242458324900077D17 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5A6271072458324700077D17 /* FeistyWatch */;
+			targetProxy = 5A6271232458324900077D17 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -770,6 +955,14 @@
 				5A25203C23E9792700A4FB72 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		5A62710A2458324700077D17 /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5A62710B2458324700077D17 /* Base */,
+			);
+			name = Interface.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -1017,6 +1210,86 @@
 			};
 			name = Release;
 		};
+		5A6271272458324900077D17 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = GLK7J5PP82;
+				IBSC_MODULE = FeistyWatch_Extension;
+				INFOPLIST_FILE = FeistyWatch/Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = za.co.dvt.Feisty.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 6.2;
+			};
+			name = Debug;
+		};
+		5A6271282458324900077D17 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = GLK7J5PP82;
+				IBSC_MODULE = FeistyWatch_Extension;
+				INFOPLIST_FILE = FeistyWatch/Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = za.co.dvt.Feisty.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 6.2;
+			};
+			name = Release;
+		};
+		5A62712A2458324900077D17 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "FeistyWatch Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = za.co.dvt.Feisty.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 6.2;
+			};
+			name = Debug;
+		};
+		5A62712B2458324900077D17 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "FeistyWatch Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = za.co.dvt.Feisty.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 6.2;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1052,6 +1325,24 @@
 			buildConfigurations = (
 				5A25205E23E9792700A4FB72 /* Debug */,
 				5A25205F23E9792700A4FB72 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5A62712C2458324900077D17 /* Build configuration list for PBXNativeTarget "FeistyWatch Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5A62712A2458324900077D17 /* Debug */,
+				5A62712B2458324900077D17 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5A62712D2458324900077D17 /* Build configuration list for PBXNativeTarget "FeistyWatch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5A6271272458324900077D17 /* Debug */,
+				5A6271282458324900077D17 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
