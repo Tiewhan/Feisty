@@ -8,6 +8,7 @@
 
 import UIKit
 import CommonFiles
+import CoreData
 
 class ShoppingCartViewController: UIViewController {
   
@@ -15,11 +16,23 @@ class ShoppingCartViewController: UIViewController {
   @IBOutlet weak var tableView: UITableView!
   
   var shoppingCart: ShoppingCart?
+  
   private lazy var viewModel: ShoppingCartViewModelType = {
     
     let viewModel = ShoppingCartViewModel()
+    var model = ShoppingCartModel(withShoppingCart: shoppingCart)
     
-    viewModel.model = ShoppingCartModel(shoppingCart: shoppingCart ?? ShoppingCart())
+    if let coreDataAppDelete = UIApplication.shared.delegate as? CoreDataAppDelegate {
+      
+      let repo = ShoppingCartCoreDataRepo(withAppDelegate: coreDataAppDelete)
+      model.coreDataRepo = repo
+      repo.subscribeToRepository(withObserver: model)
+      
+    }
+    
+    viewModel.model = model
+    model.subscribeToModel(withObserver: viewModel)
+    viewModel.view = self
     
     return viewModel
     
@@ -33,6 +46,18 @@ class ShoppingCartViewController: UIViewController {
     checkoutButton.setUpDropShadow()
     checkoutButton.setUpCornerRadiusWith(radiusOf: 25)
     
+  }
+  
+  override func viewWillDisappear(_ animated: Bool) {
+    super.viewWillDisappear(animated)
+    
+    viewModel.saveShoppingCart()
+  }
+  
+  override func viewWillAppear(_ animated: Bool) {
+    super.viewWillAppear(animated)
+    
+    viewModel.loadShoppingCart()
   }
   
   private func setUpTableView() {
@@ -55,9 +80,7 @@ extension ShoppingCartViewController: UITableViewDelegate {
                  forRowAt indexPath: IndexPath) {
     
       if editingStyle == .delete {
-        let index = indexPath.row
-        shoppingCart?.shoppingList.remove(at: index)
-        tableView.reloadData()
+        viewModel.removeItem(at: indexPath.row)
       }
     
   }
@@ -87,6 +110,18 @@ extension ShoppingCartViewController: UITableViewDataSource {
     cell.gameImage.image = gameDetails.headerImage ?? #imageLiteral(resourceName: "Default Game Icon")
     
     return cell
+    
+  }
+  
+}
+
+extension ShoppingCartViewController: ShoppingCartViewType {
+  
+  func gamesInCartLoaded() {
+    
+    DispatchQueue.main.async {
+      self.tableView.reloadData()
+    }
     
   }
   
