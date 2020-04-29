@@ -19,6 +19,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     static let databaseName = "FeistyDatabase"
   }
   
+  struct APIStrings {
+    
+    static let herokuHostName = "feisty-server.herokuapp.com"
+    static let loginPath = "/login"
+    static let friendsPath = "/friends"
+    static let friendImagePath = "/friendImage"
+    
+  }
+  
   lazy var persistentContainer: NSPersistentContainer = {
     
     let container = NSPersistentContainer(name: CoreDataStrings.databaseName)
@@ -46,6 +55,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     FirebaseApp.configure()
   }
   
+    // MARK: UISceneSession Lifecycle
+
+    func application(_ application: UIApplication, configurationForConnecting connectingSceneSession: UISceneSession,
+                     options: UIScene.ConnectionOptions) -> UISceneConfiguration {
+      // Called when a new scene session is being created.
+      // Use this method to select a configuration to create the new scene with.
+      return UISceneConfiguration(name: "Default Configuration", sessionRole: connectingSceneSession.role)
+    }
+
+    func application(_ application: UIApplication, didDiscardSceneSessions sceneSessions: Set<UISceneSession>) {
+      // Called when the user discards a scene session.
+      // If any sessions were discarded while the application was not running,
+      // this will be called shortly after application:didFinishLaunchingWithOptions.
+      // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
+    }
+  
   private func setUpStubs() {
     
     let option = ProcessInfo.processInfo.arguments.contains("-UseStubs")
@@ -53,6 +78,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     guard option == true else {
       return
     }
+    
+    setUpSteamAPIStub()
+    setUpSteamStoreAPIStub()
+    setUpHerokuLoginStub()
+    setUpHerokuFriendsStub()
+    setUpHerokuFriendImagesPath()
+    
+  }
+  
+  private func setUpSteamAPIStub() {
     
     stub(condition: isHost("api.steampowered.com")) { _ in
       
@@ -62,6 +97,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                                headers: ["Content-Type": "application/json"])
       
     }
+    
+  }
+  
+  private func setUpSteamStoreAPIStub() {
     
     stub(condition: isHost("store.steampowered.com") && isPath("/api/appdetails")) { request in
       
@@ -88,22 +127,70 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
   }
   
-    // MARK: UISceneSession Lifecycle
-
-    func application(_ application: UIApplication, configurationForConnecting connectingSceneSession: UISceneSession,
-                     options: UIScene.ConnectionOptions) -> UISceneConfiguration {
-      // Called when a new scene session is being created.
-      // Use this method to select a configuration to create the new scene with.
-      return UISceneConfiguration(name: "Default Configuration", sessionRole: connectingSceneSession.role)
+  private func setUpHerokuLoginStub() {
+    
+    stub(condition: (isHost(APIStrings.herokuHostName) && isPath(APIStrings.loginPath))) { request in
+      
+      var stubPath = OHPathForFile("loginInvalidResponse.json", type(of: self))
+      
+      var data: String = ""
+      
+      if let body = request.ohhttpStubs_httpBody {
+        data = String(decoding: body, as: UTF8.self)
+      }
+      
+      if data.contains("tiewhan") && data.contains("cat3") {
+        stubPath = OHPathForFile("loginValidResponse.json", type(of: self))
+      }
+      
+      guard let unboxedStubPath = stubPath else {
+        return HTTPStubsResponse()
+      }
+      
+      return HTTPStubsResponse(fileAtPath: unboxedStubPath,
+                               statusCode: 200,
+                               headers: ["Content-Type": "application/json"])
+      
     }
-
-    func application(_ application: UIApplication, didDiscardSceneSessions sceneSessions: Set<UISceneSession>) {
-      // Called when the user discards a scene session.
-      // If any sessions were discarded while the application was not running,
-      // this will be called shortly after application:didFinishLaunchingWithOptions.
-      // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
+    
+  }
+  
+  private func setUpHerokuFriendsStub() {
+    
+    stub(condition: isHost(APIStrings.herokuHostName) && isPath(APIStrings.friendsPath)) { _ in
+      
+      let stubPath = OHPathForFile("friendsResponse.json", type(of: self))
+      
+      guard let unboxedStubPath = stubPath else {
+        return HTTPStubsResponse()
+      }
+      
+      return HTTPStubsResponse(fileAtPath: unboxedStubPath,
+                               statusCode: 200,
+                               headers: ["Content-Type": "application/json"])
+      
     }
-
+    
+  }
+  
+  private func setUpHerokuFriendImagesPath() {
+    
+    stub(condition: (isHost(APIStrings.herokuHostName) && isPath(APIStrings.friendImagePath))) { _ in
+      
+      let stubPath = OHPathForFile("friendImageResponse.json", type(of: self))
+      
+      guard let unboxedStubPath = stubPath else {
+        return HTTPStubsResponse()
+      }
+      
+      return HTTPStubsResponse(fileAtPath: unboxedStubPath,
+                               statusCode: 200,
+                               headers: ["Content-Type": "application/json"])
+      
+    }
+    
+  }
+  
 }
 
 extension AppDelegate: CoreDataAppDelegate {

@@ -25,15 +25,18 @@ class LoginTestCase: XCTestCase {
   
   func loginUser(with username: String, and password: String) {
     
-    application.textFields["Username"].tap()
+    let usernameTextfield = application.textFields["loginUsernameTextfield"]
+    let passwordTextfield = application.secureTextFields["loginPasswordTextfield"]
+    
+    usernameTextfield.tap()
     sleep(1)
     UIPasteboard.general.string = username
-    application.textFields["Username"].tap()
+    usernameTextfield.tap()
     application.menuItems["Paste"].tap()
     
-    application.textFields["Password"].doubleTap()
+    passwordTextfield.tap()
     UIPasteboard.general.string = password
-    application.textFields["Password"].tap()
+    passwordTextfield.doubleTap()
     application.menuItems["Paste"].tap()
     
     sleep(1)

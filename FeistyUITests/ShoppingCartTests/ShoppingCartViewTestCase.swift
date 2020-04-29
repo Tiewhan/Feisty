@@ -1,15 +1,18 @@
 //
-//  GameViewTestCase.swift
+//  ShoppingCartViewTestCase.swift
 //  FeistyUITests
 //
-//  Created by Tiewhan Smith on 2020/03/16.
+//  Created by Tiewhan Smith on 2020/04/29.
 //  Copyright © 2020 DVT. All rights reserved.
 //
 
+import Foundation
 import XCTest
+@testable import Feisty
+@testable import CommonFiles
 
-class GameViewTestCase: XCTestCase {
-  
+class ShoppingCartViewTestCase: XCTestCase {
+
   var application: XCUIApplication!
   
   override func setUp() {
@@ -19,7 +22,7 @@ class GameViewTestCase: XCTestCase {
     application = XCUIApplication()
     setupSnapshot(application)
     
-    application.launchArguments += ["-UseStubs"]
+    application.launchArguments += ["-UseStubs", "true"]
     
   }
   
@@ -41,7 +44,22 @@ class GameViewTestCase: XCTestCase {
     
     application.buttons["Login"].tap()
     
-    sleep(2)
+    sleep(1)
+    
+  }
+  
+  func swipeLeftToDelete() {
+    
+    let cell = application.cells.element(boundBy: 0) // first cell on the page
+
+    let rightOffset = CGVector(dx: 0.95, dy: 0.5)
+    let leftOffset = CGVector(dx: 0.05, dy: 0.5)
+
+    let cellFarRightCoordinate = cell.coordinate(withNormalizedOffset: rightOffset)
+    let cellFarLeftCoordinate = cell.coordinate(withNormalizedOffset: leftOffset)
+
+    // drag from right to left to delete
+    cellFarRightCoordinate.press(forDuration: 0.1, thenDragTo: cellFarLeftCoordinate)
     
   }
   

@@ -1,14 +1,17 @@
 //
-//  GameViewTestCase.swift
+//  GameDetailsTestCase.swift
 //  FeistyUITests
 //
-//  Created by Tiewhan Smith on 2020/03/16.
+//  Created by Tiewhan Smith on 2020/04/29.
 //  Copyright © 2020 DVT. All rights reserved.
 //
 
+import Foundation
 import XCTest
+@testable import Feisty
+@testable import CommonFiles
 
-class GameViewTestCase: XCTestCase {
+class GameDetailsViewTestCase: XCTestCase {
   
   var application: XCUIApplication!
   
@@ -19,7 +22,7 @@ class GameViewTestCase: XCTestCase {
     application = XCUIApplication()
     setupSnapshot(application)
     
-    application.launchArguments += ["-UseStubs"]
+    application.launchArguments += ["-UseStubs", "true"]
     
   }
   
@@ -41,7 +44,7 @@ class GameViewTestCase: XCTestCase {
     
     application.buttons["Login"].tap()
     
-    sleep(2)
+    sleep(1)
     
   }
   

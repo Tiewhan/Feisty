@@ -28,22 +28,21 @@ class FriendViewTestCase: XCTestCase {
   
   func loginUserWithDetails() {
     
-    application.textFields["Username"].tap()
+    let usernameTextfield = application.textFields["loginUsernameTextfield"]
+    let passwordTextfield = application.secureTextFields["loginPasswordTextfield"]
+    
+    usernameTextfield.tap()
     sleep(1)
     UIPasteboard.general.string = "tiewhan"
-    application.textFields["Username"].tap()
+    usernameTextfield.tap()
     application.menuItems["Paste"].tap()
     
-    application.textFields["Password"].doubleTap()
+    passwordTextfield.tap()
     UIPasteboard.general.string = "cat3"
-    application.textFields["Password"].tap()
+    passwordTextfield.doubleTap()
     application.menuItems["Paste"].tap()
-    
-    sleep(1)
     
     application.buttons["Login"].tap()
-    
-    application.alerts["Login Message"].buttons["Dismiss"].tap()
     
     sleep(1)
     
