@@ -46,18 +46,4 @@ extension SessionHandler: WCSessionDelegate {
     self.session.activate()
   }
   
-  func session(_ session: WCSession,
-               didReceiveMessage message: [String: Any],
-               replyHandler: @escaping ([String: Any]) -> Void) {
-    
-      if message["request"] as? String == "version" {
-        
-        let versionNumber = Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") ?? "No version"
-        
-        replyHandler(["version": versionNumber])
-        
-      }
-    
-  }
-  
 }
