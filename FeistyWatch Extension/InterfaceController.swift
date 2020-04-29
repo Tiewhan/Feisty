@@ -59,12 +59,12 @@ extension InterfaceController: WCSessionDelegate {
   }
   
   private func setImage(message: [String: Any]) {
-    guard let imageData = message["image"] as? NSData? else {
+    guard let imageData = message["image"] as? Data? else {
       print("Image could not be set")
       return
     }
     
-    if let data = imageData as Data? {
+    if let data = imageData {
       
       let image = UIImage(data: data)
       friendImage.setImage(image)
