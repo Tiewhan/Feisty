@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -49,6 +49,7 @@
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Fa9-ia-2r4">
                                         <rect key="frame" x="0.0" y="0.0" width="343" height="53"/>
                                         <color key="backgroundColor" name="BaseGrey"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="loginUsernameTextfield"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="53" id="zP3-5A-r8R"/>
                                         </constraints>
@@ -59,6 +60,7 @@
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aan-iG-gdG">
                                         <rect key="frame" x="0.0" y="65" width="343" height="53"/>
                                         <color key="backgroundColor" name="BaseGrey"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="loginPasswordTextfield"/>
                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                         <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
@@ -98,7 +100,7 @@
             <objects>
                 <viewController title="Friends" id="UN3-mA-ItT" customClass="FriendsViewController" customModule="Feisty" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="88" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="gFu-iq-Krw" userLabel="Friend Table View">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="675"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" name="LightGrey"/>
                         <color key="tintColor" name="LightBlue"/>
@@ -224,7 +226,7 @@
             <objects>
                 <viewController title="Games" id="KWS-rH-oZk" customClass="GamesViewController" customModule="Feisty" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="88" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="uq1-GS-lHj">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="675"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" name="LightGrey"/>
                         <color key="tintColor" name="LightBlue"/>
@@ -316,7 +318,7 @@
             <objects>
                 <viewController storyboardIdentifier="GameDetailsViewController" id="5A0-Lk-Doh" customClass="GameDetailsViewController" customModule="Feisty" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8wm-Dq-EDX">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="675"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="3Yc-Za-Tmc">
@@ -433,6 +435,9 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oss-0j-w89" userLabel="AddFloatingActionButton" customClass="FloatingActionButton" customModule="Feisty" customModuleProvider="target">
                                 <rect key="frame" x="303" y="531" width="56" height="56"/>
                                 <color key="backgroundColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <accessibility key="accessibilityConfiguration" identifier="addToCartFAB">
+                                    <bool key="isElement" value="YES"/>
+                                </accessibility>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="56" id="DRR-id-5N2"/>
                                     <constraint firstAttribute="height" constant="56" id="vku-Uh-2Yx"/>
@@ -441,6 +446,9 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="waV-mG-zUx" userLabel="ShoppingCartFloatingActionButton" customClass="FloatingActionButton" customModule="Feisty" customModuleProvider="target">
                                 <rect key="frame" x="303" y="603" width="56" height="56"/>
                                 <color key="backgroundColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <accessibility key="accessibilityConfiguration" identifier="shoppingCartFAB">
+                                    <bool key="isElement" value="YES"/>
+                                </accessibility>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="56" id="3MF-ga-Yll"/>
                                     <constraint firstAttribute="height" constant="56" id="Y4m-Yd-EJN"/>
@@ -485,7 +493,7 @@
             <objects>
                 <viewController storyboardIdentifier="ShoppingCartViewController" title="Shopping Cart" id="Yk9-p9-Bdf" customClass="ShoppingCartViewController" customModule="Feisty" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="aJk-lo-Rfb">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="758"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="88" estimatedRowHeight="88" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Eas-pk-ww8">
@@ -628,9 +636,9 @@
         <image name="Friends Tab Bar Icon" width="44" height="37.333332061767578"/>
         <image name="Game Tab Bar Icon" width="44" height="20"/>
         <image name="Profile Icon" width="40" height="41"/>
-        <image name="folder.fill" catalog="system" width="64" height="46"/>
-        <image name="square.and.arrow.up.on.square.fill" catalog="system" width="58" height="64"/>
-        <image name="trash" catalog="system" width="60" height="64"/>
+        <image name="folder.fill" catalog="system" width="128" height="95"/>
+        <image name="square.and.arrow.up.on.square.fill" catalog="system" width="117" height="128"/>
+        <image name="trash" catalog="system" width="121" height="128"/>
         <namedColor name="BaseBlue">
             <color red="0.37647058823529411" green="0.53725490196078429" blue="0.70196078431372544" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
