@@ -49,6 +49,25 @@ class FriendsViewController: UITableViewController {
     
     cell.status.text = user.status
     cell.username.text = user.username
+    cell.cellTappedAction = {
+      
+      let connectivityHandler = SessionHandler.shared
+      
+      guard connectivityHandler.session.isReachable else {
+        return
+      }
+      
+      var data: [String: Any] = [:]
+      data["image"] = cell.friendAvatar.image?.jpegData(compressionQuality: 0.35) as NSData?
+      
+      connectivityHandler.session.sendMessage(data,
+                                              replyHandler: nil) { error in
+                                                
+                                                print("\(error)")
+                                                
+      }
+      
+    }
 
     return cell
     
